@@ -448,3 +448,13 @@ Stack trace:
 #62 C:\wamp\www\picerija\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #63 C:\wamp\www\picerija\server.php(21): require_once('C:\\wamp\\www\\pic...')
 #64 {main}  
+[2017-03-09 12:11:48] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: Command "serve]" is not defined.
+
+Did you mean this?
+    serve in C:\Users\VS\Projekti\picerija\vendor\symfony\console\Application.php:515
+Stack trace:
+#0 C:\Users\VS\Projekti\picerija\vendor\symfony\console\Application.php(183): Symfony\Component\Console\Application->find('serve]')
+#1 C:\Users\VS\Projekti\picerija\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\Users\VS\Projekti\picerija\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  

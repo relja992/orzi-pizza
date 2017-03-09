@@ -12,8 +12,8 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700,800&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <!--		 Place favicon.ico and apple-touch-icon.png in the root directory -->
 		<link rel="stylesheet" href="css/custom.css">
-		<link rel="stylesheet" href="{{ asset("css/foundation.css") }}"/>
-		<link rel="stylesheet" href="{{ asset("css/app.css") }}"/>
+		<link rel="stylesheet" href="<?php echo e(asset("css/foundation.css")); ?>"/>
+		<link rel="stylesheet" href="<?php echo e(asset("css/app.css")); ?>"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
 		<script src="js/jquery-2.1.0.min.js"></script>
@@ -37,7 +37,7 @@
 		</div>
 
 		<div class="logo pull-left">
-			<a href="{{ url('/') }}">
+			<a href="<?php echo e(url('/')); ?>">
 				<figure>
 					<img src="img/logo1.png" class="light-logo" alt="ORZI PIZZERIA"/>
 					<img src="img/logo2.png" class="dark-logo" alt="ORZI PIZZERIA"/>
@@ -47,52 +47,52 @@
 		<div class="main-nav">
 			<ul class="pull-right">
 				<li>
-					<a href="{{ url('/') }}" class="    ">Početna</a>	
+					<a href="<?php echo e(url('/')); ?>" class="    ">Početna</a>	
 				</li>				
 				<li>
-					<a href="{{ url('/menu') }}" class="hover-subnav active">meni</a>
+					<a href="<?php echo e(url('/menu')); ?>" class="hover-subnav active">meni</a>
 					<div class="subnav image-subnav">
 						<ul class="subnav-wrapper">
 							<li>
-								<a href="{{ url('/menu') }}#grill">roštilj</a>
+								<a href="<?php echo e(url('/menu')); ?>#grill">roštilj</a>
 								<div>
-									<a href="{{ url('/menu') }}#grill" class="menu-img" style="background-image: url('img/demo/nav/grill.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#grill" class="menu-img" style="background-image: url('img/demo/nav/grill.jpg')"></a>
 								</div>
 							</li>			
 							<li>
-								<a href="{{ url('/menu') }}#salad">salate</a>
+								<a href="<?php echo e(url('/menu')); ?>#salad">salate</a>
 								<div>
-									<a href="{{ url('/menu') }}#salad" class="menu-img" style="background-image: url('img/demo/nav/starters.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#salad" class="menu-img" style="background-image: url('img/demo/nav/starters.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#pasta">paste</a>
+								<a href="<?php echo e(url('/menu')); ?>#pasta">paste</a>
 								<div>							
-									<a href="{{ url('/menu') }}#pasta" class="menu-img" style="background-image: url('img/demo/nav/salads.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#pasta" class="menu-img" style="background-image: url('img/demo/nav/salads.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#tortilla">tortilje</a>
+								<a href="<?php echo e(url('/menu')); ?>#tortilla">tortilje</a>
 								<div>
-									<a href="{{ url('/menu') }}#tortilla" class="menu-img" style="background-image: url('img/demo/nav/mains.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#tortilla" class="menu-img" style="background-image: url('img/demo/nav/mains.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#pizza">pizza</a>
+								<a href="<?php echo e(url('/menu')); ?>#pizza">pizza</a>
 								<div>
-									<a href="{{ url('/menu') }}#pizza" class="menu-img" style="background-image: url('img/demo/nav/soup.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#pizza" class="menu-img" style="background-image: url('img/demo/nav/soup.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#pancake">palačinke</a>
+								<a href="<?php echo e(url('/menu')); ?>#pancake">palačinke</a>
 								<div>
-									<a href="{{ url('/menu') }}#pancake" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#pancake" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#sandwich">sendviči</a>
+								<a href="<?php echo e(url('/menu')); ?>#sandwich">sendviči</a>
 								<div>							
-									<a href="{{ url('/menu') }}#sandwich" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#sandwich" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
 								</div>
 							</li>
 						</ul>
@@ -100,11 +100,11 @@
 				</li>	
 				
 				<li>
-					<a href="{{ url('/contact') }}" class="">kontakt</a>	
+					<a href="<?php echo e(url('/contact')); ?>" class="">kontakt</a>	
 				</li>
 				
 				<li>
-					<a href="{{ url('/gallery') }}" class="hover-subnav">galerija</a>
+					<a href="<?php echo e(url('/gallery')); ?>" class="hover-subnav">galerija</a>
 					
 				</li>				
 			</ul>
@@ -198,6 +198,11 @@
 		<li>
 			<span class="filter" data-filter=".sandwich">sendviči</span>
 		</li>
+
+		
+		
+
+
 	</ul>
 
 	<!--			</div>
