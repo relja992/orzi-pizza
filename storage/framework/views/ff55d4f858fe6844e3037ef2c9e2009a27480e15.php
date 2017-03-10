@@ -11,9 +11,9 @@
 		<link href='http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,600,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700,800&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <!--		 Place favicon.ico and apple-touch-icon.png in the root directory -->
-		<link rel="stylesheet" href="{{ asset('css/custom.css') }}">
-		<script src="{{ asset('js/jquery-2.1.0.min.js') }}"></script>
-		<script src="{{ asset('js/modernizr-2.6.2.min.js') }}"></script>
+		<link rel="stylesheet" href="<?php echo e(asset('css/custom.css')); ?>">
+		<script src="<?php echo e(asset('js/jquery-2.1.0.min.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/modernizr-2.6.2.min.js')); ?>"></script>
 		<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=false&amp;ver=3.0'></script>
 
     </head>
@@ -42,52 +42,52 @@
 		<div class="main-nav">
 			<ul class="pull-right">
 				<li>
-					<a href="{{ url('/') }}" class="    ">Početna</a>	
+					<a href="<?php echo e(url('/')); ?>" class="    ">Početna</a>	
 				</li>				
 				<li>
-					<a href="{{ url('/menu') }}" class="hover-subnav active">meni</a>
+					<a href="<?php echo e(url('/menu')); ?>" class="hover-subnav active">meni</a>
 					<div class="subnav image-subnav">
 						<ul class="subnav-wrapper">
 							<li>
-								<a href="{{ url('/menu') }}#grill">roštilj</a>
+								<a href="<?php echo e(url('/menu')); ?>#grill">roštilj</a>
 								<div>
-									<a href="{{ url('/menu') }}#grill" class="menu-img" style="background-image: url('img/demo/nav/grill.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#grill" class="menu-img" style="background-image: url('img/demo/nav/grill.jpg')"></a>
 								</div>
 							</li>			
 							<li>
-								<a href="{{ url('/menu') }}#salad">salate</a>
+								<a href="<?php echo e(url('/menu')); ?>#salad">salate</a>
 								<div>
-									<a href="{{ url('/menu') }}#salad" class="menu-img" style="background-image: url('img/demo/nav/starters.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#salad" class="menu-img" style="background-image: url('img/demo/nav/starters.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#pasta">paste</a>
+								<a href="<?php echo e(url('/menu')); ?>#pasta">paste</a>
 								<div>							
-									<a href="{{ url('/menu') }}#pasta" class="menu-img" style="background-image: url('img/demo/nav/salads.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#pasta" class="menu-img" style="background-image: url('img/demo/nav/salads.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#tortilla">tortilje</a>
+								<a href="<?php echo e(url('/menu')); ?>#tortilla">tortilje</a>
 								<div>
-									<a href="{{ url('/menu') }}#tortilla" class="menu-img" style="background-image: url('img/demo/nav/mains.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#tortilla" class="menu-img" style="background-image: url('img/demo/nav/mains.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#pizza">pizza</a>
+								<a href="<?php echo e(url('/menu')); ?>#pizza">pizza</a>
 								<div>
-									<a href="{{ url('/menu') }}#pizza" class="menu-img" style="background-image: url('img/demo/nav/soup.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#pizza" class="menu-img" style="background-image: url('img/demo/nav/soup.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#pancake">palačinke</a>
+								<a href="<?php echo e(url('/menu')); ?>#pancake">palačinke</a>
 								<div>
-									<a href="{{ url('/menu') }}#pancake" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#pancake" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#sandwich">sendviči</a>
+								<a href="<?php echo e(url('/menu')); ?>#sandwich">sendviči</a>
 								<div>							
-									<a href="{{ url('/menu') }}#sandwich" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#sandwich" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
 								</div>
 							</li>
 						</ul>
@@ -95,11 +95,11 @@
 				</li>	
 				
 				<li>
-					<a href="{{ url('/contact') }}" class="">kontakt</a>	
+					<a href="<?php echo e(url('/contact')); ?>" class="">kontakt</a>	
 				</li>
 				
 				<li>
-					<a href="{{ url('/gallery') }}" class="hover-subnav">galerija</a>
+					<a href="<?php echo e(url('/gallery')); ?>" class="hover-subnav">galerija</a>
 					
 				</li>				
 			</ul>
@@ -362,21 +362,21 @@
 			<div id="status-loaded"></div>
 		</div>
 
-		<script src="{{ asset('js/browser.js') }}"></script>
-		<script src="{{ asset('js/jquery.ba-throttle-debounce.min.js') }}"></script>
-		<script src="{{ asset('js/jquery.smooth-scroll.js') }}"></script>
-		<script src="{{ asset('js/matchmedia.js') }}"></script>
-		<script src="{{ asset('js/enquire.min.js') }}"></script>
-		<script src="{{ asset('js/jquery.velocity.min.js') }}"></script>
-		<script src="{{ asset('js/waypoints.js') }}"></script>		
-		<script src="{{ asset('js/owl.carousel.js') }}"></script>
-		<script src="{{ asset('js/jquery.mb.YTPlayer.js') }}"></script>
-		<script src="{{ asset('js/jquery.parallaxify.js') }}"></script>
-		<script src="{{ asset('js/jquery.imagesloaded.js') }}"></script>
-		<script src="{{ asset('js/jquery.unveil.min.js') }}"></script>
-		<script src="{{ asset('js/jquery.superslides.min.js') }}"></script>
-		<script src="{{ asset('js/jquery.fullPage.min.js') }}"></script>
-		<script src="{{ asset('js/jquery.mixitup.js') }}"></script>
-		<script src="{{ asset('js/main.js') }}"></script>
+		<script src="<?php echo e(asset('js/browser.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/jquery.ba-throttle-debounce.min.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/jquery.smooth-scroll.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/matchmedia.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/enquire.min.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/jquery.velocity.min.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/waypoints.js')); ?>"></script>		
+		<script src="<?php echo e(asset('js/owl.carousel.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/jquery.mb.YTPlayer.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/jquery.parallaxify.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/jquery.imagesloaded.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/jquery.unveil.min.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/jquery.superslides.min.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/jquery.fullPage.min.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/jquery.mixitup.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/main.js')); ?>"></script>
 	</body>
 </html>
