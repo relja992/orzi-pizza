@@ -32,49 +32,49 @@
 					
 				</li>				
 				<li>
-					<a href="<?php echo e(url('/menu')); ?>" class="hover-subnav ">meni</a>
+					<a href="<?php echo e(route('menu')); ?>" class="hover-subnav ">meni</a>
 					<div class="subnav image-subnav">
 						<ul class="subnav-wrapper">			
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#grill">roštilj</a>
+								<a href="<?php echo e(route('menu')); ?>#grill" style="color: white;">roštilj</a>
 								<div>
-									<a href="<?php echo e(url('/menu')); ?>#grill" class="menu-img" style="background-image: url('img/demo/nav/grill.jpg')"></a>
+									<a href="<?php echo e(route('menu')); ?>#grill" class="menu-img" style="background-image: url('img/demo/nav/grill.jpg')"></a>
 								</div>
 							</li>			
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#salad">salate</a>
+								<a href="<?php echo e(route('menu')); ?>#salad" style="color: white;">salate</a>
 								<div>
-									<a href="<?php echo e(url('/menu')); ?>#salad" class="menu-img" style="background-image: url('img/demo/nav/salads.jpg')"></a>
+									<a href="<?php echo e(route('menu')); ?>#salad" class="menu-img" style="background-image: url('img/demo/nav/salads.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#pasta">paste</a>
+								<a href="<?php echo e(route('menu')); ?>#pasta" style="color: white;">paste</a>
 								<div>							
-									<a href="<?php echo e(url('/menu')); ?>#pasta" class="menu-img" style="background-image: url('img/demo/nav/pasta.jpg')"></a>
+									<a href="<?php echo e(route('menu')); ?>#pasta" class="menu-img" style="background-image: url('img/demo/nav/pasta.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#tortilla">tortilje</a>
+								<a href="<?php echo e(route('menu')); ?>#tortilla" style="color: white;">tortilje</a>
 								<div>
-									<a href="<?php echo e(url('/menu')); ?>#tortilla" class="menu-img" style="background-image: url('img/demo/nav/tortilla.jpg')"></a>
+									<a href="<?php echo e(route('menu')); ?>#tortilla" class="menu-img" style="background-image: url('img/demo/nav/tortilla.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#pizza">pizza</a>
+								<a href="<?php echo e(route('menu')); ?>#pizza" style="color: white;">pizza</a>
 								<div>
-									<a href="<?php echo e(url('/menu')); ?>#pizza" class="menu-img" style="background-image: url('img/demo/nav/pizza.jpg')"></a>
+									<a href="<?php echo e(route('menu')); ?>#pizza" class="menu-img" style="background-image: url('img/demo/nav/pizza.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#pancake">palačinke</a>
+								<a href="<?php echo e(route('menu')); ?>#pancake" style="color: white;">palačinke</a>
 								<div>
-									<a href="<?php echo e(url('/menu')); ?>#pancake" class="menu-img" style="background-image: url('img/demo/nav/pancake.jpg')"></a>
+									<a href="<?php echo e(route('menu')); ?>#pancake" class="menu-img" style="background-image: url('img/demo/nav/pancake.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#sandwich">sendviči</a>
+								<a href="<?php echo e(route('menu')); ?>#sandwich" style="color: white;">sendviči</a>
 								<div>							
-									<a href="<?php echo e(url('/menu')); ?>#sandwich" class="menu-img" style="background-image: url('img/demo/nav/sandwich.jpg')"></a>
+									<a href="<?php echo e(route('menu')); ?>#sandwich" class="menu-img" style="background-image: url('img/demo/nav/sandwich.jpg')"></a>
 								</div>
 							</li>
 						</ul>
@@ -82,7 +82,7 @@
 				</li>	
 				
 				<li>
-					<a href="<?php echo e(url('/contact')); ?>" class="">kontakt</a>	
+					<a href="<?php echo e(route('contact')); ?>" class="">kontakt</a>	
 				</li>
 				<!--
 				<li>
@@ -90,7 +90,7 @@
 				</li>
 				-->
 				<li>
-					<a href="<?php echo e(url('/gallery')); ?>" class="hover-subnav">galerija</a>
+					<a href="<?php echo e(route('gallery')); ?>" class="hover-subnav">galerija</a>
 					
 
 							</div>

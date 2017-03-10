@@ -866,3 +866,78 @@ Stack trace:
 #62 C:\Users\VS\Projekti\picerija\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #63 C:\Users\VS\Projekti\picerija\server.php(21): require_once('C:\\Users\\VS\\Pro...')
 #64 {main}  
+[2017-03-10 11:28:10] local.ERROR: ReflectionException: Class App\Http\Controllers\OrderController does not exist in C:\Users\VS\Projekti\picerija\bootstrap\cache\compiled.php:1355
+Stack trace:
+#0 C:\Users\VS\Projekti\picerija\bootstrap\cache\compiled.php(1355): ReflectionClass->__construct('App\\Http\\Contro...')
+#1 C:\Users\VS\Projekti\picerija\bootstrap\cache\compiled.php(1309): Illuminate\Container\Container->build('App\\Http\\Contro...', Array)
+#2 C:\Users\VS\Projekti\picerija\bootstrap\cache\compiled.php(1874): Illuminate\Container\Container->make('App\\Http\\Contro...', Array)
+#3 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Foundation\Console\RouteListCommand.php(165): Illuminate\Foundation\Application->make('App\\Http\\Contro...')
+#4 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Foundation\Console\RouteListCommand.php(146): Illuminate\Foundation\Console\RouteListCommand->getControllerMiddleware('App\\Http\\Contro...')
+#5 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Foundation\Console\RouteListCommand.php(118): Illuminate\Foundation\Console\RouteListCommand->getMiddleware(Object(Illuminate\Routing\Route))
+#6 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Foundation\Console\RouteListCommand.php(88): Illuminate\Foundation\Console\RouteListCommand->getRouteInformation(Object(Illuminate\Routing\Route))
+#7 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Foundation\Console\RouteListCommand.php(75): Illuminate\Foundation\Console\RouteListCommand->getRoutes()
+#8 [internal function]: Illuminate\Foundation\Console\RouteListCommand->fire()
+#9 C:\Users\VS\Projekti\picerija\bootstrap\cache\compiled.php(1257): call_user_func_array(Array, Array)
+#10 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#11 C:\Users\VS\Projekti\picerija\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\Users\VS\Projekti\picerija\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\Users\VS\Projekti\picerija\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Foundation\Console\RouteListCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\Users\VS\Projekti\picerija\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\Users\VS\Projekti\picerija\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 {main}  
+[2017-03-10 11:28:29] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: Command "route" is not defined.
+
+Did you mean one of these?
+    route:cache
+    route:clear
+    route:list in C:\Users\VS\Projekti\picerija\vendor\symfony\console\Application.php:515
+Stack trace:
+#0 C:\Users\VS\Projekti\picerija\vendor\symfony\console\Application.php(183): Symfony\Component\Console\Application->find('route')
+#1 C:\Users\VS\Projekti\picerija\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\Users\VS\Projekti\picerija\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2017-03-10 11:28:39] local.ERROR: ReflectionException: Class App\Http\Controllers\OrderController does not exist in C:\Users\VS\Projekti\picerija\bootstrap\cache\compiled.php:1355
+Stack trace:
+#0 C:\Users\VS\Projekti\picerija\bootstrap\cache\compiled.php(1355): ReflectionClass->__construct('App\\Http\\Contro...')
+#1 C:\Users\VS\Projekti\picerija\bootstrap\cache\compiled.php(1309): Illuminate\Container\Container->build('App\\Http\\Contro...', Array)
+#2 C:\Users\VS\Projekti\picerija\bootstrap\cache\compiled.php(1874): Illuminate\Container\Container->make('App\\Http\\Contro...', Array)
+#3 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Foundation\Console\RouteListCommand.php(165): Illuminate\Foundation\Application->make('App\\Http\\Contro...')
+#4 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Foundation\Console\RouteListCommand.php(146): Illuminate\Foundation\Console\RouteListCommand->getControllerMiddleware('App\\Http\\Contro...')
+#5 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Foundation\Console\RouteListCommand.php(118): Illuminate\Foundation\Console\RouteListCommand->getMiddleware(Object(Illuminate\Routing\Route))
+#6 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Foundation\Console\RouteListCommand.php(88): Illuminate\Foundation\Console\RouteListCommand->getRouteInformation(Object(Illuminate\Routing\Route))
+#7 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Foundation\Console\RouteListCommand.php(75): Illuminate\Foundation\Console\RouteListCommand->getRoutes()
+#8 [internal function]: Illuminate\Foundation\Console\RouteListCommand->fire()
+#9 C:\Users\VS\Projekti\picerija\bootstrap\cache\compiled.php(1257): call_user_func_array(Array, Array)
+#10 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#11 C:\Users\VS\Projekti\picerija\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\Users\VS\Projekti\picerija\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\Users\VS\Projekti\picerija\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Foundation\Console\RouteListCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\Users\VS\Projekti\picerija\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\Users\VS\Projekti\picerija\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 {main}  
+[2017-03-10 11:29:04] local.ERROR: ReflectionException: Class App\Http\Controllers\OrderController does not exist in C:\Users\VS\Projekti\picerija\bootstrap\cache\compiled.php:1355
+Stack trace:
+#0 C:\Users\VS\Projekti\picerija\bootstrap\cache\compiled.php(1355): ReflectionClass->__construct('App\\Http\\Contro...')
+#1 C:\Users\VS\Projekti\picerija\bootstrap\cache\compiled.php(1309): Illuminate\Container\Container->build('App\\Http\\Contro...', Array)
+#2 C:\Users\VS\Projekti\picerija\bootstrap\cache\compiled.php(1874): Illuminate\Container\Container->make('App\\Http\\Contro...', Array)
+#3 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Foundation\Console\RouteListCommand.php(165): Illuminate\Foundation\Application->make('App\\Http\\Contro...')
+#4 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Foundation\Console\RouteListCommand.php(146): Illuminate\Foundation\Console\RouteListCommand->getControllerMiddleware('App\\Http\\Contro...')
+#5 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Foundation\Console\RouteListCommand.php(118): Illuminate\Foundation\Console\RouteListCommand->getMiddleware(Object(Illuminate\Routing\Route))
+#6 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Foundation\Console\RouteListCommand.php(88): Illuminate\Foundation\Console\RouteListCommand->getRouteInformation(Object(Illuminate\Routing\Route))
+#7 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Foundation\Console\RouteListCommand.php(75): Illuminate\Foundation\Console\RouteListCommand->getRoutes()
+#8 [internal function]: Illuminate\Foundation\Console\RouteListCommand->fire()
+#9 C:\Users\VS\Projekti\picerija\bootstrap\cache\compiled.php(1257): call_user_func_array(Array, Array)
+#10 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#11 C:\Users\VS\Projekti\picerija\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\Users\VS\Projekti\picerija\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\Users\VS\Projekti\picerija\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Foundation\Console\RouteListCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\Users\VS\Projekti\picerija\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Users\VS\Projekti\picerija\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\Users\VS\Projekti\picerija\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 {main}  

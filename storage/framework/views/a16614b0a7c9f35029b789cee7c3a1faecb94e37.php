@@ -28,49 +28,49 @@
 					<a href="<?php echo e(url('/')); ?>" class="    ">Početna</a>	
 				</li>				
 				<li>
-					<a href="<?php echo e(url('/menu')); ?>" class="hover-subnav active">meni</a>
+					<a href="<?php echo e(url('/menu')); ?>" class="hover-subnav">meni</a>
 					<div class="subnav image-subnav">
 						<ul class="subnav-wrapper">
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#grill">roštilj</a>
+								<a href="<?php echo e(url('/menu')); ?>#grill" style="color: white;">roštilj</a>
 								<div>
 									<a href="<?php echo e(url('/menu')); ?>#grill" class="menu-img" style="background-image: url('img/demo/nav/grill.jpg')"></a>
 								</div>
 							</li>			
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#salad">salate</a>
+								<a href="<?php echo e(url('/menu')); ?>#salad" style="color: white;">salate</a>
 								<div>
 									<a href="<?php echo e(url('/menu')); ?>#salad" class="menu-img" style="background-image: url('img/demo/nav/starters.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#pasta">paste</a>
+								<a href="<?php echo e(url('/menu')); ?>#pasta" style="color: white;">paste</a>
 								<div>							
 									<a href="<?php echo e(url('/menu')); ?>#pasta" class="menu-img" style="background-image: url('img/demo/nav/salads.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#tortilla">tortilje</a>
+								<a href="<?php echo e(url('/menu')); ?>#tortilla" style="color: white;">tortilje</a>
 								<div>
 									<a href="<?php echo e(url('/menu')); ?>#tortilla" class="menu-img" style="background-image: url('img/demo/nav/mains.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#pizza">pizza</a>
+								<a href="<?php echo e(url('/menu')); ?>#pizza" style="color: white;">pizza</a>
 								<div>
 									<a href="<?php echo e(url('/menu')); ?>#pizza" class="menu-img" style="background-image: url('img/demo/nav/soup.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#pancake">palačinke</a>
+								<a href="<?php echo e(url('/menu')); ?>#pancake" style="color: white;">palačinke</a>
 								<div>
 									<a href="<?php echo e(url('/menu')); ?>#pancake" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#sandwich">sendviči</a>
+								<a href="<?php echo e(url('/menu')); ?>#sandwich" style="color: white;">sendviči</a>
 								<div>							
-									<a href="<?php echo e(url('/menu')); ?>#sandwich" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#sandwich style="color: white;"" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
 								</div>
 							</li>
 						</ul>
@@ -87,10 +87,10 @@
 				</li>
 				<li>
                         <a href="#">
-                            <i class="fa fa-shopping-cart fa-2x" aria-hidden="true">
+                            <i class="fa fa-shopping-cart fa-2x" aria-hidden="true" style >
                             </i>
                             Korpa
-                            <span class="alert badge">
+                            <span class="badge label-danger">
                                 3
                             </span>
                         </a>
@@ -215,7 +215,8 @@
 								<h6>CHEESEBURGER 120 GR</h6>
 								<p>JUNETINA, SUSAM KAJZERICA, KAČKAVALJ, ZELENA PARADAJZ </p>
 								
-								<span class="new-price item-price">170</span>
+								<span class="new-price item-price">170</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
 						</div>
 					</div>
@@ -236,7 +237,8 @@
 								<p>DUPLA JUNETINA, SLANINICA, KAČKAVALJ, PARADAJZ, ZELENA
                               </p>
 								
-								<span class="new-price item-price">310</span>
+								<span class="new-price item-price">310</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
 						</div>
 					</div>
@@ -256,7 +258,8 @@
 								<h6>Uštipci  250 gr</h6>
 								<p>roštilj meso, kačkavalj, slaninica, kulen, šunka  </p>
 								
-								<span class="new-price item-price">250</span>
+								<span class="new-price item-price">250</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
 						</div>
 					</div>
@@ -276,7 +279,8 @@
 								<h6>Punjeni ćevap 200 gr</h6>
 						<p>roštilj meso, domaća lepinja , prilozi..</p>
 								
-								<span class="new-price item-price">230</span>
+								<span class="new-price item-price">230</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
 						</div>
 					</div>
@@ -296,7 +300,8 @@
 								<h6>Orzi kroketi 180 gr</h6>
 							<p>šunka, pečurke, sir, sve to rolovano i pohovano.</p>
 								
-								<span class="new-price item-price">230</span>
+								<span class="new-price item-price">230</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
 						</div>
 					</div>
@@ -328,7 +333,8 @@
 								<h6>Pljeskavica 180 gr</h6>
 								<p>roštilj meso, domaća lepinja prolozi </p>
 								
-								<span class="new-price item-price">190</span>
+								<span class="new-price item-price">190</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
 						</div>
 					</div>
@@ -349,7 +355,8 @@
 								<p>roštilj meso, kačkavalj, slaninica, kulen, šunka 
                               </p>
 								
-								<span class="new-price item-price">250</span>
+								<span class="new-price item-price">250</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
 						</div>
 					</div>
@@ -369,7 +376,8 @@
 								<h6>Gurmanska</h6>
 								<p>roštilj meso, kačkavalj, slaninica, kulen, šunka  </p>
 								
-								<span class="new-price item-price">250</span>
+								<span class="new-price item-price">250</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
 						</div>
 					</div>
@@ -389,7 +397,8 @@
 								<h6>Ćevapi 150 gr</h6>
 						<p>roštilj meso, domaća lepinja , prilozi..</p>
 								
-								<span class="new-price item-price">170</span>
+								<span class="new-price item-price">170</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
 						</div>
 					</div>
@@ -409,7 +418,8 @@
 								<h6>Šiš ćevap 150 gr</h6>
 							<p>ćevap meso, domaća lepinja, prilozi...</p>
 								
-								<span class="new-price item-price">170</span>
+								<span class="new-price item-price">170</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
 						</div>
 					</div>
@@ -429,12 +439,32 @@
 								<h6>Rolovani ćevap 200 gr</h6>
 						<p>ćevap meso, domaća kifla, prilozi</p>
 								
-								<span class="new-price item-price">230</span>
+								<span class="new-price item-price">230</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
+							</div>
+						</div>
+					</div>    
+				</div>
+				<div class="menu-item">
+					<a href="img/demo/food/444.jpg" class="hidden-xs  open-overlay">
+						<figure>
+							<img src="img/placeholder.png" data-src="img/demo/food/444.jpg" alt="Menu item"/>
+							<div class="actions">
+								<i class="icon-magnifier-add"></i>
+							</div>
+						</figure>
+					</a>
+					<div class="item-description">
+						<div class="">
+							<div class=""> 
+								<h6>Dimljeni vrat 150 gr</h6>
+							<p>dimljeni svinjski vrat, domaća lepinja, prilozi</p>
+								
+								<span class="new-price item-price">270</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
 						</div>
 					</div>
-                    
-                    
 				</div>
                 
 			</div>
@@ -454,7 +484,8 @@
 								<h6>Kobasica dimljena 200 gr</h6>
 						<p>domaća pikant kobasica, domaća kifla </p>
 								
-								<span class="new-price item-price">230</span>
+								<span class="new-price item-price">230</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
 						</div>
 					</div>
@@ -475,7 +506,8 @@
 					<p>pileći file pohovan, domaća lepinja, prilozi
                               </p>
 								
-								<span class="new-price item-price">230</span>
+								<span class="new-price item-price">230</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
 						</div>
 					</div>
@@ -495,7 +527,8 @@
 								<h6>Pohovani pileći susam štapići 180 gr</h6>
 				<p>pohovano belo meso u susamu, domaća lepinja, prilozi </p>
 								
-								<span class="new-price item-price">210</span>
+								<span class="new-price item-price">210</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
 						</div>
 					</div>
@@ -515,7 +548,8 @@
 								<h6>Pileći file 200 gr</h6>
 						<p>pileći file, domaća lepinja, prilozi...</p>
 								
-								<span class="new-price item-price">230</span>
+								<span class="new-price item-price">230</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
 						</div>
 					</div>
@@ -535,7 +569,8 @@
 								<h6>Punjeni pileći file 250 gr</h6>
 							<p>pileći file punjen slaninicom, kulenom, šunkom i sirom...</p>
 								
-								<span class="new-price item-price">270</span>
+								<span class="new-price item-price">270</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
 						</div>
 					</div>
@@ -555,7 +590,8 @@
 								<h6>Pileći batak 200 gr</h6>
 						<p>pileći batak, domaća lepinja, prilozi</p>
 								
-								<span class="new-price item-price">220</span>
+								<span class="new-price item-price">220</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
                             
 						</div>
@@ -588,7 +624,8 @@
 					<p>punjeni pileći batak , domaća lepinja, prilozi
                               </p>
 								
-								<span class="new-price item-price">270</span>
+								<span class="new-price item-price">270</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
 						</div>
 					</div>
@@ -608,7 +645,8 @@
 								<h6>Pohovani batak 230 gr</h6>
 				<p>pohovano batak, domaća lepinja, prilozi </p>
 								
-								<span class="new-price item-price">210</span>
+								<span class="new-price item-price">210</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
 						</div>
 					</div>
@@ -628,31 +666,17 @@
 								<h6>Pileći rol ražnjići 230 gr</h6>
 						<p>pileći ražnjići rolovani slaninicom, domaća lepinja, prilozi...</p>
 								
-								<span class="new-price item-price">250</span>
+								<span class="new-price item-price">250</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="menu-item">
-					<a href="img/demo/food/444.jpg" class="hidden-xs  open-overlay">
-						<figure>
-							<img src="img/placeholder.png" data-src="img/demo/food/444.jpg" alt="Menu item"/>
-							<div class="actions">
-								<i class="icon-magnifier-add"></i>
-							</div>
-						</figure>
-					</a>
-					<div class="item-description">
-						<div class="">
-							<div class=""> 
-								<h6>Dimljeni vrat 150 gr</h6>
-							<p>dimljeni svinjski vrat, domaća lepinja, prilozi</p>
-								
-								<span class="new-price item-price">270</span>
-							</div>
-						</div>
-					</div>
-				</div>
+					
+					<!-- PRAZAN -->
+					
+                </div>
 				<div class="menu-item">
 					<a href="img/demo/food/555.jpg" class="hidden-xs  open-overlay">
 						<figure>
@@ -668,19 +692,15 @@
 								<h6>Pohovani kačkavalj 180 gr</h6>
 						<p>pohovani kačkavalj, domaća lepinja, prilozi</p>
 								
-								<span class="new-price item-price">200</span>
+								<span class="new-price item-price">200</span><br><br>
+								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
                             
                             
 						</div>
-                        
-                        
-                        
 					</div>
-                    
-                    </div>
-                        
-					</div>
+                </div>
+</div>
                     
 
                     
