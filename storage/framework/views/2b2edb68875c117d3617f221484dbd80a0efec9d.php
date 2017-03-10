@@ -1,31 +1,11 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8"> 
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>ORZI PIZZERIA</title>
-		<meta name="description" content="pica, dostava, zvezdara, vojislava ilica, tortilja, sendvic, pljeskavica, cevapi, pizza, paste, beograd, Orzi, piletina, hrana, dostava, crveni krst, vracar">
-		<meta name="msapplication-tap-highlight" content="yes" />
+<?php $__env->startSection('body'); ?>
 
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
-		<link href='http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,600,700' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700,800&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-<!--		 Place favicon.ico and apple-touch-icon.png in the root directory -->
-		<link rel="stylesheet" href="<?php echo e(asset("css/custom.css")); ?>">
-		<link rel="stylesheet" href="<?php echo e(asset("css/foundation.css")); ?>"/>
-        <link rel="stylesheet" href="<?php echo e(asset("css/app.css")); ?>"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<body class="show-nav nav-center home-page yo-anim-enabled">
 
-		<script src="<?php echo e(asset("js/jquery-2.1.0.min.js")); ?>"></script>
-		<script src="<?php echo e(asset("js/modernizr-2.6.2.min.js")); ?>"></script>
-		<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=false&amp;ver=3.0'></script>
+<?php $__env->stopSection(); ?>
 
-        <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
-
-    </head>
-    <body class="show-nav nav-center home-page yo-anim-enabled">
-
-		<!--content-->
+<?php $__env->startSection('content'); ?>
+<!--content-->
 
 
     <span class="loading-wrapper"><img src="img/logo2.png" alt="Loading"/></span>
@@ -38,7 +18,7 @@
 		</div>
 
 		<div class="logo pull-left">
-			<a href="index.html">
+			<a href="<?php echo e(url('/')); ?>">
 				<figure>
 					<img src="img/logo2.png" class="light-logo" alt="ORZI"/>
 					<img src="img/logo2.png" class="dark-logo" alt="ORZI"/>
@@ -51,47 +31,50 @@
 					<a href="<?php echo e(url('/')); ?>" class="active active2 active3 active4 active5">Početna</a>
 					
 				</li>				
-				
-				
 				<li>
 					<a href="<?php echo e(url('/menu')); ?>" class="hover-subnav ">meni</a>
 					<div class="subnav image-subnav">
 						<ul class="subnav-wrapper">			
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#starters">salate</a>
+								<a href="<?php echo e(url('/menu')); ?>#grill">roštilj</a>
 								<div>
-									<a href="<?php echo e(url('/menu')); ?>#starters" class="menu-img" style="background-image: url('img/demo/nav/starters.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#grill" class="menu-img" style="background-image: url('img/demo/nav/grill.jpg')"></a>
+								</div>
+							</li>			
+							<li>
+								<a href="<?php echo e(url('/menu')); ?>#salad">salate</a>
+								<div>
+									<a href="<?php echo e(url('/menu')); ?>#salad" class="menu-img" style="background-image: url('img/demo/nav/salads.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#salads">paste</a>
+								<a href="<?php echo e(url('/menu')); ?>#pasta">paste</a>
 								<div>							
-									<a href="<?php echo e(url('/menu')); ?>#salads" class="menu-img" style="background-image: url('img/demo/nav/salads.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#pasta" class="menu-img" style="background-image: url('img/demo/nav/pasta.jpg')"></a>
 								</div>
-							
 							</li>
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#soups">pizza</a>
+								<a href="<?php echo e(url('/menu')); ?>#tortilla">tortilje</a>
 								<div>
-									<a href="<?php echo e(url('/menu')); ?>#soups" class="menu-img" style="background-image: url('img/demo/nav/soup.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#tortilla" class="menu-img" style="background-image: url('img/demo/nav/tortilla.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#mains">pizza</a>
+								<a href="<?php echo e(url('/menu')); ?>#pizza">pizza</a>
 								<div>
-									<a href="<?php echo e(url('/menu')); ?>#mains" class="menu-img" style="background-image: url('img/demo/nav/mains.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#pizza" class="menu-img" style="background-image: url('img/demo/nav/pizza.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#desserts">palačinke</a>
+								<a href="<?php echo e(url('/menu')); ?>#pancake">palačinke</a>
 								<div>
-									<a href="<?php echo e(url('/menu')); ?>#desserts" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#pancake" class="menu-img" style="background-image: url('img/demo/nav/pancake.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#drinks">sendviči</a>
+								<a href="<?php echo e(url('/menu')); ?>#sandwich">sendviči</a>
 								<div>							
-									<a href="<?php echo e(url('/menu')); ?>#drinks" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#sandwich" class="menu-img" style="background-image: url('img/demo/nav/sandwich.jpg')"></a>
 								</div>
 							</li>
 						</ul>
@@ -101,11 +84,11 @@
 				<li>
 					<a href="<?php echo e(url('/contact')); ?>" class="">kontakt</a>	
 				</li>
-
+				<!--
 				<li>
 					<a href="<?php echo e(url('/narucite_online')); ?>" class="">naručite online</a>	
 				</li>
-
+				-->
 				<li>
 					<a href="<?php echo e(url('/gallery')); ?>" class="hover-subnav">galerija</a>
 					
@@ -207,98 +190,8 @@
 	</div>
 </header>
 <div class="visible-xs mobile-basic-info">
-	<div id="footer-spacer"></div>
-<footer id="footer" class="text-center">
-
-	<a href="#" class="to-the-top">
-		<i class="fa fa-arrow-circle-o-up"></i>
-	</a>
-
-	<h2>ORZI PIZZERIA</h2>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2 text-center v-card">
-
-					<div class="col-sm-6 col-lg-3">
-						<div class="open-daily">
-							<span class="day">Ponedeljak - Subota</span>
-							<span class="hours">09.00 - 23.00</span>
-						</div>
-					</div>
-					<div class="col-sm-6 col-lg-3">	
-						<div class="open-daily">
-							<span class="day">Nedelja</span>
-							<span class="hours">16.00 - 23.00</span>
-						</div>
-					</div>	
-					<div class="col-sm-6 col-lg-3">	
-						<div class="simple-contact">
-							<span class="address">Vojislava Ilića 73a</span>
-							<span class="postal-code">11000 Beograd </span>
-						</div>
-					</div>	
-					<div class="col-sm-6 col-lg-3">	
-						<div class="simple-contact">
-							<span class="mobile"><a href="#">061-6561-301</a></span>
-							<span class="email"><a href="#">office@orzipizzeria.rs</a></span>
-						</div>
-					</div>
-			</div>
-		</div>
-	</div>
-			<ul class="social-icon clearfix">
-				<li>
-					<a href="https://www.facebook.com/OrziPizzeria"><i class="fa fa-facebook"></i></a>
-				</li>
-				<li>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-				</li>
-				<li>
-					<a href="#"><i class="fa fa-pinterest"></i></a>
-				</li>
-				<li>
-					<a href="#"><i class="fa fa-google-plus"></i></a>
-				</li>
-				<li>
-					<a href="#"><i class="fa fa-instagram"></i></a>
-				</li>
-			</ul>
 
 
-	<p class="copyrights">© 2015 <a href="">ORZI PIZZERIA</a>. All Rights Reserved. </p>
-</footer>
-	<div class="home-bg-image"></div>
-</div>
+<?php $__env->stopSection(); ?>
 
-
-		<div class="gallery-wrapper"></div>
-
-		<div id="preloader">
-			<div id="status">
-				<div class="loading-wrapper"></div>
-			</div>
-			<div id="status-loaded"></div>
-		</div>
-
-		<script src="<?php echo e(asset('js/browser.js')); ?>"></script>
-		<script src="<?php echo e(asset('js/jquery.ba-throttle-debounce.min.js')); ?>"></script>
-		<script src="<?php echo e(asset('js/jquery.smooth-scroll.js')); ?>"></script>
-		<script src="<?php echo e(asset('js/matchmedia.js')); ?>"></script>
-		<script src="<?php echo e(asset('js/enquire.min.js')); ?>"></script>
-		<script src="<?php echo e(asset('js/jquery.velocity.min.js')); ?>"></script>
-		<script src="<?php echo e(asset('js/waypoints.js')); ?>"></script>		
-		<script src="<?php echo e(asset('js/owl.carousel.js')); ?>"></script>
-		<script src="<?php echo e(asset('js/jquery.mb.YTPlayer.js')); ?>"></script>
-		<script src="<?php echo e(asset('js/jquery.parallaxify.js')); ?>"></script>
-		<script src="<?php echo e(asset('js/jquery.imagesloaded.js')); ?>"></script>
-		<script src="<?php echo e(asset('js/jquery.unveil.min.js')); ?>"></script>
-		<script src="<?php echo e(asset('js/jquery.superslides.min.js')); ?>"></script>
-		<script src="<?php echo e(asset('js/jquery.fullPage.min.js')); ?>"></script>
-		<script src="<?php echo e(asset('js/jquery.mixitup.js')); ?>"></script>
-		<script src="<?php echo e(asset('js/main.js')); ?>"></script>
-
-		<!--<script src="<?php echo e(asset('js/jquery.js')); ?>"></script>-->
-    	<script src="<?php echo e(asset('js/app.js')); ?>"></script>
-
-	</body>
-</html>
+<?php echo $__env->make('layout.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
