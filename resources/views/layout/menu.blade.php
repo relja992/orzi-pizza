@@ -217,7 +217,7 @@
 								<h6>CHEESEBURGER 120 GR</h6>
 								<p>JUNETINA, SUSAM KAJZERICA, KAČKAVALJ, ZELENA PARADAJZ </p>
 								
-								<span class="new-price item-price">170</span><br><br>
+								<span class="new-price item-price">170 RSD</span><br><br>
 								<button type="button" class="btn btn-danger">Dodaj u korpu</button>
 							</div>
 						</div>

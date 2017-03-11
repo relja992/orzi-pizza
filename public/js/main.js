@@ -1314,3 +1314,5 @@ enquire.register("screen and (min-width: 992px)", {
 	// Place cleanup code here
 	destroy : function() {}
 }, true);
+
+
