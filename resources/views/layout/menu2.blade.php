@@ -88,12 +88,12 @@
 					
 				</li>
 				<li>
-                        <a href="#">
+                        <a href="{{ route('cart.index') }}">
                             <i class="fa fa-shopping-cart fa-2x" aria-hidden="true" style >
                             </i>
                             Korpa
-                            <span class="badge label-danger">
-                                3
+                            <span class="badge" style="background-color: red;">
+                                {{ Cart::count() }}
                             </span>
                         </a>
                 </li>				
@@ -215,26 +215,28 @@
 						</a>
 						<div class="item-description" style="height:300px;">
 							<div class="">
-								<div class=""> 
+								<div class="">
 									<h4>{{ $product->name }}</h4>
 									<p>{{ $product->description }}</p>
+									{!! Form::open(['route' => ['cart.addItem',$product->id], 'method' => 'POST']) !!}
 									
 									@if($category->slug == 'pizza')
 										<br><h9 style="font-size:9px">Odaberi veličinu</h9><br>
 										<div class="btn-group" role="group" aria-label="...">
-										  <button type="button" class="btn btn-default">24 cm</button>
-										  <button type="button" class="btn btn-default">32 cm</button>
-										  <button type="button" class="btn btn-default">45 cm</button>
+											<label class="radio-inline"><input type="radio" value="1" name="optradio">24 cm</label>
+											<label class="radio-inline"><input type="radio" value="2" name="optradio">32 cm</label>
+											<label class="radio-inline"><input type="radio" value="3" name="optradio">45 cm</label>
 										</div><br>&nbsp;
 
-										<span class="new-price item-price">{{ $product->price }}</span><h8>RSD</h8>&nbsp;
-										<span class="new-price item-price">{{ $product->price2 }}</span><h8>RSD</h8>&nbsp;
+										<span class="new-price item-price">{{ $product->price }}</span><h8>RSD</h8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<span class="new-price item-price">{{ $product->price2 }}</span><h8>RSD</h8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 										<span class="new-price item-price">{{ $product->price3 }}</span>RSD<br><br>
 									@else
-										<span class="new-price item-price">{{ $product->price }} RSD</span><br><br>
+										<span class="new-price item-price">{{ $product->price}} RSD</span><br><br>
 									@endif
 
-									<button type="button" class="btn btn-danger">Dodaj u korpu</button>
+									<input class="btn btn-danger btn-lg active" type="submit" value="Dodaj u korpu">
+									{!! Form::close() !!}
 								</div>
 							</div>
 						</div>

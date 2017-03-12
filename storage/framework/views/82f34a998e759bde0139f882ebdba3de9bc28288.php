@@ -5,29 +5,45 @@
 		<div class="col-md-12">
 			<table class="table">
 				<thead>
-					<th>#</th>
-					<th>Naziv</th>
-					<th>Opis</th>
-					<th>Cena</th>
-					<th>Slika</th>
-					<th>Kategorija</th>
-					<th></th>
+					<th style="text-align:center">#</th>
+					<th style="text-align:center">Naziv</th>
+					<th style="text-align:center">Opis</th>
+					<th style="text-align:center"></th>
+					<th style="text-align:center">Cene</th>
+					<th style="text-align:center"></th>
+					<th style="text-align:center">Slika</th>
+					<th style="text-align:center">Kategorija</th>
+					<th style="text-align:center"></th>
 				</thead>
 
 				<tbody>
-					
-					<?php foreach($products as $product): ?>
-						
-						<tr>
-							<th><?php echo e($product->id); ?></th>
-							<td><?php echo e($product->name); ?></td>
-							<td><?php echo e(substr(strip_tags($product->description), 0, 50)); ?><?php echo e(strlen(strip_tags($product->description)) > 50 ? "..." : ""); ?></td>
-							<td><?php echo e($product->cena); ?></td>
-							<td><?php echo e($product->image); ?></td>
-							<td><?php echo e($product->category->name); ?></td>
-							<td><a href="<?php echo e(route('admin.product.index', $product->id)); ?>" class="btn btn-primary btn-sm">Izmeni</a></td>
-							<td><a href="<?php echo e(route('admin.product.destroy', $product->id)); ?>" class="btn btn-primary btn-sm">Obriši</a></td>
-						</tr>
+					<?php foreach($categories as $category): ?>
+
+						<?php foreach($products as $product): ?>
+
+							<?php if($product->category_id == $category->id): ?>
+							<tr>
+								<td style="vertical-align:middle"><?php echo e($product->id); ?></td>
+								<td style="vertical-align:middle"><?php echo e($product->name); ?></td>
+								<td style="vertical-align:middle"><?php echo e(substr(strip_tags($product->description), 0, 50)); ?><?php echo e(strlen(strip_tags($product->description)) > 50 ? "..." : ""); ?></td>
+								<td style="vertical-align:middle"><?php echo e($product->price); ?></td>
+
+								<?php if($category->slug == 'pizza'): ?>
+									<td style="vertical-align:middle"><?php echo e($product->price2); ?></td>
+									<td style="vertical-align:middle"><?php echo e($product->price3); ?></td>
+								<?php else: ?>
+									<td></td>
+									<td></td>
+								<?php endif; ?>
+
+								<td style="vertical-align:middle"><img src="<?php echo e(asset('/images/').'/'.$product->image); ?>" alt="" style="width:50px;height:50px;border-radius: 20%;"></td>
+								<td style="vertical-align:middle"><?php echo e($product->category->name); ?></td>
+								<td style="vertical-align:middle"><a href="<?php echo e(route('admin.product.index', $product->id)); ?>" class="btn btn-primary btn-sm">Izmeni</a></td>
+								<td style="vertical-align:middle"><a href="<?php echo e(route('admin.product.destroy', $product->id)); ?>" class="btn btn-danger btn-sm">Obriši</a></td>
+							</tr>
+							<?php endif; ?>
+
+						<?php endforeach; ?>
 
 					<?php endforeach; ?>
 

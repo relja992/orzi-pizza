@@ -678,3 +678,11 @@ body {
         border-radius: 10px;
     }
 }
+
+.ravnanje {
+    vertical-align:middle;
+}
+
+td {
+    vertical-align:middle;
+}

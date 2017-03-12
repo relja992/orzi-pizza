@@ -7,29 +7,45 @@
 		<div class="col-md-12">
 			<table class="table">
 				<thead>
-					<th>#</th>
-					<th>Naziv</th>
-					<th>Opis</th>
-					<th>Cena</th>
-					<th>Slika</th>
-					<th>Kategorija</th>
-					<th></th>
+					<th style="text-align:center">#</th>
+					<th style="text-align:center">Naziv</th>
+					<th style="text-align:center">Opis</th>
+					<th style="text-align:center"></th>
+					<th style="text-align:center">Cene</th>
+					<th style="text-align:center"></th>
+					<th style="text-align:center">Slika</th>
+					<th style="text-align:center">Kategorija</th>
+					<th style="text-align:center"></th>
 				</thead>
 
 				<tbody>
-					
-					@foreach ($products as $product)
-						
-						<tr>
-							<th>{{ $product->id }}</th>
-							<td>{{ $product->name }}</td>
-							<td>{{ substr(strip_tags($product->description), 0, 50) }}{{ strlen(strip_tags($product->description)) > 50 ? "..." : "" }}</td>
-							<td>{{ $product->cena }}</td>
-							<td>{{ $product->image }}</td>
-							<td>{{ $product->category->name }}</td>
-							<td><a href="{{ route('admin.product.index', $product->id) }}" class="btn btn-primary btn-sm">Izmeni</a></td>
-							<td><a href="{{ route('admin.product.destroy', $product->id) }}" class="btn btn-primary btn-sm">Obriši</a></td>
-						</tr>
+					@foreach($categories as $category)
+
+						@foreach ($products as $product)
+
+							@if($product->category_id == $category->id)
+							<tr>
+								<td style="vertical-align:middle">{{ $product->id }}</td>
+								<td style="vertical-align:middle">{{ $product->name }}</td>
+								<td style="vertical-align:middle">{{ substr(strip_tags($product->description), 0, 50) }}{{ strlen(strip_tags($product->description)) > 50 ? "..." : "" }}</td>
+								<td style="vertical-align:middle">{{ $product->price }}</td>
+
+								@if($category->slug == 'pizza')
+									<td style="vertical-align:middle">{{ $product->price2 }}</td>
+									<td style="vertical-align:middle">{{ $product->price3 }}</td>
+								@else
+									<td></td>
+									<td></td>
+								@endif
+
+								<td style="vertical-align:middle"><img src="{{ asset('/images/').'/'.$product->image }}" alt="" style="width:50px;height:50px;border-radius: 20%;"></td>
+								<td style="vertical-align:middle">{{ $product->category->name }}</td>
+								<td style="vertical-align:middle"><a href="{{ route('admin.product.index', $product->id) }}" class="btn btn-primary btn-sm">Izmeni</a></td>
+								<td style="vertical-align:middle"><a href="{{ route('admin.product.destroy', $product->id) }}" class="btn btn-danger btn-sm">Obriši</a></td>
+							</tr>
+							@endif
+
+						@endforeach
 
 					@endforeach
 

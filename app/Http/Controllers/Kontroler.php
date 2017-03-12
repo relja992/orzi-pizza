@@ -22,7 +22,8 @@ class Kontroler extends Controller
     public function menu2(){
         $cat = Category::all();
         $pro = Product::all();
-        return view('layout.menu2')->withCategories($cat)->withProducts($pro);
+        $vel = "1";
+        return view('layout.menu2')->withCategories($cat)->withProducts($pro)->withTest($vel);
     }
 
     public function contact(){

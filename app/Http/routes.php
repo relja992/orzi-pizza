@@ -38,6 +38,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+Route::resource('/cart', 'CartController');
+Route::post('/cart/addItem/{id}', ['as' => 'cart.addItem', 'uses' => 'CartController@addItem']);
+Route::get('/checkout', 'CheckoutController@step1');
+Route::get('/shipping', ['as' => 'shipping', 'uses' => 'CheckoutController@shipping']);
+Route::get('/test', ['as' => 'address.store', 'uses' => 'CheckoutController@shipping']);
 
 
 /*Route::group(['prefix' => 'admin', 'middleware' => ['auth','admin']], function () {
