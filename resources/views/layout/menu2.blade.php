@@ -89,10 +89,10 @@
 				</li>
 				<li>
                         <a href="{{ route('cart.index') }}">
-                            <i class="fa fa-shopping-cart fa-2x" aria-hidden="true" style >
+                            <i class="fa fa-shopping-basket fa-2x" aria-hidden="true" style="color:#EA4623" >
                             </i>
                             Korpa
-                            <span class="badge" style="background-color: red;">
+                            <span class="badge" style="background-color: #EA4623;">
                                 {{ Cart::count() }}
                             </span>
                         </a>
@@ -219,6 +219,7 @@
 									<h4>{{ $product->name }}</h4>
 									<p>{{ $product->description }}</p>
 									{!! Form::open(['route' => ['cart.addItem',$product->id], 'method' => 'POST']) !!}
+									Form::open(array('route' => array('route.name', $user->id)))
 									
 									@if($category->slug == 'pizza')
 										<br><h9 style="font-size:9px">Odaberi veličinu</h9><br>

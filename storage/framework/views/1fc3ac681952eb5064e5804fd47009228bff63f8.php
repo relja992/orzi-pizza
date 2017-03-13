@@ -7,13 +7,13 @@
                     Kontrolna tabla</a></li>
             <li class="submenu">
                 <a href="#">
-                    <i class="glyphicon glyphicon-list"></i> Jela
+                    <i class="glyphicon glyphicon-cutlery"></i> Jela
                     <span class="caret pull-right"></span>
                 </a>
                 <!-- Sub menu -->
                 <ul>
-                    <li><a href="<?php echo e(route('admin.product.index')); ?>">Sva jela</a></li>
-                    <li><a href="<?php echo e(route('admin.product.create')); ?>">Dodaj jelo</a></li>
+                    <li><a href="<?php echo e(route('admin.product.index')); ?>">- Sva jela</a></li>
+                    <li><a href="<?php echo e(route('admin.product.create')); ?>">- Dodaj jelo</a></li>
                 </ul>
             </li>
         </ul>

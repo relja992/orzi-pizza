@@ -87,10 +87,10 @@
 				</li>
 				<li>
                         <a href="<?php echo e(route('cart.index')); ?>">
-                            <i class="fa fa-shopping-cart fa-2x" aria-hidden="true" style >
+                            <i class="fa fa-shopping-basket fa-2x" aria-hidden="true" style="color:#EA4623" >
                             </i>
                             Korpa
-                            <span class="badge" style="background-color: red;">
+                            <span class="badge" style="background-color: #EA4623;">
                                 <?php echo e(Cart::count()); ?>
 
                             </span>
@@ -219,6 +219,7 @@
 									<p><?php echo e($product->description); ?></p>
 									<?php echo Form::open(['route' => ['cart.addItem',$product->id], 'method' => 'POST']); ?>
 
+									Form::open(array('route' => array('route.name', $user->id)))
 									
 									<?php if($category->slug == 'pizza'): ?>
 										<br><h9 style="font-size:9px">Odaberi veličinu</h9><br>
