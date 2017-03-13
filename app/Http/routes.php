@@ -42,7 +42,15 @@ Route::resource('/cart', 'CartController');
 Route::post('/cart/addItem/{id}', ['as' => 'cart.addItem', 'uses' => 'CartController@addItem']);
 Route::get('/checkout', 'CheckoutController@step1');
 Route::get('/shipping', ['as' => 'shipping', 'uses' => 'CheckoutController@shipping']);
+Route::post('/orderstore', ['as' => 'orderstore', 'uses' => 'CheckoutController@finishOrder']);
 Route::get('/test', ['as' => 'address.store', 'uses' => 'CheckoutController@shipping']);
+
+Route::get('/email', function(){
+        Mail::send('test', ['ime' => 'Djoka'], function ($m){
+
+            $m->to('office@rimteam.com', 'RiM Team')->subject('Your Reminder!');
+        });
+});
 
 
 /*Route::group(['prefix' => 'admin', 'middleware' => ['auth','admin']], function () {

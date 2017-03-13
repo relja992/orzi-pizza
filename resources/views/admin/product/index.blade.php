@@ -52,25 +52,7 @@
 				</tbody>
 			</table> <br><br><br><br><br>
 
-			<ul>
-			    @forelse($products as $product)
-			    <li>
-			        <h4>Naziv jel:{{$product->name}}</h4>
-			        <h4>Kategorija:{{count($product->category)?$product->category->name:"N/A"}}</h4>
-			        <form action="{{route('admin.product.destroy',$product->id)}}"  method="POST">
-			           {{csrf_field()}}
-			           {{method_field('DELETE')}}
-			           <input class="btn btn-sm btn-danger" type="submit" value="Delete">
-			         </form>
-
-			    </li>
-
-			        @empty
-
-			        <h3>No products</h3>
-
-			    @endforelse
-			</ul>
+			
 		</div>
 	</div>
 

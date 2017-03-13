@@ -1,12 +1,10 @@
-@extends('layout.main')
-
-@section('body')
+<?php $__env->startSection('body'); ?>
     
 <body class="intro-fullscreen fixed-footer scroll-down yo-anim-enabled">
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 <!--content-->
 <nav id="main-navbar" class="hidden-xs hidden-sm">
 	<div class="nav hidden-xs">
@@ -17,7 +15,7 @@
 		</div>
 
 		<div class="logo pull-left">
-			<a href="{{ url('/') }}">
+			<a href="<?php echo e(url('/')); ?>">
 				<figure>
 					<img src="img/logo1.png" class="light-logo" alt="ORZI PIZZERIA"/>
 					<img src="img/logo2.png" class="dark-logo" alt="ORZI PIZZERIA"/>
@@ -27,52 +25,52 @@
 		<div class="main-nav">
 			<ul class="pull-right">
 				<li>
-					<a href="{{ url('/') }}" class="    ">Početna</a>	
+					<a href="<?php echo e(url('/')); ?>" class="    ">Početna</a>	
 				</li>				
 				<li>
-					<a href="{{ url('/menu') }}" class="hover-subnav">meni</a>
+					<a href="<?php echo e(url('/menu')); ?>" class="hover-subnav">meni</a>
 					<div class="subnav image-subnav">
 						<ul class="subnav-wrapper">
 							<li>
-								<a href="{{ url('/menu') }}#grill" style="color: white;">roštilj</a>
+								<a href="<?php echo e(url('/menu')); ?>#grill" style="color: white;">roštilj</a>
 								<div>
-									<a href="{{ url('/menu') }}#grill" class="menu-img" style="background-image: url('img/demo/nav/grill.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#grill" class="menu-img" style="background-image: url('img/demo/nav/grill.jpg')"></a>
 								</div>
 							</li>			
 							<li>
-								<a href="{{ url('/menu') }}#salad" style="color: white;">salate</a>
+								<a href="<?php echo e(url('/menu')); ?>#salad" style="color: white;">salate</a>
 								<div>
-									<a href="{{ url('/menu') }}#salad" class="menu-img" style="background-image: url('img/demo/nav/starters.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#salad" class="menu-img" style="background-image: url('img/demo/nav/starters.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#pasta" style="color: white;">paste</a>
+								<a href="<?php echo e(url('/menu')); ?>#pasta" style="color: white;">paste</a>
 								<div>							
-									<a href="{{ url('/menu') }}#pasta" class="menu-img" style="background-image: url('img/demo/nav/salads.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#pasta" class="menu-img" style="background-image: url('img/demo/nav/salads.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#tortilla" style="color: white;">tortilje</a>
+								<a href="<?php echo e(url('/menu')); ?>#tortilla" style="color: white;">tortilje</a>
 								<div>
-									<a href="{{ url('/menu') }}#tortilla" class="menu-img" style="background-image: url('img/demo/nav/mains.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#tortilla" class="menu-img" style="background-image: url('img/demo/nav/mains.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#pizza" style="color: white;">pizza</a>
+								<a href="<?php echo e(url('/menu')); ?>#pizza" style="color: white;">pizza</a>
 								<div>
-									<a href="{{ url('/menu') }}#pizza" class="menu-img" style="background-image: url('img/demo/nav/soup.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#pizza" class="menu-img" style="background-image: url('img/demo/nav/soup.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#pancake" style="color: white;">palačinke</a>
+								<a href="<?php echo e(url('/menu')); ?>#pancake" style="color: white;">palačinke</a>
 								<div>
-									<a href="{{ url('/menu') }}#pancake" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#pancake" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#sandwich" style="color: white;">sendviči</a>
+								<a href="<?php echo e(url('/menu')); ?>#sandwich" style="color: white;">sendviči</a>
 								<div>							
-									<a href="{{ url('/menu') }}#sandwich style="color: white;"" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#sandwich style="color: white;"" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
 								</div>
 							</li>
 						</ul>
@@ -80,20 +78,21 @@
 				</li>	
 				
 				<li>
-					<a href="{{ url('/contact') }}" class="">kontakt</a>	
+					<a href="<?php echo e(url('/contact')); ?>" class="">kontakt</a>	
 				</li>
 				
 				<li>
-					<a href="{{ url('/gallery') }}" class="hover-subnav">galerija</a>
+					<a href="<?php echo e(url('/gallery')); ?>" class="hover-subnav">galerija</a>
 					
 				</li>
 				<li>
-                        <a href="{{ route('cart.index') }}">
+                        <a href="<?php echo e(route('cart.index')); ?>">
                             <i class="fa fa-shopping-basket fa-2x" aria-hidden="true" style="color:#EA4623" >
                             </i>
                             Korpa
                             <span class="badge" style="background-color: #EA4623;">
-                                {{ Cart::count() }}
+                                <?php echo e(Cart::count()); ?>
+
                             </span>
                         </a>
                 </li>				
@@ -195,19 +194,19 @@
 		</div> -->
 
 	<div class="container-fluid menu-content mixitup">
-	@foreach($categories as $category)
-		<div class="mix {{ $category->slug }}" data-myorder="0">
+	<?php foreach($categories as $category): ?>
+		<div class="mix <?php echo e($category->slug); ?>" data-myorder="0">
 			<div class="row">
 				<div class="col-xs-12 menu-category sticky-header sticky-header first-header fixed visible">
-					<h2>{{ $category->name }}</h2>
+					<h2><?php echo e($category->name); ?></h2>
 				</div>
 				<div class="row">
-					@foreach($products as $product)
-					@if($product->category_id == $category->id)
+					<?php foreach($products as $product): ?>
+					<?php if($product->category_id == $category->id): ?>
 					<div class="menu-item">
-						<a href="{{ url('images', $product->image) }}" class="hidden-xs open-overlay">
+						<a href="<?php echo e(url('images', $product->image)); ?>" class="hidden-xs open-overlay">
 							<figure>
-								<img src="img/placeholder.png" data-src="{{ url('images', $product->image) }}" alt="Menu item"/>
+								<img src="img/placeholder.png" data-src="<?php echo e(url('images', $product->image)); ?>" alt="Menu item"/>
 								<div class="actions">
 									<i class="icon-magnifier-add"></i>
 								</div>
@@ -216,12 +215,13 @@
 						<div class="item-description" style="height:300px;">
 							<div class="">
 								<div class="">
-									<h4>{{ $product->name }}</h4>
-									<p>{{ $product->description }}</p>
-									{!! Form::open(['route' => ['cart.addItem',$product->id], 'method' => 'POST']) !!}
+									<h4><?php echo e($product->name); ?></h4>
+									<p><?php echo e($product->description); ?></p>
+									<?php echo Form::open(['route' => ['cart.addItem',$product->id], 'method' => 'POST']); ?>
+
 									
 									
-									@if($category->slug == 'pizza')
+									<?php if($category->slug == 'pizza'): ?>
 										<br><h9 style="font-size:9px">Odaberi veličinu</h9><br>
 										<div class="btn-group" role="group" aria-label="...">
 											<label class="radio-inline"><input type="radio" value="1" name="optradio">24 cm</label>
@@ -229,26 +229,28 @@
 											<label class="radio-inline"><input type="radio" value="3" name="optradio">45 cm</label>
 										</div><br>&nbsp;
 
-										<span class="new-price item-price">{{ $product->price }}</span><h8>RSD</h8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-										<span class="new-price item-price">{{ $product->price2 }}</span><h8>RSD</h8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-										<span class="new-price item-price">{{ $product->price3 }}</span>RSD<br><br>
-									@else
-										<span class="new-price item-price">{{ $product->price}} RSD</span><br><br>
-									@endif
+										<span class="new-price item-price"><?php echo e($product->price); ?></span><h8>RSD</h8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<span class="new-price item-price"><?php echo e($product->price2); ?></span><h8>RSD</h8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<span class="new-price item-price"><?php echo e($product->price3); ?></span>RSD<br><br>
+									<?php else: ?>
+										<span class="new-price item-price"><?php echo e($product->price); ?> RSD</span><br><br>
+									<?php endif; ?>
 
 									<input class="btn btn-danger btn-lg active" type="submit" value="Dodaj u korpu">
-									{!! Form::close() !!}
+									<?php echo Form::close(); ?>
+
 								</div>
 							</div>
 						</div>
 					</div>
-					@endif
-					@endforeach
+					<?php endif; ?>
+					<?php endforeach; ?>
 				</div>
 			</div>
 		</div>
-		@endforeach
+		<?php endforeach; ?>
 	</div>
 </section>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
