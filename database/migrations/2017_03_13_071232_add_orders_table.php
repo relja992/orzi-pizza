@@ -18,10 +18,10 @@ class AddOrdersTable extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('address');
-            $table->string('sprat');
-            $table->string('stan');
+            $table->string('sprat')->nullable();
+            $table->string('stan')->nullable();
             $table->string('telephone');
-            $table->string('napomena');
+            $table->string('napomena')->nullable();
             $table->string('email');
             $table->string('price');
             $table->timestamps();

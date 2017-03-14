@@ -16,6 +16,11 @@
                     <li><a href="{{route('admin.product.create')}}">- Dodaj jelo</a></li>
                 </ul>
             </li>
+            <li class="">
+                <a href="{{route('admin.orders.index')}}">
+                    <i class="glyphicon glyphicon-edit"></i> Narudžbine
+                </a>
+            </li>
         </ul>
     </div>
 </div> <!-- ADMIN SIDE NAV-->

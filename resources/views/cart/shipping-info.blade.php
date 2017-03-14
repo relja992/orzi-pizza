@@ -167,7 +167,7 @@
             </div>
             <div class="form-group">
                 {{ Form::label('stan', 'Stan') }}
-                {{ Form::text('phone', null, array('class' => 'form-control')) }}
+                {{ Form::text('stan', null, array('class' => 'form-control')) }}
             </div>
             <div class="form-group">
                 {{ Form::label('telephone', 'Telefon') }}

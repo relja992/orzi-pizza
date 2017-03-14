@@ -1,1 +1,0 @@
-zdravo <?php echo e($ime); ?>

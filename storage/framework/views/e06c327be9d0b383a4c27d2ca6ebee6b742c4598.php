@@ -146,19 +146,55 @@
         <div class="col-md-6 col-md-offset-3">
             <h3 style="text-align:center;">Podaci za dostavu</h3>
 
-            <?php echo Form::open(['route' => 'address.store', 'method' => 'post']); ?>
+            <?php echo Form::open(['route' => 'orderstore', 'method' => 'post']); ?>
 
 
             <div class="form-group">
-                <?php echo e(Form::label('addressline', 'Adresa')); ?>
+                <?php echo e(Form::label('name', 'Ime')); ?>
 
-                <?php echo e(Form::text('addressline', null, array('class' => 'form-control'))); ?>
+                <?php echo e(Form::text('name', null, array('class' => 'form-control'))); ?>
 
             </div>
             <div class="form-group">
-                <?php echo e(Form::label('phone', 'Telefon')); ?>
+                <?php echo e(Form::label('surname', 'Prezime')); ?>
 
-                <?php echo e(Form::text('phone', null, array('class' => 'form-control'))); ?>
+                <?php echo e(Form::text('surname', null, array('class' => 'form-control'))); ?>
+
+            </div>
+            <div class="form-group">
+                <?php echo e(Form::label('address', 'Ulica i broj')); ?>
+
+                <?php echo e(Form::text('address', null, array('class' => 'form-control'))); ?>
+
+            </div>
+            <div class="form-group">
+                <?php echo e(Form::label('sprat', 'Sprat')); ?>
+
+                <?php echo e(Form::text('sprat', null, array('class' => 'form-control'))); ?>
+
+            </div>
+            <div class="form-group">
+                <?php echo e(Form::label('stan', 'Stan')); ?>
+
+                <?php echo e(Form::text('stan', null, array('class' => 'form-control'))); ?>
+
+            </div>
+            <div class="form-group">
+                <?php echo e(Form::label('telephone', 'Telefon')); ?>
+
+                <?php echo e(Form::text('telephone', null, array('class' => 'form-control'))); ?>
+
+            </div>
+            <div class="form-group">
+                <?php echo e(Form::label('email', 'E-mail')); ?>
+
+                <?php echo e(Form::text('email', null, array('class' => 'form-control'))); ?>
+
+            </div>
+            <div class="form-group">
+                <?php echo e(Form::label('napomena', 'Napomena')); ?>
+
+                <?php echo e(Form::textarea('napomena', null, array('class' => 'form-control'))); ?>
 
             </div>
             <div class="col-md-8 col-md-offset-2" id="hiddenDiv" style="text-align:center;">

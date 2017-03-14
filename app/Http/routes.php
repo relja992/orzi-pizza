@@ -33,6 +33,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource('product','ProductsController');
 
 	Route::resource('category','CategoriesController');
+
+    Route::get('orders/{id}details/', ['as' => 'orders.details', 'uses' => 'OrderController@orderDetails']);
+    Route::resource('orders','OrderController');
 });
 
 Route::auth();

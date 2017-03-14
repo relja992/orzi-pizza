@@ -18,7 +18,7 @@ class CheckoutController extends Controller
 
     public function shipping()
     {
-        return view('layout.shipping-info');
+        return view('cart.shipping-info');
     }
 
     public function finishOrder(Request $request){
@@ -61,6 +61,12 @@ class CheckoutController extends Controller
         	}
 
     	//send email
+
+        //praznjenje korpe
+        Cart::destroy();
+
+        //redirekcija
+        return redirect()->route('home');
 
     }
 }
