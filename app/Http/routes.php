@@ -23,21 +23,6 @@ Route::get('/contact', ['as' => 'contact', 'uses' => 'Kontroler@contact']);
 Route::get('/gallery', ['as' => 'gallery', 'uses' => 'Kontroler@gallery']);
 //Route::get('/narucite_online', ['as' => 'narucite_online', 'uses' => 'Kontroler@online']);
 
-
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
-	
-    Route::get('/', function () {
-        return view('admin.index');
-    })->name('admin.index');
-
-    Route::resource('product','ProductsController');
-
-	Route::resource('category','CategoriesController');
-
-    Route::get('orders/{id}details/', ['as' => 'orders.details', 'uses' => 'OrderController@orderDetails']);
-    Route::resource('orders','OrderController');
-});
-
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
@@ -48,36 +33,21 @@ Route::get('/shipping', ['as' => 'shipping', 'uses' => 'CheckoutController@shipp
 Route::post('/orderstore', ['as' => 'orderstore', 'uses' => 'CheckoutController@finishOrder']);
 Route::get('/test', ['as' => 'address.store', 'uses' => 'CheckoutController@shipping']);
 
-Route::get('/email', function(){
-        Mail::send('test', ['ime' => 'Djoka'], function ($m){
-
-            $m->to('office@rimteam.com', 'RiM Team')->subject('Your Reminder!');
-        });
-});
+Route::get('/email/{id}', 'EmailController@posalji');
 
 
-/*Route::group(['prefix' => 'admin', 'middleware' => ['auth','admin']], function () {
-    Route::post('toggledeliver/{orderId}', 'OrderController@toggledeliver')->name('toggle.deliver');
 
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+    
     Route::get('/', function () {
         return view('admin.index');
     })->name('admin.index');
 
     Route::resource('product','ProductsController');
+
     Route::resource('category','CategoriesController');
 
-    Route::get('orders/{type?}', 'OrderController@Orders');
-
+    Route::get('orders/{id}/details/', ['as' => 'admin.orders.details', 'uses' => 'OrderController@orderDetails']);
+    Route::get('orders/{id}/updatee/', ['as' => 'admin.orders.updatee', 'uses' => 'OrderController@updatee']);
+    Route::resource('orders','OrderController');
 });
-Route::resource('address','AddressController');
-
-//Route::get('checkout','CheckoutController@step1');
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('shipping-info','CheckoutController@shipping')->name('checkout.shipping');
-});
-
-
-Route::get('payment','CheckoutController@payment')->name('checkout.payment');
-Route::post('store-payment','CheckoutController@storePayment')->name('payment.store');*/
-
-

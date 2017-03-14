@@ -17,16 +17,18 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $ord = Order::all();
+        $ord = Order::all()->sortByDesc('id');
 
         return view('admin.orders.index')->withOrders($ord);
     }
 
     public function orderDetails($id){
-        $ord = Order::all();
-        $ordItems = OrderItems::find($id);
 
-        dd($ordItems);
+        $ord = Order::find($id);
+        $ordItems = OrderItems::where('order_id', $id)->get();
+        $i=1;
+
+        return view('admin.orders.orderDetails')->withOrd($ord)->withTest($ordItems)->withI($i);
     }
 
     /**
@@ -79,10 +81,18 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $orders)
     {
-        //
+        dd($orders);
     }
+
+    public function updatee($id)
+    {
+        Order::where('id', $id)->update(['status' => 'odobrena']);
+
+        return redirect()->route('admin.orders.index');
+    }
+
 
     /**
      * Remove the specified resource from storage.

@@ -75,6 +75,14 @@ class CartController extends Controller
 
         $product = Product::find($id);
 
+        if($product->category->slug == 'pizza'){
+
+            $this->validate($request, [
+                'optradio' => 'required',
+            ]);
+        }
+
+
         $size ="";
         $price = 0;
 

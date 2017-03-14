@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Order;
 use App\OrderItems;
+use Mail;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
 class CheckoutController extends Controller
@@ -43,12 +44,14 @@ class CheckoutController extends Controller
         $order->email = $request->email;
         $order->napomena = $request->napomena;
         $order->price = Cart::subtotal();
+        $order->status = 'na čekanju';
         $order->save();
 
         $id = $order->id;
 
         //taking data from cart inserting to db * 2
-        $cartItems = Cart::content();
+            $cartItems = Cart::content();
+
         	foreach($cartItems as $cartItem){
 
         		$orderItem = new OrderItems();
@@ -62,11 +65,22 @@ class CheckoutController extends Controller
 
     	//send email
 
+            $ord = Order::find($id);
+            $ordItems = OrderItems::where('order_id', $id)->get();
+            $i=1;
+
+            $data = ['ord' => $ord, 'test' => $ordItems, 'i' => $i];
+
+            Mail::send('admin.orders.email', $data, function($message) use ($ord){
+                $message->to($ord['email'], 'RiM Team')->cc('matoriinfos@gmail.com')->subject('Orzi pizzeria');
+            });
+
+
         //praznjenje korpe
-        Cart::destroy();
+            Cart::destroy();
 
         //redirekcija
-        return redirect()->route('home');
+            return redirect()->route('menu2');
 
     }
 }
