@@ -4,24 +4,24 @@
     <title>Admin Sektor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="screen" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{asset('css/admin.css')}}">
+    <link rel="stylesheet" href="<?php echo e(asset('css/admin.css')); ?>">
 </head>
 <body>
-@include('admin.layout.includes.header')
+<?php echo $__env->make('admin.layout.includes.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <div class="page-content">
-    @if(Session::has('message'))
+    <?php if(Session::has('message')): ?>
         <div class="alert alert-info">
-            <p>{{ Session::get('message') }}</p>
+            <p><?php echo e(Session::get('message')); ?></p>
         </div>
-    @endif
+    <?php endif; ?>
 
     <div class="row">
-        @include('admin.layout.includes.sidenav')
+        <?php echo $__env->make('admin.layout.includes.sidenav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         <div class="col-md-10 display-area">
             <div class="row text-center">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="content-box-large">
-                        @yield('content')
+                        <?php echo $__env->yieldContent('content'); ?>
                     </div>
                 </div>
             </div>
@@ -51,8 +51,6 @@
         });
     });
 </script>
-
-@yield('script')
 
 </body>
 </html>
