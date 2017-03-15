@@ -11,7 +11,7 @@
 					<th style="text-align:center">Naziv jela</th>
 					<th style="text-align:center">Opis</th>
 					<th style="text-align:center">Cena</th>
-					<th style="text-align:center">Veličina</th>
+					<th style="text-align:center">Tip</th>
 				</thead>
 
 				<tbody>

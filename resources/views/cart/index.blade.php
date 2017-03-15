@@ -159,9 +159,10 @@
 	            <tr>
 	                <th style="width:200px; text-align:center">Jelo</th>
 	                <th style="width:100px; text-align:center">Cena</th>
-	                <th style="text-align:center">Količina</th>
-	                <th style="text-align:center">Veličina </th>
-	                <th style="text-align:center">Akcija</th>
+	                <th style="text-align:center; width:80px">Količina</th>
+	                <th style="text-align:center">Prilozi</th>
+	                <th style="text-align:center;  width:120px">Tip</th>
+	                <th style="text-align:center; width:100px">Akcija</th>
 	            </tr>
 	            </thead>
 	            <tbody>
@@ -172,18 +173,23 @@
 		                    <td style="vertical-align:middle; text-align:center; ">
 		                        {!! Form::open(['route' => ['cart.update',$cartItem->rowId], 'method' => 'PUT']) !!}
 		                        <input style="width:50%; text-align:center" name="qty" type="text" value="{{$cartItem->qty}}">
-
-
 		                    </td>
-		                    @if($cartItem->options->size != 'standard')
-			                    <td style="vertical-align:middle; text-align:center">
-			                        <div > {!! Form::select('size', ['small'=>'24 cm','medium'=>'32 cm','large'=>'45 cm', 'standard' => 'standard'] , $cartItem->options->has('size')?$cartItem->options->size:'' ) !!}
+		                    <td style="vertical-align:middle; text-align:center; "></td>
+		                    @if($cartItem->options->size == 'small' || $cartItem->options->size == 'medium' || $cartItem->options->size == 'large')
+			                    <td style="vertical-align:middle; text-align:center; width:80px">
+			                        <div > 
+			                        	{!! Form::select('size', ['small'=>'24 cm','medium'=>'32 cm','large'=>'45 cm'] , $cartItem->options->has('size')?$cartItem->options->size:'' ) !!}
 			                        </div>
-
+			                    </td>
+		                    @elseif($cartItem->options->size == 'pene' || $cartItem->options->size == 'fusili')
+								<td style="vertical-align:middle; text-align:center; width:80px">
+			                        <div > 
+			                        	{!! Form::select('size', ['pene'=>'Pene','fusili'=>'Fusili'] , $cartItem->options->has('size')?$cartItem->options->size:'' ) !!}
+			                        </div>
 			                    </td>
 		                    @else
-		                    	<td style="vertical-align:middle; text-align:center">
-
+		                    	<td style="vertical-align:middle; text-align:center; width:80px">
+									<span class="label label-default">Standard</span>
 		                    	</td>
 		                    @endif
 
@@ -194,8 +200,8 @@
 		                        <form action="{{route('cart.destroy',$cartItem->rowId)}}"  method="POST">
 		                           {{csrf_field()}}
 		                           {{method_field('DELETE')}}
-		                           <input class="button small btn-danger" type="submit" value="Obriši">
-		                         </form>
+		                           <i class="fa fa-trash-o" aria-hidden="true"><input class="button small btn-danger" type="submit" value=""></i>
+		                        </form>
 		                    </td>
 		                </tr>
 		            @endforeach

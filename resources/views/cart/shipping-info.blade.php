@@ -1,5 +1,11 @@
 @extends('layout.main')
 
+@section('parsley')
+    
+    <script src="js/parsley.min.js"></script>
+    
+@endsection
+
 @section('body')
     
 <body class="intro-fullscreen fixed-footer scroll-down yo-anim-enabled">
@@ -147,19 +153,19 @@
         <div class="col-md-6 col-md-offset-3">
             <h3 style="text-align:center;">Podaci za dostavu</h3>
 
-            {!! Form::open(['route' => 'orderstore', 'method' => 'post']) !!}
+            {!! Form::open(['route' => 'orderstore', 'method' => 'post', 'data-parsley-validate' => '']) !!}
 
             <div class="form-group">
                 {{ Form::label('name', 'Ime') }}
-                {{ Form::text('name', null, array('class' => 'form-control')) }}
+                {{ Form::text('name', null, array('class' => 'form-control', 'required' => '')) }}
             </div>
             <div class="form-group">
                 {{ Form::label('surname', 'Prezime') }}
-                {{ Form::text('surname', null, array('class' => 'form-control')) }}
+                {{ Form::text('surname', null, array('class' => 'form-control', 'required' => '')) }}
             </div>
             <div class="form-group">
                 {{ Form::label('address', 'Ulica i broj') }}
-                {{ Form::text('address', null, array('class' => 'form-control')) }}
+                {{ Form::text('address', null, array('class' => 'form-control', 'required' => '')) }}
             </div>
             <div class="form-group">
                 {{ Form::label('sprat', 'Sprat') }}
@@ -171,11 +177,11 @@
             </div>
             <div class="form-group">
                 {{ Form::label('telephone', 'Telefon') }}
-                {{ Form::text('telephone', null, array('class' => 'form-control')) }}
+                {{ Form::text('telephone', null, array('class' => 'form-control', 'required' => '')) }}
             </div>
             <div class="form-group">
                 {{ Form::label('email', 'E-mail') }}
-                {{ Form::text('email', null, array('class' => 'form-control')) }}
+                {{ Form::text('email', null, array('class' => 'form-control', 'required' => '')) }}
             </div>
             <div class="form-group">
                 {{ Form::label('napomena', 'Napomena') }}

@@ -1,5 +1,11 @@
 @extends('layout.main')
 
+@section('parsley')
+	
+	<script src="js/parsley2.min.js"></script>
+
+@endsection
+
 @section('body')
     
 <body class="intro-fullscreen fixed-footer scroll-down yo-anim-enabled">
@@ -162,6 +168,7 @@
 	</a> 
 </div> 
 <div class="section-space"></div>
+
 <section id="menu" class="section-scroll main-section menu">
 	<ul class="list-category">
 		<li> 
@@ -188,6 +195,12 @@
 		<li>
 			<span class="filter" data-filter=".sandwich">sendviči</span>
 		</li>
+		<li>
+			<span class="filter" data-filter=".grill-kg">roštilj na kilo</span>
+		</li>
+		<li>
+			<span class="filter" data-filter=".drink">Piće</span>
+		</li>
 	</ul>
 
 	<!--			</div>
@@ -195,11 +208,25 @@
 		</div> -->
 
 	<div class="container-fluid menu-content mixitup">
+		@if (Session::has('success'))
+			<div class="col-md-12">
+				<h5 class="alert alert-success" style="text-align:center">{{ Session::get('success') }}</h5>
+			</div>
+		@endif
+
+	
+
+		<h4><div id="message-holder" style="text-align:center"></div></h4>
+
+
+
 	@foreach($categories as $category)
 		<div class="mix {{ $category->slug }}" data-myorder="0">
 			<div class="row">
 				<div class="col-xs-12 menu-category sticky-header sticky-header first-header fixed visible">
+					
 					<h2>{{ $category->name }}</h2>
+						
 				</div>
 				<div class="row">
 					@foreach($products as $product)
@@ -218,15 +245,22 @@
 								<div class="">
 									<h4>{{ $product->name }}</h4>
 									<p>{{ $product->description }}</p>
-									{!! Form::open(['route' => ['cart.addItem',$product->id], 'method' => 'POST']) !!}
+									{!! Form::open(['route' => ['cart.addItem',$product->id], 'method' => 'POST', 'data-parsley-validate' => '']) !!}
 									
+									@if($category->slug == 'pasta')
+										<br><h9 style="font-size:9px">Odaberi veličinu</h9><br>
+										<div class="btn-group" role="group" aria-label="...">
+											<label class="radio-inline"><input data-parsley-multiple data-parsley-errors-container="#message-holder" required type="radio" value="4" name="optradio">Pene</label>
+											<label class="radio-inline"><input data-parsley-multiple type="radio" value="5" name="optradio">Fusili</label>
+										</div><br>&nbsp;
+									@endif
 									
 									@if($category->slug == 'pizza')
 										<br><h9 style="font-size:9px">Odaberi veličinu</h9><br>
 										<div class="btn-group" role="group" aria-label="...">
-											<label class="radio-inline"><input type="radio" value="1" name="optradio">24 cm</label>
-											<label class="radio-inline"><input type="radio" value="2" name="optradio">32 cm</label>
-											<label class="radio-inline"><input type="radio" value="3" name="optradio">45 cm</label>
+											<label class="radio-inline"><input data-parsley-multiple data-parsley-errors-container="#message-holder" required type="radio" value="1" name="optradio">24 cm</label>
+											<label class="radio-inline"><input data-parsley-multiple type="radio" value="2" name="optradio">32 cm</label>
+											<label class="radio-inline"><input data-parsley-multiple type="radio" value="3" name="optradio">45 cm</label>
 										</div><br>&nbsp;
 
 										<span class="new-price item-price">{{ $product->price }}</span><h8>RSD</h8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

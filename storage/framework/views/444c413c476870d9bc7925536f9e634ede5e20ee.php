@@ -9,28 +9,28 @@
             <div class="form-group">
                 <?php echo e(Form::label('name', 'Naziv jela')); ?>
 
-                <?php echo e(Form::text('name', null, array('class' => 'form-control','required'=>'','minlength'=>'4'))); ?>
+                <?php echo e(Form::text('name', null, array('class' => 'form-control', 'required' => ''))); ?>
 
             </div>
 
             <div class="form-group">
                 <?php echo e(Form::label('description', 'Opis')); ?>
 
-                <?php echo e(Form::text('description', null, array('class' => 'form-control'))); ?>
+                <?php echo e(Form::text('description', null, array('class' => 'form-control', 'required' => ''))); ?>
 
             </div>
 
             <div class="form-group">
                 <?php echo e(Form::label('category_id', 'Kategorija')); ?>
 
-                <?php echo e(Form::select('category_id', $categories, null, ['class' => 'form-control','placeholder'=>'Odaberi kategoriju', 'onchange' => 'java_script_:show(this.options[this.selectedIndex].value)'])); ?>
+                <?php echo e(Form::select('category_id', $categories, null, ['class' => 'form-control','placeholder'=>'Odaberi kategoriju', 'required' => ''])); ?>
 
             </div>
 
             <div class="form-group">
                 <?php echo e(Form::label('price', 'Cena (Pizza 24cm)')); ?>
 
-                <?php echo e(Form::text('price', null, array('class' => 'form-control'))); ?>
+                <?php echo e(Form::text('price', null, array('class' => 'form-control', 'required' => ''))); ?>
 
             </div>
             <div class="col-md-6 col-md-offset-3" id="hiddenDiv" style="border-style:solid; border-width:1px;">

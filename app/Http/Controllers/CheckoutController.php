@@ -9,6 +9,7 @@ use App\Order;
 use App\OrderItems;
 use Mail;
 use Gloudemans\Shoppingcart\Facades\Cart;
+use Session;
 
 class CheckoutController extends Controller
 {
@@ -62,6 +63,9 @@ class CheckoutController extends Controller
 
         		$orderItem->save();
         	}
+        //setovanje sesije za obavestenje
+
+            Session::flash('success', 'Uspešno ste izvršili naručivanje. Poslat Vam je email sa specifikacijom narudžbine.');
 
     	//send email
 

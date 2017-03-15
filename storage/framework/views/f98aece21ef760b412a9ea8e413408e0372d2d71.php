@@ -39,7 +39,6 @@
 								<td style="vertical-align:middle"><img src="<?php echo e(asset('/images/').'/'.$product->image); ?>" alt="" style="width:50px;height:50px;border-radius: 20%;"></td>
 								<td style="vertical-align:middle"><?php echo e($product->category->name); ?></td>
 								<td style="vertical-align:middle"><a href="<?php echo e(route('admin.product.index', $product->id)); ?>" class="btn btn-primary btn-sm">Izmeni</a></td>
-								<td style="vertical-align:middle"><a href="<?php echo e(route('admin.product.destroy', $product->id)); ?>" class="btn btn-danger btn-sm">Obriši</a></td>
 							</tr>
 							<?php endif; ?>
 

@@ -70,7 +70,7 @@ class ProductsController extends Controller
         $product->save();
         
         //Product::create($request->all());
-        return redirect()->route('admin.product.create');
+        return redirect()->route('admin.product.index');
     }
 
     /**

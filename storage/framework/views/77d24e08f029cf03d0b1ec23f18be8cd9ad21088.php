@@ -1,3 +1,9 @@
+<?php $__env->startSection('parsley'); ?>
+    
+    <script src="js/parsley.min.js"></script>
+    
+<?php $__env->stopSection(); ?>
+
 <?php $__env->startSection('body'); ?>
     
 <body class="intro-fullscreen fixed-footer scroll-down yo-anim-enabled">
@@ -146,25 +152,25 @@
         <div class="col-md-6 col-md-offset-3">
             <h3 style="text-align:center;">Podaci za dostavu</h3>
 
-            <?php echo Form::open(['route' => 'orderstore', 'method' => 'post']); ?>
+            <?php echo Form::open(['route' => 'orderstore', 'method' => 'post', 'data-parsley-validate' => '']); ?>
 
 
             <div class="form-group">
                 <?php echo e(Form::label('name', 'Ime')); ?>
 
-                <?php echo e(Form::text('name', null, array('class' => 'form-control'))); ?>
+                <?php echo e(Form::text('name', null, array('class' => 'form-control', 'required' => ''))); ?>
 
             </div>
             <div class="form-group">
                 <?php echo e(Form::label('surname', 'Prezime')); ?>
 
-                <?php echo e(Form::text('surname', null, array('class' => 'form-control'))); ?>
+                <?php echo e(Form::text('surname', null, array('class' => 'form-control', 'required' => ''))); ?>
 
             </div>
             <div class="form-group">
                 <?php echo e(Form::label('address', 'Ulica i broj')); ?>
 
-                <?php echo e(Form::text('address', null, array('class' => 'form-control'))); ?>
+                <?php echo e(Form::text('address', null, array('class' => 'form-control', 'required' => ''))); ?>
 
             </div>
             <div class="form-group">
@@ -182,13 +188,13 @@
             <div class="form-group">
                 <?php echo e(Form::label('telephone', 'Telefon')); ?>
 
-                <?php echo e(Form::text('telephone', null, array('class' => 'form-control'))); ?>
+                <?php echo e(Form::text('telephone', null, array('class' => 'form-control', 'required' => ''))); ?>
 
             </div>
             <div class="form-group">
                 <?php echo e(Form::label('email', 'E-mail')); ?>
 
-                <?php echo e(Form::text('email', null, array('class' => 'form-control'))); ?>
+                <?php echo e(Form::text('email', null, array('class' => 'form-control', 'required' => ''))); ?>
 
             </div>
             <div class="form-group">

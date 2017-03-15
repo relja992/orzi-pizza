@@ -14,11 +14,15 @@
 		<link rel="stylesheet" href="css/custom.css">
 		<link rel="stylesheet" href="<?php echo e(asset("css/foundation.css")); ?>"/>
 		<link rel="stylesheet" href="<?php echo e(asset("css/app.css")); ?>"/>
+		<link rel="stylesheet" href="<?php echo e(asset("css/parsley.css")); ?>"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 		<script src="js/jquery-2.1.0.min.js"></script>
 		<script src="js/modernizr-2.6.2.min.js"></script>
+
+		<?php echo $__env->yieldContent('parsley'); ?>
+		
 		<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=false&amp;ver=3.0'></script>
 
 		<link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">

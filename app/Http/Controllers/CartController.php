@@ -98,6 +98,14 @@ class CartController extends Controller
             $size = "large";
             $price = $product->price3;
             Cart::add($id, $product->name, 1, $price,['size'=> $size]); 
+        }elseif($request->optradio == 4){
+            $size = "pene";
+            $price = $product->price;
+            Cart::add($id, $product->name, 1, $price,['size'=> $size]); 
+        }elseif($request->optradio == 5){
+            $size = "fusili";
+            $price = $product->price;
+            Cart::add($id, $product->name, 1, $price,['size'=> $size]); 
         }else{
             $size = "standard";
             $price = $product->price;
