@@ -106,6 +106,22 @@ class CartController extends Controller
             $size = "fusili";
             $price = $product->price;
             Cart::add($id, $product->name, 1, $price,['size'=> $size]); 
+        }elseif($request->optradio == 6){
+            $size = "200g";
+            $price = $product->price;
+            Cart::add($id, $product->name, 1, $price,['size'=> $size]); 
+        }elseif($request->optradio == 7){
+            $size = "300g";
+            $price = $product->price2;
+            Cart::add($id, $product->name, 1, $price,['size'=> $size]); 
+        }elseif($request->optradio == 8){
+            $size = "500g";
+            $price = $product->price3;
+            Cart::add($id, $product->name, 1, $price,['size'=> $size]); 
+        }elseif($request->optradio == 8){
+            $size = "1kg";
+            $price = $product->price4;
+            Cart::add($id, $product->name, 1, $price,['size'=> $size]); 
         }else{
             $size = "standard";
             $price = $product->price;
@@ -149,7 +165,37 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Cart::update($id, ['qty'=>$request->qty, 'options'=> ['size'=> $request->size]]);
+
+        $item = Cart::get($id);
+        $product = Product::find($item->id);
+
+        $size ="";
+        $price = 0;
+
+        if($request->size == "small"){
+
+            $price = $product->price;
+        }elseif($request->size == "medium"){
+            $price = $product->price2;
+        }elseif($request->size == "large"){
+            $price = $product->price3;
+        }elseif($request->size == 'standard'){
+            $price = $product->price;
+        }elseif($request->size == 'pene'){
+            $price = $product->price;
+        }elseif($request->size == 'fusili'){
+            $price = $product->price;
+        }elseif($request->size == '200g'){
+            $price = $product->price;
+        }elseif($request->size == '300g'){
+            $price = $product->price2;
+        }elseif($request->size == '500g'){
+            $price = $product->price3;
+        }elseif($request->size == '1kg'){
+            $price = $product->price4;
+        }
+
+        Cart::update($id, ['qty'=>$request->qty, 'price' => $price, 'options'=> ['size'=> $request->size]]);
 
         return back();
     }

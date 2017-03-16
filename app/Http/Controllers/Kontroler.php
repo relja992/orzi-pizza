@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Category;
 use App\Product;
+use App\Prilog;
 
 class Kontroler extends Controller
 {
@@ -22,8 +23,9 @@ class Kontroler extends Controller
     public function menu2(){
         $cat = Category::all();
         $pro = Product::all();
+        $pri = Prilog::all(); 
         $vel = "1";
-        return view('layout.menu2')->withCategories($cat)->withProducts($pro)->withTest($vel);
+        return view('layout.menu2')->withCategories($cat)->withProducts($pro)->withTest($vel)->withPrilozi($pri);
     }
 
     public function contact(){

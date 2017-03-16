@@ -1,1 +1,22 @@
-test
+									<!-- The Modal -->
+									<div id="myModal" class="modal myModal" >
+
+									  <!-- Modal content -->
+									  <div class="modal-content">
+									    <div class="modal-header">
+									      <span class="close">&times;</span>
+									      <h2 name="modalDiv">Dodavanje priloga</h2>
+									    </div>
+									    <div class="modal-body">
+									      <p>Some text in the Modal Body</p>
+									      <p>Some other text...</p>
+									    </div>
+									    <div class="modal-footer">
+									      <h3>Modal Footer</h3>
+									      <input class="btn btn-danger btn-lg active" type="submit" value="Dodaj u korpu">
+									    </div>
+									  </div>
+
+									</div>
+
+									<input class="btn btn-danger btn-lg active" type="submit" value="Dodaj u korpu">
