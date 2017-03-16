@@ -310,11 +310,9 @@
 									            </thead>
 									      		<tbody>
 												@foreach($prilozi as $prilog)
+												@if($category->slug == 'grill' && $prilog->tip == 'roštilj' && $prilog->price == 0)
 												<tr>
 													<td style="width:200px; text-align:left">
-
-													@if($category->slug == 'grill')
-
 												      	<div class="has-error">
 														  <div class="checkbox">
 														    <label>
@@ -323,23 +321,22 @@
 														    </label>
 														  </div>
 														</div>
-													@endif
-
 													</td>
 												</tr>
+												@endif
 												@endforeach
 											</tbody>
 											</table>
 										</div>
 									    </div>
 									    <div class="modal-footer"><br>
-									      <input class="btn btn-primary btn-lg active col-md-2 col-md-offset-5" type="submit" value="Dodaj u korpu">
+									      <input class="btn btn-default btn-lg active col-md-2 col-md-offset-5" type="submit" value="Dodaj u korpu">
 									    </div>
 									  </div>
 
 									</div>
 
-									<input class="btn btn-danger btn-lg active myBtn" type="button" value="Dodaj u korpu" onClick="openModal(this);">
+									<input class="btn btn-danger btn-lg active myBtn" type="button" value="Dodaj priloge" onClick="openModal(this);">
 
 									
 

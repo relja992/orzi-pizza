@@ -301,7 +301,7 @@
 									    <div class="modal-body">
 									      <h3 ><?php echo e($product->name); ?></h3>
 									      <h4><?php echo e($product->description); ?></h4><br>
-									      	<div class="container" style="width:350px;">
+									      	<div class="container" style="width:300px;">
 									      	<table class="table table-striped">
 									      		<thead>
 									            <tr>
@@ -310,11 +310,9 @@
 									            </thead>
 									      		<tbody>
 												<?php foreach($prilozi as $prilog): ?>
+												<?php if($category->slug == 'grill' && $prilog->tip == 'roštilj' && $prilog->price == 0): ?>
 												<tr>
 													<td style="width:200px; text-align:left">
-
-													<?php if($category->slug == 'grill'): ?>
-
 												      	<div class="has-error">
 														  <div class="checkbox">
 														    <label>
@@ -324,23 +322,22 @@
 														    </label>
 														  </div>
 														</div>
-													<?php endif; ?>
-
 													</td>
 												</tr>
+												<?php endif; ?>
 												<?php endforeach; ?>
 											</tbody>
 											</table>
 										</div>
 									    </div>
 									    <div class="modal-footer"><br>
-									      <input class="btn btn-primary btn-lg active col-md-2 col-md-offset-5" type="submit" value="Dodaj u korpu">
+									      <input class="btn btn-default btn-lg active col-md-2 col-md-offset-5" type="submit" value="Dodaj u korpu">
 									    </div>
 									  </div>
 
 									</div>
 
-									<input class="btn btn-danger btn-lg active myBtn" type="button" value="Dodaj u korpu" onClick="openModal(this);">
+									<input class="btn btn-danger btn-lg active myBtn" type="button" value="Dodaj priloge" onClick="openModal(this);">
 
 									
 
