@@ -170,11 +170,12 @@
 		                <tr>
 		                    <td style="vertical-align:middle; text-align:center">{{$cartItem->name}}</td>
 		                    <td style="vertical-align:middle; text-align:center">{{$cartItem->price}}</td>
+
 		                    <td style="vertical-align:middle; text-align:center; ">
 		                        {!! Form::open(['route' => ['cart.update',$cartItem->rowId], 'method' => 'PUT']) !!}
 		                        <input style="width:50%; text-align:center" name="qty" type="text" value="{{$cartItem->qty}}">
 		                    </td>
-		                    <td style="vertical-align:middle; text-align:center; "></td>
+		                    <td style="vertical-align:middle; text-align:center; ">{{$cartItem->options->prilozi}}</td>
 		                    @if($cartItem->options->size == 'small' || $cartItem->options->size == 'medium' || $cartItem->options->size == 'large')
 			                    <td style="vertical-align:middle; text-align:center; width:80px">
 			                        <div > 

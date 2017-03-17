@@ -256,7 +256,7 @@
 										<div class="btn-group" role="group" aria-label="...">
 											<label class="radio-inline"><input data-parsley-multiple data-parsley-errors-container="#message-holder" required type="radio" value="4" name="optradio">Pene</label>
 											<label class="radio-inline"><input data-parsley-multiple type="radio" value="5" name="optradio">Fusili</label>
-										</div><br>&nbsp;
+										</div><br><br>&nbsp;
 									
 									@elseif($category->slug == 'pizza')
 										<br><h9 style="font-size:9px">Odaberi veličinu</h9><br>
@@ -293,50 +293,208 @@
 									<div id="myModal" class="modal myModal" >
 
 									  <!-- Modal content -->
-									  <div class="modal-content">
-									    <div class="modal-header">
-									      <span class="close">&times;</span>
-									      <h3 style="font-size:24px" name="modalDiv">Dodavanje priloga</h3>
-									    </div> 
+									  	<div class="modal-content">
+										    <div class="modal-header">
+										      <span class="close">&times;</span>
+										      <h3 style="font-size:24px" name="modalDiv">Dodavanje priloga</h3>
+										    </div> 
 									    <div class="modal-body">
-									      <h3 >{{ $product->name }}</h3>
-									      <h4>{{ $product->description }}</h4><br>
-									      	<div class="container" style="width:300px;">
-									      	<table class="table table-striped">
-									      		<thead>
-									            <tr>
-									                <th style="width:200px; text-align:left"></th>
-									            </tr>
-									            </thead>
-									      		<tbody>
-												@foreach($prilozi as $prilog)
-												@if($category->slug == 'grill' && $prilog->tip == 'roštilj' && $prilog->price == 0)
-												<tr>
-													<td style="width:200px; text-align:left">
-												      	<div class="has-error">
-														  <div class="checkbox">
-														    <label>
-														      <input type="checkbox" id="checkboxError" value="option1">
-														      {{ $prilog->name }}
-														    </label>
-														  </div>
-														</div>
-													</td>
-												</tr>
-												@endif
-												@endforeach
-											</tbody>
-											</table>
+										        <h3 >{{ $product->name }}</h3><br>
+										        <h4>{{ $product->description }}</h4><br>
+										        @if($category->slug != "grill")
+											      	<div class="row">
+											      	<div class="col-md-4 col-md-offset-4">
+											      	<table class="table table-striped">
+											      		<thead>
+											            <tr>
+											                <th style="width:200px; text-align:center">Prilog</th>
+											                <th style="width:200px; text-align:center">Cena</th>
+											            </tr>
+											            </thead>
+											      		<tbody>
+														@foreach($prilozi as $prilog)
+															@if(($category->slug == 'grill' || $category->slug == 'tortilla' || $category->slug == 'pizza' || $category->slug == 'sandwich') && $prilog->tip == 'roštilj' && $prilog->price != 0)
+																<tr>
+																	<td style="width:200px; text-align:left">
+																      	<div class="has-error">
+																		  <div class="checkbox">
+																		    <label>
+																		      {!! Form::checkbox('ch[]', $prilog->namePrice, false); !!} 
+																		     
+																		      {{ $prilog->name }}
+																		    </label>
+																		  </div>
+																		</div>
+																	</td>
+																	<td style="width:200px; text-align:center; vertical-align:middle;">
+																	    <label style="text-align:center">
+																	      {{ $prilog->price }},00&nbsp;RSD
+																	    </label>
+																	</td>
+																</tr>
+															@elseif($category->slug == 'pancake' && $prilog->tip == 'slatka' && $prilog->price != 0)
+																<tr>
+																	<td style="width:200px; text-align:left">
+																      	<div class="has-error">
+																		  <div class="checkbox">
+																		    <label>
+																		      {!! Form::checkbox('ch[]', $prilog->namePrice, false); !!} 
+																		     
+																		      {{ $prilog->name }}
+																		    </label>
+																		  </div>
+																		</div>
+																	</td>
+																	<td style="width:200px; text-align:center; vertical-align:middle;">
+																	    <label style="text-align:center">
+																	      {{ $prilog->price }},00&nbsp;RSD
+																	    </label>
+																	</td>
+																</tr>
+															@elseif(($category->slug == 'grill' || $category->slug == 'grill-kg') && $prilog->tip == 'roštilj' && $prilog->price == 0)
+																<tr>
+																	<td style="width:200px; text-align:left">
+																      	<div class="has-error">
+																		  <div class="checkbox">
+																		    <label>
+																		      {!! Form::checkbox('ch[]', $prilog->namePrice, false); !!} 
+																		     
+																		      {{ $prilog->name }}
+																		    </label>
+																		  </div>
+																		</div>
+																	</td>
+																	<td style="width:200px; text-align:center; vertical-align:middle;">
+																	    <label style="text-align:center">
+																	      
+																	    </label>
+																	</td>
+																</tr>
+															@elseif($category->slug != 'grill' && $category->slug != 'grill-kg' && $prilog->tip == 'ostalo' && $category->slug != 'pancake')
+																<tr>
+																	<td style="width:200px; text-align:left">
+																      	<div class="has-error">
+																		  <div class="checkbox">
+																		    <label>
+																		      {!! Form::checkbox('ch[]', $prilog->namePrice, false); !!} 
+																		     
+																		      {{ $prilog->name }}
+																		    </label>
+																		  </div>
+																		</div>
+																	</td>
+																	<td style="width:200px; text-align:center; vertical-align:middle;">
+																	    <label style="text-align:center">
+																	      
+																	    </label>
+																	</td>
+																</tr>
+															@endif
+														@endforeach
+														</tbody>
+													</table>
+													</div>
+													
+													</div>
+											@else
+												<div class="row">
+
+										      	<div class="col-md-8 col-md-offset-2">
+										      	<div class="col-md-6">
+										      	<table class="table table-striped">
+										      		<thead>
+										            <tr>
+										                <th style="width:200px; text-align:center">Prilog</th>
+										                <th style="width:200px; text-align:center">Cena</th>
+										            </tr>
+										            </thead>
+										      		<tbody>
+													@foreach($prilozi as $prilog)
+														@if(($category->slug == 'grill' || $category->slug == 'tortilla' || $category->slug == 'pizza' || $category->slug == 'sandwich') && $prilog->tip == 'roštilj' && $prilog->price != 0)
+															<tr>
+																<td style="width:200px; text-align:left">
+															      	<div class="has-error">
+																	  <div class="checkbox">
+																	    <label>
+																	      {!! Form::checkbox('ch[]', $prilog->namePrice, false); !!} 
+																	     
+																	      {{ $prilog->name }}
+																	    </label>
+																	  </div>
+																	</div>
+																</td>
+																<td style="width:200px; text-align:center; vertical-align:middle;">
+																    <label style="text-align:center">
+																      {{ $prilog->price }},00&nbsp;RSD
+																    </label>
+																</td>
+															</tr>
+														@endif
+													@endforeach
+													</tbody>
+												</table>
+												</div>
+
+
+
+											<div class="col-md-6">
+										      	<table class="table table-striped">
+										      		<thead>
+										            <tr>
+										                <th style="width:200px; text-align:center">Prilog</th>
+										                <th style="width:200px; text-align:center">Cena</th>
+										            </tr>
+										            </thead>
+										      		<tbody>
+													@foreach($prilozi as $prilog)
+														@if(($category->slug == 'grill' || $category->slug == 'grill-kg') && $prilog->tip == 'roštilj' && $prilog->price == 0)
+															<tr>
+																<td style="width:200px; text-align:left">
+															      	<div class="has-error">
+																	  <div class="checkbox">
+																	    <label>
+																	      {!! Form::checkbox('ch[]', $prilog->namePrice, false); !!} 
+																	     
+																	      {{ $prilog->name }}
+																	    </label>
+																	  </div>
+																	</div>
+																</td>
+																<td style="width:200px; text-align:center; vertical-align:middle;">
+																    <label style="text-align:center">
+																      
+																    </label>
+																</td>
+															</tr>
+														@endif
+													@endforeach
+													</tbody>
+												</table>
+												</div>
+
+
+
+
+											</div>
+
+											</div>
+											@endif
+
+
+
 										</div>
-									    </div>
-									    <div class="modal-footer"><br>
-									      <input class="btn btn-default btn-lg active col-md-2 col-md-offset-5" type="submit" value="Dodaj u korpu">
-									    </div>
-									  </div>
+											<div class="modal-footer"><br>
+											    <input class="btn btn-default btn-lg active col-md-2 col-md-offset-5" type="submit" value="Dodaj u korpu">
+											</div>
+										</div>
 
 									</div>
-
-									<input class="btn btn-danger btn-lg active myBtn" type="button" value="Dodaj priloge" onClick="openModal(this);">
+									@if($category->slug == 'pasta' || $category->slug == 'drink' || $category->slug == 'salad')
+										<input class="btn btn-danger btn-lg active" type="submit" value="Dodaj u korpu">
+									@else
+										<br>
+										<input class="btn btn-danger btn-lg active myBtn" type="button" value="Dodaj priloge" onClick="openModal(this);">
+									@endif
 
 									
 

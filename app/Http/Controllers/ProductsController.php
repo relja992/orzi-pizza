@@ -45,7 +45,6 @@ class ProductsController extends Controller
         //validacija
         $this->validate($request, [
                 'name' => 'required',
-                'description' => 'required',
                 'price' => 'required',
                 'image' => 'image|mimes:png,jpg,jpeg|max:10240',
                 'category_id' => 'required'

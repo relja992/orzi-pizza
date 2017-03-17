@@ -16,7 +16,7 @@
             <div class="form-group">
                 <?php echo e(Form::label('description', 'Opis')); ?>
 
-                <?php echo e(Form::text('description', null, array('class' => 'form-control', 'required' => ''))); ?>
+                <?php echo e(Form::text('description', null, array('class' => 'form-control'))); ?>
 
             </div>
 

@@ -14,7 +14,7 @@
 
             <div class="form-group">
                 {{ Form::label('description', 'Opis') }}
-                {{ Form::text('description', null, array('class' => 'form-control', 'required' => '')) }}
+                {{ Form::text('description', null, array('class' => 'form-control')) }}
             </div>
 
             <div class="form-group">

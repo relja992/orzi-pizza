@@ -23,7 +23,7 @@ class Kontroler extends Controller
     public function menu2(){
         $cat = Category::all();
         $pro = Product::all();
-        $pri = Prilog::all(); 
+        $pri = Prilog::orderBy('price', 'desc')->get();
         $vel = "1";
         return view('layout.menu2')->withCategories($cat)->withProducts($pro)->withTest($vel)->withPrilozi($pri);
     }

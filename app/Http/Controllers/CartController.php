@@ -73,6 +73,8 @@ class CartController extends Controller
 
     public function addItem(Request $request, $id){
 
+        //dd($request->ch);
+
         $product = Product::find($id);
 
         if($product->category->slug == 'pizza'){
@@ -80,52 +82,72 @@ class CartController extends Controller
             $this->validate($request, [
                 'optradio' => 'required',
             ]);
-        }
-
+        } 
 
         $size ="";
         $price = 0;
+        $check = "Bez priloga";
+        $check = array();
+        $pieces = array();
+        $check = $request->ch;
+        $checkString = "";
+
+        $broj = count($check);
+        $cenaPriloga = 0;
+
+        for($i=0; $i<$broj; $i++){
+            
+            $pieces = explode(",", $check[$i]);
+                 
+            $cenaPriloga += intval($pieces[1]);
+
+            if($i == ($broj-1) ){
+                $checkString = $checkString . $pieces[0] . ' ';
+            }else{
+                $checkString = $checkString . $pieces[0] . ', ';
+            }           
+        }
 
         if($request->optradio == 1){
             $size = "small";
-            $price = $product->price;
-            Cart::add($id, $product->name, 1, $price,['size'=> $size]); 
+            $price = $product->price + $cenaPriloga;
+            Cart::add($id, $product->name, 1, $price,['size'=> $size, 'prilozi' => $checkString]); 
         }elseif($request->optradio == 2){
             $size = "medium";
-            $price = $product->price2;
-            Cart::add($id, $product->name, 1, $price,['size'=> $size]); 
+            $price = $product->price2 + $cenaPriloga;
+            Cart::add($id, $product->name, 1, $price,['size'=> $size, 'prilozi' => $checkString]); 
         }elseif($request->optradio == 3){
             $size = "large";
-            $price = $product->price3;
-            Cart::add($id, $product->name, 1, $price,['size'=> $size]); 
+            $price = $product->price3 + $cenaPriloga;
+            Cart::add($id, $product->name, 1, $price,['size'=> $size, 'prilozi' => $checkString]); 
         }elseif($request->optradio == 4){
             $size = "pene";
-            $price = $product->price;
-            Cart::add($id, $product->name, 1, $price,['size'=> $size]); 
+            $price = $product->price + $cenaPriloga;
+            Cart::add($id, $product->name, 1, $price,['size'=> $size, 'prilozi' => $checkString]); 
         }elseif($request->optradio == 5){
             $size = "fusili";
-            $price = $product->price;
-            Cart::add($id, $product->name, 1, $price,['size'=> $size]); 
+            $price = $product->price + $cenaPriloga;
+            Cart::add($id, $product->name, 1, $price,['size'=> $size, 'prilozi' => $checkString]); 
         }elseif($request->optradio == 6){
             $size = "200g";
-            $price = $product->price;
-            Cart::add($id, $product->name, 1, $price,['size'=> $size]); 
+            $price = $product->price + $cenaPriloga;
+            Cart::add($id, $product->name, 1, $price,['size'=> $size, 'prilozi' => $checkString]); 
         }elseif($request->optradio == 7){
             $size = "300g";
-            $price = $product->price2;
-            Cart::add($id, $product->name, 1, $price,['size'=> $size]); 
+            $price = $product->price2 + $cenaPriloga;
+            Cart::add($id, $product->name, 1, $price,['size'=> $size, 'prilozi' => $checkString]); 
         }elseif($request->optradio == 8){
             $size = "500g";
-            $price = $product->price3;
-            Cart::add($id, $product->name, 1, $price,['size'=> $size]); 
+            $price = $product->price3 + $cenaPriloga;
+            Cart::add($id, $product->name, 1, $price,['size'=> $size, 'prilozi' => $checkString]); 
         }elseif($request->optradio == 8){
             $size = "1kg";
-            $price = $product->price4;
-            Cart::add($id, $product->name, 1, $price,['size'=> $size]); 
+            $price = $product->price4 + $cenaPriloga;
+            Cart::add($id, $product->name, 1, $price,['size'=> $size, 'prilozi' => $checkString]); 
         }else{
             $size = "standard";
-            $price = $product->price;
-            Cart::add($id, $product->name, 1, $price,['size'=> $size]); 
+            $price = $product->price + $cenaPriloga;
+            Cart::add($id, $product->name, 1, $price,['size'=> $size, 'prilozi' => $checkString]); 
         }
 
         /*if($request->optradio == 2){
