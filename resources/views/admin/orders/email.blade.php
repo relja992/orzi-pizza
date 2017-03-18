@@ -16,6 +16,7 @@
 					<th style="text-align:center; border: 1px solid black;">#</th>
 					<th style="text-align:center; border: 1px solid black;">Naziv jela</th>
 					<th style="text-align:center; border: 1px solid black;">Opis</th>
+					<th style="text-align:center; border: 1px solid black;">Prilozi</th>
 					<th style="text-align:center; border: 1px solid black;">Cena</th>
 					<th style="text-align:center; border: 1px solid black;">Veličina</th>
 				</thead>
@@ -26,6 +27,7 @@
 							<td style="vertical-align:middle; border: 1px solid black;">{{ $i++ }}</td>
 							<td style="vertical-align:middle; border: 1px solid black;">{{ $orderItem->product->name }}</td>
 							<td style="vertical-align:middle; border: 1px solid black;">{{ $orderItem->product->description }}</td>
+							<td style="vertical-align:middle; border: 1px solid black;">{{ $orderItem->prilozi }}</td>
 							@if($orderItem->product->price2 == 0)
 								<td style="vertical-align:middle; border: 1px solid black;">{{ $orderItem->product->price }}</td>
 							@elseif($orderItem->size == 'small')

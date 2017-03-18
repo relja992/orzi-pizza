@@ -44,7 +44,7 @@ class CheckoutController extends Controller
         $order->telephone = $request->telephone;
         $order->email = $request->email;
         $order->napomena = $request->napomena;
-        $order->price = Cart::subtotal();
+        $order->price = Cart::subtotal(2, ',', '.');
         $order->status = 'na čekanju';
         $order->save();
 
@@ -60,6 +60,7 @@ class CheckoutController extends Controller
         		$orderItem->product_id = $cartItem->id;
         		$orderItem->amount = $cartItem->qty;
         		$orderItem->size = $cartItem->options->size;
+                $orderItem->prilozi = $cartItem->options->prilozi;
 
         		$orderItem->save();
         	}

@@ -86,7 +86,6 @@ class CartController extends Controller
 
         $size ="";
         $price = 0;
-        $check = "Bez priloga";
         $check = array();
         $pieces = array();
         $check = $request->ch;
@@ -193,33 +192,94 @@ class CartController extends Controller
 
         $size ="";
         $price = 0;
+        $cenaPriloga=0;
 
         if($request->size == "small"){
-
-            $price = $product->price;
+            if($item->options->size == "small"){
+                $cenaPriloga = $item->price - $product->price;
+            }elseif($item->options->size == "medium"){
+                $cenaPriloga = $item->price - $product->price2;
+            }elseif($item->options->size == "large"){
+                $cenaPriloga = $item->price - $product->price3;
+            }
+            $price = $product->price + $cenaPriloga;
         }elseif($request->size == "medium"){
-            $price = $product->price2;
+            if($item->options->size == "small"){
+                $cenaPriloga = $item->price - $product->price;
+            }elseif($item->options->size == "medium"){
+                $cenaPriloga = $item->price - $product->price2;
+            }elseif($item->options->size == "large"){
+                $cenaPriloga = $item->price - $product->price3;
+            }
+            $price = $product->price2 + $cenaPriloga;
         }elseif($request->size == "large"){
-            $price = $product->price3;
+            if($item->options->size == "small"){
+                $cenaPriloga = $item->price - $product->price;
+            }elseif($item->options->size == "medium"){
+                $cenaPriloga = $item->price - $product->price2;
+            }elseif($item->options->size == "large"){
+                $cenaPriloga = $item->price - $product->price3;
+            }
+            $price = $product->price3 + $cenaPriloga;
         }elseif($request->size == 'standard'){
-            $price = $product->price;
+            $cenaPriloga = $item->price - $product->price;
+            $price = $product->price + $cenaPriloga;
         }elseif($request->size == 'pene'){
-            $price = $product->price;
+            $cenaPriloga = $item->price - $product->price;
+            $price = $product->price + $cenaPriloga;
         }elseif($request->size == 'fusili'){
-            $price = $product->price;
+            $cenaPriloga = $item->price - $product->price;
+            $price = $product->price + $cenaPriloga;
         }elseif($request->size == '200g'){
-            $price = $product->price;
+            if($item->options->size == "200g"){
+                $cenaPriloga = $item->price - $product->price;
+            }elseif($item->options->size == "300g"){
+                $cenaPriloga = $item->price - $product->price2;
+            }elseif($item->options->size == "500g"){
+                $cenaPriloga = $item->price - $product->price3;
+            }elseif($item->options->size == "1kg"){
+                $cenaPriloga = $item->price - $product->price4;
+            }
+            $price = $product->price + $cenaPriloga;
         }elseif($request->size == '300g'){
-            $price = $product->price2;
+            if($item->options->size == "200g"){
+                $cenaPriloga = $item->price - $product->price;
+            }elseif($item->options->size == "300g"){
+                $cenaPriloga = $item->price - $product->price2;
+            }elseif($item->options->size == "500g"){
+                $cenaPriloga = $item->price - $product->price3;
+            }elseif($item->options->size == "1kg"){
+                $cenaPriloga = $item->price - $product->price4;
+            }
+            $price = $product->price2 + $cenaPriloga;
         }elseif($request->size == '500g'){
-            $price = $product->price3;
+            if($item->options->size == "200g"){
+                $cenaPriloga = $item->price - $product->price;
+            }elseif($item->options->size == "300g"){
+                $cenaPriloga = $item->price - $product->price2;
+            }elseif($item->options->size == "500g"){
+                $cenaPriloga = $item->price - $product->price3;
+            }elseif($item->options->size == "1kg"){
+                $cenaPriloga = $item->price - $product->price4;
+            }
+            $price = $product->price3 + $cenaPriloga;
         }elseif($request->size == '1kg'){
-            $price = $product->price4;
+            if($item->options->size == "200g"){
+                $cenaPriloga = $item->price - $product->price;
+            }elseif($item->options->size == "300g"){
+                $cenaPriloga = $item->price - $product->price2;
+            }elseif($item->options->size == "500g"){
+                $cenaPriloga = $item->price - $product->price3;
+            }elseif($item->options->size == "1kg"){
+                $cenaPriloga = $item->price - $product->price4;
+            }
+            $price = $product->price4 + $cenaPriloga;
         }else{
-            $price = $product->price;
+            $cenaPriloga = $item->price - $product->price;
+            $price = $product->price + $cenaPriloga;
         }
 
-        Cart::update($id, ['qty'=>$request->qty, 'price' => $price, 'options'=> ['size'=> $request->size]]);
+        Cart::update($id, ['qty'=>$request->qty, 'price' => $price, 'options'=> ['size'=> $item->options->size, 'prilozi' => $item->options->prilozi]]);
 
         return back();
     }

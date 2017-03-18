@@ -10,6 +10,7 @@
 					<th style="text-align:center">#</th>
 					<th style="text-align:center">Naziv jela</th>
 					<th style="text-align:center">Opis</th>
+					<th style="text-align:center">Prilozi</th>
 					<th style="text-align:center">Cena</th>
 					<th style="text-align:center">Tip</th>
 				</thead>
@@ -20,6 +21,7 @@
 							<td style="vertical-align:middle">{{ $i++ }}</td>
 							<td style="vertical-align:middle">{{ $orderItem->product->name }}</td>
 							<td style="vertical-align:middle">{{ $orderItem->product->description }}</td>
+							<td style="vertical-align:middle">{{ $orderItem->prilozi }}</td>
 							@if($orderItem->product->price2 == 0)
 								<td style="vertical-align:middle">{{ $orderItem->product->price }}</td>
 							@elseif($orderItem->size == 'small')
@@ -28,6 +30,14 @@
 								<td style="vertical-align:middle">{{ $orderItem->product->price2 }}</td>
 							@elseif($orderItem->size == 'large')
 								<td style="vertical-align:middle">{{ $orderItem->product->price3 }}</td>
+							@elseif($orderItem->size == '200g')
+								<td style="vertical-align:middle">{{ $orderItem->product->price }}</td>
+							@elseif($orderItem->size == '300g')
+								<td style="vertical-align:middle">{{ $orderItem->product->price2 }}</td>
+							@elseif($orderItem->size == '500g')
+								<td style="vertical-align:middle">{{ $orderItem->product->price3 }}</td>
+							@elseif($orderItem->size == '1kg')
+								<td style="vertical-align:middle">{{ $orderItem->product->price4 }}</td>
 							@endif
 							<td style="vertical-align:middle">{{ $orderItem->size }}</td>
 						</tr>

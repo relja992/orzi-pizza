@@ -12,16 +12,16 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700,800&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <!--		 Place favicon.ico and apple-touch-icon.png in the root directory -->
 		<link rel="stylesheet" href="css/custom.css">
-		<link rel="stylesheet" href="{{ asset("css/foundation.css") }}"/>
-		<link rel="stylesheet" href="{{ asset("css/app.css") }}"/>
-		<link rel="stylesheet" href="{{ asset("css/parsley.css") }}"/>
+		<link rel="stylesheet" href="<?php echo e(asset("css/foundation.css")); ?>"/>
+		<link rel="stylesheet" href="<?php echo e(asset("css/app.css")); ?>"/>
+		<link rel="stylesheet" href="<?php echo e(asset("css/parsley.css")); ?>"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 		<script src="js/jquery-2.1.0.min.js"></script>
 		<script src="js/modernizr-2.6.2.min.js"></script>
-		@yield('skripta')
-		@yield('parsley')
+		<?php echo $__env->yieldContent('skripta'); ?>
+		<?php echo $__env->yieldContent('parsley'); ?>
 		
 		<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=false&amp;ver=3.0'></script>
 
@@ -29,12 +29,12 @@
 
     </head>
 
-		@yield('body')
+		<?php echo $__env->yieldContent('body'); ?>
 
 
 
 		<!--content-->
-		@yield('content')
+		<?php echo $__env->yieldContent('content'); ?>
 
 
 		<div id="footer-spacer"></div>
@@ -125,7 +125,7 @@
 		<script src="js/jquery.mixitup.js"></script>
 		<script src="js/main.js"></script>
 
-		@yield('javascript')
+		<?php echo $__env->yieldContent('javascript'); ?>
 		
 	</body>
 </html>

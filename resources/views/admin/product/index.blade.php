@@ -40,7 +40,7 @@
 
 								<td style="vertical-align:middle"><img src="{{ asset('/images/').'/'.$product->image }}" alt="" style="width:50px;height:50px;border-radius: 20%;"></td>
 								<td style="vertical-align:middle">{{ $product->category->name }}</td>
-								<td style="vertical-align:middle"><a href="{{ route('admin.product.index', $product->id) }}" class="btn btn-primary btn-sm">Izmeni</a></td>
+								<td style="vertical-align:middle"><a href="#" class="btn btn-primary btn-sm">Izmeni</a></td>
 							</tr>
 							@endif
 
