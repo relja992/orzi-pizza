@@ -91,7 +91,18 @@
 				-->
 				<li>
 					<a href="<?php echo e(route('gallery')); ?>" class="hover-subnav">galerija</a>
-					
+				</li>
+				<li>
+                        <a href="<?php echo e(route('cart.index')); ?>">
+                            <i class="fa fa-shopping-basket fa-2x" aria-hidden="true" style="color:#EA4623" >
+                            </i>
+                            Korpa
+                            <span class="badge" style="background-color: #EA4623;">
+                                <?php echo e(Cart::count()); ?>
+
+                            </span>
+                        </a>
+                </li>			
 
 							</div>
 						</nav>

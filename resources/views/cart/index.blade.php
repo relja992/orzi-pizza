@@ -248,5 +248,5 @@
 @endsection
 
 @section('javascript')
-	<script src="js/mojJS/script.js"></script>
+	<script src="{!! asset('js/mojJS/script.js') !!}"></script>
 @endsection

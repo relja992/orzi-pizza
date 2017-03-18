@@ -11,6 +11,7 @@
 					<th style="text-align:center">Naziv jela</th>
 					<th style="text-align:center">Opis</th>
 					<th style="text-align:center">Prilozi</th>
+					<th style="text-align:center">Količina</th>
 					<th style="text-align:center">Cena</th>
 					<th style="text-align:center">Tip</th>
 				</thead>
@@ -22,6 +23,7 @@
 							<td style="vertical-align:middle">{{ $orderItem->product->name }}</td>
 							<td style="vertical-align:middle">{{ $orderItem->product->description }}</td>
 							<td style="vertical-align:middle">{{ $orderItem->prilozi }}</td>
+							<td style="vertical-align:middle">{{ $orderItem->amount }}</td>
 							@if($orderItem->product->price2 == 0)
 								<td style="vertical-align:middle">{{ $orderItem->product->price }}</td>
 							@elseif($orderItem->size == 'small')

@@ -80,15 +80,27 @@
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#pancake" style="color: white;">palačinke</a>
+								<a href="{{ url('/menu') }}#pancake" style="color: white;">slatke palačinke</a>
 								<div>
 									<a href="{{ url('/menu') }}#pancake" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
+								</div>
+							</li>
+							<li>
+								<a href="{{ url('/menu') }}#pancake_salted" style="color: white;">slane palačinke</a>
+								<div>
+									<a href="{{ url('/menu') }}#pancake_salted" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
 								</div>
 							</li>
 							<li>
 								<a href="{{ url('/menu') }}#sandwich" style="color: white;">sendviči</a>
 								<div>							
 									<a href="{{ url('/menu') }}#sandwich style="color: white;"" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
+								</div>
+							</li>
+							<li>
+								<a href="{{ url('/menu') }}#other" style="color: white;">ostalo</a>
+								<div>							
+									<a href="{{ url('/menu') }}#other style="color: white;"" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
 								</div>
 							</li>
 						</ul>
@@ -200,7 +212,10 @@
 			<span class="filter" data-filter=".pizza">Pizza</span>
 		</li>
 		<li>
-			<span class="filter" data-filter=".pancake">palačinke</span>
+			<span class="filter" data-filter=".pancake">slatke palačinke</span>
+		</li>
+		<li>
+			<span class="filter" data-filter=".pancake_salted">slane palačinke</span>
 		</li>
 		<li>
 			<span class="filter" data-filter=".sandwich">sendviči</span>
@@ -210,6 +225,9 @@
 		</li>
 		<li>
 			<span class="filter" data-filter=".drink">Piće</span>
+		</li>
+		<li>
+			<span class="filter" data-filter=".other">ostalo</span>
 		</li>
 	</ul>
 
@@ -319,7 +337,7 @@
 											            </thead>
 											      		<tbody>
 														@foreach($prilozi as $prilog)
-															@if(($category->slug == 'grill' || $category->slug == 'tortilla' || $category->slug == 'pizza' || $category->slug == 'sandwich') && $prilog->tip == 'roštilj' && $prilog->price != 0)
+															@if(($category->slug == 'grill' || $category->slug == 'pancake_salted' || $category->slug == 'tortilla' || $category->slug == 'pizza' || $category->slug == 'sandwich') && $prilog->tip == 'roštilj' && $prilog->price != 0)
 																<tr>
 																	<td style="width:200px; text-align:left">
 																      	<div class="has-error">
@@ -495,7 +513,7 @@
 										</div>
 
 									</div>
-									@if($category->slug == 'pasta' || $category->slug == 'drink' || $category->slug == 'salad')
+									@if($category->slug == 'pasta' || $category->slug == 'drink' || $category->slug == 'salad' || $category->slug == 'other')
 										<input class="btn btn-danger btn-lg active" type="submit" value="Dodaj u korpu">
 									@else
 										<br>

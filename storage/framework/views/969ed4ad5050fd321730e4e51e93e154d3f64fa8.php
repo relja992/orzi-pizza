@@ -22,6 +22,7 @@
 		</div>
 		<div class="main-nav">
 			<ul class="pull-right">
+				
 				<li>
 					<a href="<?php echo e(url('/')); ?>" class="    ">Početna</a>	
 				</li>				
@@ -60,15 +61,27 @@
 								</div>
 							</li>
 							<li>
-								<a href="<?php echo e(url('/menu')); ?>#pancake" style="color: white;">palačinke</a>
+								<a href="<?php echo e(url('/menu')); ?>#pancake" style="color: white;">slatke palačinke</a>
 								<div>
 									<a href="<?php echo e(url('/menu')); ?>#pancake" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
 								</div>
 							</li>
 							<li>
+								<a href="<?php echo e(url('/menu')); ?>#pancake_salted" style="color: white;">slane palačinke</a>
+								<div>
+									<a href="<?php echo e(url('/menu')); ?>#pancake_salted" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
+								</div>
+							</li>
+							<li>
 								<a href="<?php echo e(url('/menu')); ?>#sandwich" style="color: white;">sendviči</a>
 								<div>							
-									<a href="<?php echo e(url('/menu')); ?>#sandwich" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#sandwich style="color: white;"" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
+								</div>
+							</li>
+							<li>
+								<a href="<?php echo e(url('/menu')); ?>#other" style="color: white;">ostalo</a>
+								<div>							
+									<a href="<?php echo e(url('/menu')); ?>#other style="color: white;"" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
 								</div>
 							</li>
 						</ul>
@@ -82,9 +95,19 @@
 				<li>
 					<a href="<?php echo e(url('/gallery')); ?>" class="hover-subnav">galerija</a>
 					
-				</li>				
-			</ul>
-		</div>
+				</li>
+				<li>
+                        <a href="<?php echo e(route('cart.index')); ?>">
+                            <i class="fa fa-shopping-basket fa-2x" aria-hidden="true" style="color:#EA4623" >
+                            </i>
+                            Korpa
+                            <span class="badge" style="background-color: #EA4623;">
+                                <?php echo e(Cart::count()); ?>
+
+                            </span>
+                        </a>
+                </li>				
+			</ul>		</div>
 	</div>
 </nav>
 <div id="mobile-nav" class="visible-xs visible-sm">
