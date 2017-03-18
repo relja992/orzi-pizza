@@ -3,85 +3,108 @@ function mojaFunkcija(elem){
 
 	var selectedText = elem.options[elem.selectedIndex].innerHTML;
 	var selectedValue = elem.options[elem.selectedIndex].value;
+	var ukupnaCena = parseInt(document.getElementById("ukupnaCena").innerHTML);
 
 	if(selectedText == "Vračar"){
-		var minCenaZaOdabranuOblast = 500;
-		var ukupnaCena = document.getElementById('ukupnaCena').innerHTML;
+		var minCenaZaOdabranuOblast = parseInt("500");
 		if(ukupnaCena <= minCenaZaOdabranuOblast){
-			document.getElementById('labela').innerHTML = 'Minimalna cena za besplatnu dostavu: ' + minCenaZaOdabranuOblast + ',00 RSD';
-			document.getElementById("labela").style.visibility = "visible";
+			document.getElementById("labela").innerHTML = "Minimalna cena za besplatnu dostavu: " + minCenaZaOdabranuOblast + ",00 RSD";
+			//document.getElementById("labela").style.visibility = "visible";
+			document.getElementById("labela").style.display = 'block';
 			document.getElementById("submit-button").setAttribute("disabled", "disabled");
-		}
+		}else{
+			//document.getElementById("labela").style.visibility = "hidden";
+			document.getElementById("labela").style.display = 'none';
+			document.getElementById("submit-button").removeAttribute("disabled")}
 	}else if(selectedText == "Mirijevo"){
-		var minCenaZaOdabranuOblast = 900;
-		var ukupnaCena = document.getElementById('ukupnaCena').innerHTML;
+		var minCenaZaOdabranuOblast = parseInt("900");
 		if(ukupnaCena <= minCenaZaOdabranuOblast){
-			document.getElementById('labela').innerHTML = 'Minimalna cena za besplatnu dostavu: ' + minCenaZaOdabranuOblast + ',00 RSD';
-			document.getElementById("labela").style.visibility = "visible";
+			document.getElementById("labela").innerHTML = "Minimalna cena za besplatnu dostavu: " + minCenaZaOdabranuOblast + ",00 RSD";
+			//document.getElementById("labela").style.visibility = "visible";
+			document.getElementById("labela").style.display = 'block';
 			document.getElementById("submit-button").setAttribute("disabled", "disabled");
-		}
+		}else{
+			//document.getElementById("labela").style.visibility = "hidden";
+			document.getElementById("labela").style.display = 'none';
+			document.getElementById("submit-button").removeAttribute("disabled")}
 	}else if(selectedText == "Zvezdara"){
-		var minCenaZaOdabranuOblast = 700;
-		var ukupnaCena = document.getElementById('ukupnaCena').innerHTML;
+		var minCenaZaOdabranuOblast = parseInt("700");
 		if(ukupnaCena <= minCenaZaOdabranuOblast){
-			document.getElementById('labela').innerHTML = 'Minimalna cena za besplatnu dostavu: ' + minCenaZaOdabranuOblast + ',00 RSD';
-			document.getElementById("labela").style.visibility = "visible";
+			document.getElementById("labela").innerHTML = "Minimalna cena za besplatnu dostavu: " + minCenaZaOdabranuOblast + ",00 RSD";
+			//document.getElementById("labela").style.visibility = "visible";
+			document.getElementById("labela").style.display = 'block';
 			document.getElementById("submit-button").setAttribute("disabled", "disabled");
-		}
+		}else{
+			//document.getElementById("labela").style.visibility = "hidden";
+			document.getElementById("labela").style.display = 'none';
+			document.getElementById("submit-button").removeAttribute("disabled")}
 	}else if(selectedText == "Dušanovac"){
-		var minCenaZaOdabranuOblast = 700;
-		var ukupnaCena = document.getElementById('ukupnaCena').innerHTML;
+		var minCenaZaOdabranuOblast = parseInt("700");
 		if(ukupnaCena <= minCenaZaOdabranuOblast){
-			document.getElementById('labela').innerHTML = 'Minimalna cena za besplatnu dostavu: ' + minCenaZaOdabranuOblast + ',00 RSD';
-			document.getElementById("labela").style.visibility = "visible";
+			document.getElementById("labela").innerHTML = "Minimalna cena za besplatnu dostavu: " + minCenaZaOdabranuOblast + ",00 RSD";
+			//document.getElementById("labela").style.visibility = "visible";
+			document.getElementById("labela").style.display = 'block';
 			document.getElementById("submit-button").setAttribute("disabled", "disabled");
-		}
+		}else{
+			//document.getElementById("labela").style.visibility = "hidden";
+			document.getElementById("labela").style.display = 'none';
+			document.getElementById("submit-button").removeAttribute("disabled")}
 	}else if(selectedText == "Voždovac"){
-		var minCenaZaOdabranuOblast = 900;
-		var ukupnaCena = document.getElementById('ukupnaCena').innerHTML;
+		var minCenaZaOdabranuOblast = parseInt("900");
 		if(ukupnaCena <= minCenaZaOdabranuOblast){
-			document.getElementById('labela').innerHTML = 'Minimalna cena za besplatnu dostavu: ' + minCenaZaOdabranuOblast + ',00 RSD';
-			document.getElementById("labela").style.visibility = "visible";
+			document.getElementById("labela").innerHTML = "Minimalna cena za besplatnu dostavu: " + minCenaZaOdabranuOblast + ",00 RSD";
+			//document.getElementById("labela").style.visibility = "visible";
+			document.getElementById("labela").style.display = 'block';
 			document.getElementById("submit-button").setAttribute("disabled", "disabled");
-		}
+		}else{
+			//document.getElementById("labela").style.visibility = "hidden";
+			document.getElementById("labela").style.display = 'none';
+			document.getElementById("submit-button").removeAttribute("disabled")}
 	}else if(selectedText == "Konjarnik"){
-		var minCenaZaOdabranuOblast = 700;
-		var ukupnaCena = document.getElementById('ukupnaCena').innerHTML;
+		var minCenaZaOdabranuOblast = parseInt("700");
 		if(ukupnaCena <= minCenaZaOdabranuOblast){
-			document.getElementById('labela').innerHTML = 'Minimalna cena za besplatnu dostavu: ' + minCenaZaOdabranuOblast + ',00 RSD';
-			document.getElementById("labela").style.visibility = "visible";
+			document.getElementById("labela").innerHTML = "Minimalna cena za besplatnu dostavu: " + minCenaZaOdabranuOblast + ",00 RSD";
+			//document.getElementById("labela").style.visibility = "visible";
+			document.getElementById("labela").style.display = 'block';
 			document.getElementById("submit-button").setAttribute("disabled", "disabled");
-		}
+		}else{
+			//document.getElementById("labela").style.visibility = "hidden";
+			document.getElementById("labela").style.display = 'none';
+			document.getElementById("submit-button").removeAttribute("disabled")}
 	}else if(selectedText == "Braće Jerković"){
-		var minCenaZaOdabranuOblast = 900;
-		var ukupnaCena = document.getElementById('ukupnaCena').innerHTML;
+		var minCenaZaOdabranuOblast = parseInt("900");
 		if(ukupnaCena <= minCenaZaOdabranuOblast){
-			document.getElementById('labela').innerHTML = 'Minimalna cena za besplatnu dostavu: ' + minCenaZaOdabranuOblast + ',00 RSD';
-			document.getElementById("labela").style.visibility = "visible";
+			document.getElementById("labela").innerHTML = "Minimalna cena za besplatnu dostavu: " + minCenaZaOdabranuOblast + ",00 RSD";
+			//document.getElementById("labela").style.visibility = "visible";
+			document.getElementById("labela").style.display = 'block';
 			document.getElementById("submit-button").setAttribute("disabled", "disabled");
-		}
+		}else{
+			//document.getElementById("labela").style.visibility = "hidden";
+			document.getElementById("labela").style.display = 'none';
+			document.getElementById("submit-button").removeAttribute("disabled")}
 	}else if(selectedText == "Medaković"){
-		var minCenaZaOdabranuOblast = 700;
-		var ukupnaCena = document.getElementById('ukupnaCena').innerHTML;
+		var minCenaZaOdabranuOblast = parseInt("700");
 		if(ukupnaCena <= minCenaZaOdabranuOblast){
-			document.getElementById('labela').innerHTML = 'Minimalna cena za besplatnu dostavu: ' + minCenaZaOdabranuOblast + ',00 RSD';
-			document.getElementById("labela").style.visibility = "visible";
+			document.getElementById("labela").innerHTML = "Minimalna cena za besplatnu dostavu: " + minCenaZaOdabranuOblast + ",00 RSD";
+			//document.getElementById("labela").style.visibility = "visible";
+			document.getElementById("labela").style.display = 'block';
 			document.getElementById("submit-button").setAttribute("disabled", "disabled");
-		}
+		}else{
+			//document.getElementById("labela").style.visibility = "hidden";
+			document.getElementById("labela").style.display = 'none';
+			document.getElementById("submit-button").removeAttribute("disabled")}
 	}else if(selectedText == "Stepa Stepanović"){
-		var minCenaZaOdabranuOblast = 1100;
-		var ukupnaCena = document.getElementById('ukupnaCena').innerHTML;
+		var minCenaZaOdabranuOblast = parseInt("1100");
 		if(ukupnaCena <= minCenaZaOdabranuOblast){
-			document.getElementById('labela').innerHTML = 'Minimalna cena za besplatnu dostavu: ' + minCenaZaOdabranuOblast + ',00 RSD';
-			document.getElementById("labela").style.visibility = "visible";
+			document.getElementById("labela").innerHTML = "Minimalna cena za besplatnu dostavu: " + minCenaZaOdabranuOblast + ",00 RSD";
+			//document.getElementById("labela").style.visibility = "visible";
+			document.getElementById("labela").style.display = 'block';
 			document.getElementById("submit-button").setAttribute("disabled", "disabled");
-		}
-	}else{
-		document.getElementById("labela").style.visibility = "hidden";
-		document.getElementById("submit-button").removeAttribute("disabled");
+		}else{
+			//document.getElementById("labela").style.visibility = "hidden";
+			document.getElementById("labela").style.display = 'none';
+			document.getElementById("submit-button").removeAttribute("disabled")}
 	}
-
-
 
 }
 
@@ -91,33 +114,6 @@ function mojaFunkcija(elem){
 
 
 //////////////////////////////////////MODAL///////////////////////////////////////////////////////
-
-// Get the modal
-var modal = document.getElementsById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementsByClassName("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
 
 function openModal(elem){
 

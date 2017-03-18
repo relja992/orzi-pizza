@@ -17,7 +17,12 @@ class Kontroler extends Controller
     }
 
     public function menu(){
-    	return view('layout.menu');
+    	//return view('layout.menu');
+        $cat = Category::all();
+        $pro = Product::all();
+        $pri = Prilog::orderBy('price', 'desc')->get();
+        $vel = "1";
+        return view('layout.menu2')->withCategories($cat)->withProducts($pro)->withTest($vel)->withPrilozi($pri);
     }
 
     public function menu2(){

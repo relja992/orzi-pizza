@@ -1,12 +1,10 @@
-@extends('layout.main')
-
-@section('body')
+<?php $__env->startSection('body'); ?>
     
 <body class="intro-fullscreen fixed-footer scroll-down yo-anim-enabled">
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 
 
@@ -19,7 +17,7 @@
 			</div>
 
 			<div class="logo pull-left">
-				<a href="{{ url('/') }}">
+				<a href="<?php echo e(url('/')); ?>">
 					<figure>
 						<img src="img/logo1.png" class="light-logo" alt="ORZI PIZZERIA"/>
 						<img src="img/logo2.png" class="dark-logo" alt="ORZI PIZZERIA"/>
@@ -29,52 +27,52 @@
 			<div class="main-nav">
 				<ul class="pull-right">
 					<li>
-						<a href="{{ url('/') }}" class="    ">Početna</a>	
+						<a href="<?php echo e(url('/')); ?>" class="    ">Početna</a>	
 					</li>				
 					<li>
-						<a href="{{ url('/menu') }}" class="hover-subnav">meni</a>
+						<a href="<?php echo e(url('/menu')); ?>" class="hover-subnav">meni</a>
 						<div class="subnav image-subnav">
 							<ul class="subnav-wrapper">
 								<li>
-									<a href="{{ url('/menu') }}#grill" style="color: white;">roštilj</a>
+									<a href="<?php echo e(url('/menu')); ?>#grill" style="color: white;">roštilj</a>
 									<div>
-										<a href="{{ url('/menu') }}#grill" class="menu-img" style="background-image: url('img/demo/nav/grill.jpg')"></a>
+										<a href="<?php echo e(url('/menu')); ?>#grill" class="menu-img" style="background-image: url('img/demo/nav/grill.jpg')"></a>
 									</div>
 								</li>			
 								<li>
-									<a href="{{ url('/menu') }}#salad" style="color: white;">salate</a>
+									<a href="<?php echo e(url('/menu')); ?>#salad" style="color: white;">salate</a>
 									<div>
-										<a href="{{ url('/menu') }}#salad" class="menu-img" style="background-image: url('img/demo/nav/starters.jpg')"></a>
+										<a href="<?php echo e(url('/menu')); ?>#salad" class="menu-img" style="background-image: url('img/demo/nav/starters.jpg')"></a>
 									</div>
 								</li>
 								<li>
-									<a href="{{ url('/menu') }}#pasta" style="color: white;">paste</a>
+									<a href="<?php echo e(url('/menu')); ?>#pasta" style="color: white;">paste</a>
 									<div>							
-										<a href="{{ url('/menu') }}#pasta" class="menu-img" style="background-image: url('img/demo/nav/salads.jpg')"></a>
+										<a href="<?php echo e(url('/menu')); ?>#pasta" class="menu-img" style="background-image: url('img/demo/nav/salads.jpg')"></a>
 									</div>
 								</li>
 								<li>
-									<a href="{{ url('/menu') }}#tortilla" style="color: white;">tortilje</a>
+									<a href="<?php echo e(url('/menu')); ?>#tortilla" style="color: white;">tortilje</a>
 									<div>
-										<a href="{{ url('/menu') }}#tortilla" class="menu-img" style="background-image: url('img/demo/nav/mains.jpg')"></a>
+										<a href="<?php echo e(url('/menu')); ?>#tortilla" class="menu-img" style="background-image: url('img/demo/nav/mains.jpg')"></a>
 									</div>
 								</li>
 								<li>
-									<a href="{{ url('/menu') }}#pizza" style="color: white;">pizza</a>
+									<a href="<?php echo e(url('/menu')); ?>#pizza" style="color: white;">pizza</a>
 									<div>
-										<a href="{{ url('/menu') }}#pizza" class="menu-img" style="background-image: url('img/demo/nav/soup.jpg')"></a>
+										<a href="<?php echo e(url('/menu')); ?>#pizza" class="menu-img" style="background-image: url('img/demo/nav/soup.jpg')"></a>
 									</div>
 								</li>
 								<li>
-									<a href="{{ url('/menu') }}#pancake" style="color: white;">palačinke</a>
+									<a href="<?php echo e(url('/menu')); ?>#pancake" style="color: white;">palačinke</a>
 									<div>
-										<a href="{{ url('/menu') }}#pancake" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
+										<a href="<?php echo e(url('/menu')); ?>#pancake" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
 									</div>
 								</li>
 								<li>
-									<a href="{{ url('/menu') }}#sandwich" style="color: white;">sendviči</a>
+									<a href="<?php echo e(url('/menu')); ?>#sandwich" style="color: white;">sendviči</a>
 									<div>							
-										<a href="{{ url('/menu') }}#sandwich style="color: white;"" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
+										<a href="<?php echo e(url('/menu')); ?>#sandwich style="color: white;"" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
 									</div>
 								</li>
 							</ul>
@@ -82,20 +80,21 @@
 					</li>	
 					
 					<li>
-						<a href="{{ url('/contact') }}" class="">kontakt</a>	
+						<a href="<?php echo e(url('/contact')); ?>" class="">kontakt</a>	
 					</li>
 					
 					<li>
-						<a href="{{ url('/gallery') }}" class="hover-subnav">galerija</a>
+						<a href="<?php echo e(url('/gallery')); ?>" class="hover-subnav">galerija</a>
 						
 					</li>
 					<li>
-	                        <a href="{{ route('cart.index') }}">
+	                        <a href="<?php echo e(route('cart.index')); ?>">
 	                            <i class="fa fa-shopping-cart fa-2x" aria-hidden="true" style >
 	                            </i>
 	                            Korpa
 	                            <span class="badge" style="background-color: red;">
-	                                {{ Cart::count() }}
+	                                <?php echo e(Cart::count()); ?>
+
 	                            </span>
 	                        </a>
 	                </li>				
@@ -166,58 +165,67 @@
 	            </tr>
 	            </thead>
 	            <tbody>
-		            @foreach($cartItems as $cartItem)
+		            <?php foreach($cartItems as $cartItem): ?>
 		                <tr>
-		                    <td style="vertical-align:middle; text-align:center">{{$cartItem->name}}</td>
-		                    <td style="vertical-align:middle; text-align:center">{{$cartItem->price}}</td>
+		                    <td style="vertical-align:middle; text-align:center"><?php echo e($cartItem->name); ?></td>
+		                    <td style="vertical-align:middle; text-align:center"><?php echo e($cartItem->price); ?></td>
 
 		                    <td style="vertical-align:middle; text-align:center; ">
-		                        {!! Form::open(['route' => ['cart.update',$cartItem->rowId], 'method' => 'PUT']) !!}
-		                        <input style="width:50%; text-align:center" name="qty" type="text" value="{{$cartItem->qty}}">
+		                        <?php echo Form::open(['route' => ['cart.update',$cartItem->rowId], 'method' => 'PUT']); ?>
+
+		                        <input style="width:50%; text-align:center" name="qty" type="text" value="<?php echo e($cartItem->qty); ?>">
 		                    </td>
-		                    <td style="vertical-align:middle; text-align:center; ">{{$cartItem->options->prilozi}}</td>
-		                    @if($cartItem->options->size == 'small' || $cartItem->options->size == 'medium' || $cartItem->options->size == 'large')
+		                    <td style="vertical-align:middle; text-align:center; "><?php echo e($cartItem->options->prilozi); ?></td>
+		                    <?php if($cartItem->options->size == 'small' || $cartItem->options->size == 'medium' || $cartItem->options->size == 'large'): ?>
 			                    <td style="vertical-align:middle; text-align:center; width:80px">
 			                        <div > 
-			                        	{!! Form::select('size', ['small'=>'24 cm','medium'=>'32 cm','large'=>'45 cm'] , $cartItem->options->has('size')?$cartItem->options->size:'' ) !!}
+			                        	<?php echo Form::select('size', ['small'=>'24 cm','medium'=>'32 cm','large'=>'45 cm'] , $cartItem->options->has('size')?$cartItem->options->size:'' ); ?>
+
 			                        </div>
 			                    </td>
-		                    @elseif($cartItem->options->size == 'pene' || $cartItem->options->size == 'fusili')
+		                    <?php elseif($cartItem->options->size == 'pene' || $cartItem->options->size == 'fusili'): ?>
 								<td style="vertical-align:middle; text-align:center; width:80px">
 			                        <div > 
-			                        	{!! Form::select('size', ['pene'=>'Pene','fusili'=>'Fusili'] , $cartItem->options->has('size')?$cartItem->options->size:'' ) !!}
+			                        	<?php echo Form::select('size', ['pene'=>'Pene','fusili'=>'Fusili'] , $cartItem->options->has('size')?$cartItem->options->size:'' ); ?>
+
 			                        </div>
 			                    </td>
-			                @elseif($cartItem->options->size == '200g' || $cartItem->options->size == '300g' || $cartItem->options->size == '500g' || $cartItem->options->size == '1kg')
+			                <?php elseif($cartItem->options->size == '200g' || $cartItem->options->size == '300g' || $cartItem->options->size == '500g' || $cartItem->options->size == '1kg'): ?>
 								<td style="vertical-align:middle; text-align:center; width:80px">
 			                        <div > 
-			                        	{!! Form::select('size', ['200g'=>'200g','300g'=>'300g','500g'=>'500g','1kg'=>'1kg'] , $cartItem->options->has('size')?$cartItem->options->size:'' ) !!}
+			                        	<?php echo Form::select('size', ['200g'=>'200g','300g'=>'300g','500g'=>'500g','1kg'=>'1kg'] , $cartItem->options->has('size')?$cartItem->options->size:'' ); ?>
+
 			                        </div>
 			                    </td>
-		                    @else
+		                    <?php else: ?>
 		                    	<td style="vertical-align:middle; text-align:center; width:80px">
 									<span class="label label-default">Standard</span>
 		                    	</td>
-		                    @endif
+		                    <?php endif; ?>
 
 		                    <td style="vertical-align:middle; text-align:center">
 		                        <input style="float: left; border-radius: 3px;"  type="submit" class="button btn-success" value="Ažuriraj">
-		                        {!! Form::close() !!}
+		                        <?php echo Form::close(); ?>
 
-		                        <form action="{{route('cart.destroy',$cartItem->rowId)}}"  method="POST">
-		                           {{csrf_field()}}
-		                           {{method_field('DELETE')}}
+
+		                        <form action="<?php echo e(route('cart.destroy',$cartItem->rowId)); ?>"  method="POST">
+		                           <?php echo e(csrf_field()); ?>
+
+		                           <?php echo e(method_field('DELETE')); ?>
+
 		                           <input style="border-radius: 3px;" class="button btn-danger" type="submit" value="Obriši">
 		                        </form>
 		                    </td>
 		                </tr>
-		            @endforeach
+		            <?php endforeach; ?>
 	            </tbody>
 	        </table>
 	        <div class="col-md-6 col-md-offset-3" style="text-align:center; border-style:solid; border-width:1px;">
 		        <div class="form-group">
-                {{ Form::label('oblast', 'Oblast') }}
-                {{ Form::select('oblast', $oblasti, null, ['class' => 'form-control','placeholder'=>'Odaberi oblast','onChange' => 'mojaFunkcija(this);']) }}
+                <?php echo e(Form::label('oblast', 'Oblast')); ?>
+
+                <?php echo e(Form::select('oblast', $oblasti, null, ['class' => 'form-control','placeholder'=>'Odaberi oblast','onChange' => 'mojaFunkcija(this);'])); ?>
+
                 <br>
                 <div class="alert alert-danger" role="alert" id="labela" style="display:none"></div>
 				</div>
@@ -226,9 +234,9 @@
 	        <div class="col-md-6 col-md-offset-3" id="hiddenDiv" style="text-align:center; border-style:solid; border-width:1px; margin-top:20px">
                 <div class="form-group"><br>
                    <span class="label-lg label" style="font-size:18px; color:black">Ukupna cena sa PDV-om:</span>
-                   <span style="font-size:18px" id="ukupnaCena" class="label-lg label label-warning">{{Cart::subtotal()}}&nbsp; RSD</span>
+                   <span style="font-size:18px" id="ukupnaCena" class="label-lg label label-warning"><?php echo e(Cart::subtotal()); ?>&nbsp; RSD</span>
                 </div>
-                <a href="{{route('shipping')}}" id="submit-button" class="btn btn-success" style="width:80%" disabled="disabled">Podaci za dostavu</a>
+                <a href="<?php echo e(route('shipping')); ?>" id="submit-button" class="btn btn-success" style="width:80%" disabled="disabled">Podaci za dostavu</a>
                 <br><br>
             </div><br><br><br><br>
         </div>
@@ -236,8 +244,9 @@
 </section>
 
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('javascript')
+<?php $__env->startSection('javascript'); ?>
 	<script src="js/mojJS/script.js"></script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

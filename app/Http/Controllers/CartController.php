@@ -215,6 +215,8 @@ class CartController extends Controller
             $price = $product->price3;
         }elseif($request->size == '1kg'){
             $price = $product->price4;
+        }else{
+            $price = $product->price;
         }
 
         Cart::update($id, ['qty'=>$request->qty, 'price' => $price, 'options'=> ['size'=> $request->size]]);
