@@ -26,23 +26,21 @@
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top" style="margin-bottom:50px">
-        <div class="container" >
+    <nav class="navbar navbar-default navbar-static-top text-center" style="margin-bottom:50px">
+        <div class=" text-center container" >
                 
                 
 
-            <div class="collapse navbar-collapse" style="text-align:center" id="app-navbar-collapse">
+            <div class=" text-center collapse navbar-collapse" style="text-align:center" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <!--<ul class="nav navbar-nav">
                     <li><a href="<?php echo e(url('/home')); ?>">Home</a></li>
                 </ul>
                 -->
-                <div style="text-align:center" class="row">
-                    <div style="text-align:center" class="col-md-12">
-                        <a style="text-align:center;" class="navbar-brand" href="<?php echo e(url('/')); ?>">
-                        Orzi Pizzeria
+                <div class="col-md-2 col-md-offset-5 text-center" style="text-align:center;padding-left:40px">
+                        <a style="text-align:center; font-size:20px" class="navbar-brand" href="<?php echo e(url('/')); ?>">
+                        <strong>Orzi Pizzeria</strong>
                         </a>
-                    </div>
                 </div>
 
                 <!-- Right Side Of Navbar -->

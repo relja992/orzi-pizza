@@ -34,7 +34,9 @@
 					<?php endforeach; ?>
 
 				</tbody>
-			</table> <br><br><br><br><br>
+			</table> 
+
+			<div class="text-center"><?php echo $orders->links();; ?></div>
 
 			
 		</div>

@@ -151,7 +151,7 @@
     <div class="row"><br><br><br><br><br>
     	<div class="col-md-8 col-md-offset-2">
     		<div class="panel panel-success">
-    			<div class="panel-heading"><strong><i class="glyphicon glyphicon-edit"></i>&nbsp;&nbsp;Narudžbina</strong></div>
+    			<div class="panel-heading"><strong style="font-size:20px"><i class="glyphicon glyphicon-edit"></i>&nbsp;&nbsp;Narudžbina</strong></div>
 				  <div class="panel-body">
 				    <table class="table table-hover" style="">
 			            <thead>
@@ -243,9 +243,9 @@
 	        <div class="col-md-6 col-md-offset-3" id="hiddenDiv" style="text-align:center; border-style:solid; border-width:1px; margin-top:20px">
                 <div class="form-group"><br>
                    <span class="label-lg label" style="font-size:18px; color:black">Ukupna cena sa PDV-om:</span><br><br>
-                   <span style="font-size:18px" id="ukupnaCena" class="label-lg label label-warning"><?php echo e(Cart::subtotal(2, ',', '.')); ?>&nbsp; RSD</span>
-                </div>
-                <a href="<?php echo e(route('shipping')); ?>" id="submit-button" class="btn btn-success" style="width:80%" disabled="disabled">Podaci za dostavu</a>
+                   <span style="font-size:18px" id="ukupnaCena" class="label-lg label label-warning"><?php echo e(Cart::subtotal(2, ',', '')); ?>&nbsp; RSD</span>
+                </div><br>
+                <a href="<?php echo e(route('shipping')); ?>" id="submit-button" class="btn btn-success btn-lg" style="width:80%; font-size:20px;" disabled="disabled">Podaci za dostavu</a>
                 <br><br>
             </div><br><br><br><br>
         </div>
@@ -256,6 +256,6 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('javascript'); ?>
-	<script src="js/mojJS/script.js"></script>
+	<script src="<?php echo asset('js/mojJS/script.js'); ?>"></script>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layout.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

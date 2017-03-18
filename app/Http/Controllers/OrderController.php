@@ -17,7 +17,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $ord = Order::all()->sortByDesc('id');
+        $ord = Order::orderBy('id', 'desc')->paginate(10);
 
         return view('admin.orders.index')->withOrders($ord);
     }
@@ -28,7 +28,51 @@ class OrderController extends Controller
         $ordItems = OrderItems::where('order_id', $id)->get();
         $i=1;
 
-        return view('admin.orders.orderDetails')->withOrd($ord)->withTest($ordItems)->withI($i);
+        //dd($ordItems);
+
+        $cenaDodataka = 0;
+        $cenaProizvoda = 0;
+        foreach($ordItems as $ordItem){
+            if($ordItem->product->size == 'small'){
+                $cenaProizvoda += $ordItem->product->price * $ordItem->amount;
+            }elseif($ordItem->size == 'medium'){
+                $cenaProizvoda += $ordItem->product->price2 * $ordItem->amount;
+            }elseif($ordItem->size == 'large'){
+                $cenaProizvoda += $ordItem->product->price3 * $ordItem->amount;
+            }elseif($ordItem->size == 'pene'){
+                $cenaProizvoda += $ordItem->product->price * $ordItem->amount;
+            }elseif($ordItem->size == 'fusili'){
+                $cenaProizvoda += $ordItem->product->price * $ordItem->amount;
+            }elseif($ordItem->size == '200g'){
+                $cenaProizvoda += $ordItem->product->price * $ordItem->amount;
+            }elseif($ordItem->size == '300g'){
+                $cenaProizvoda += $ordItem->product->price2 * $ordItem->amount;
+            }elseif($ordItem->size == '500g'){
+                $cenaProizvoda += $ordItem->product->price3 * $ordItem->amount;
+            }elseif($ordItem->size == '1kg'){
+                $cenaProizvoda += $ordItem->product->price4 * $ordItem->amount;
+            }elseif($ordItem->size == 'standard'){
+                $cenaProizvoda += $ordItem->product->price * $ordItem->amount;
+            }else{
+                $cenaProizvoda += $ordItem->product->price * $ordItem->amount;
+            }
+        }
+        $cenaOrd = array();
+        $cenaOrd = explode(".", $ord->price);
+
+        if(intval($cenaOrd[0])<100){
+        $prvaCifra = $cenaOrd[0] * 1000;
+        $ostatak = array();
+        $ostatak = explode(",", $cenaOrd[1]);
+    
+        $cenaOrdera = $prvaCifra + intval($ostatak[0]);
+        }else{
+        $cenaOrdera = $cenaOrd[0];
+        }
+
+        $cenaDodataka = $cenaOrdera - $cenaProizvoda;
+
+        return view('admin.orders.orderDetails')->withOrd($ord)->withTest($ordItems)->withI($i)->withPrilozi_cena($cenaDodataka);
     }
 
     /**

@@ -77,7 +77,7 @@ class CheckoutController extends Controller
             $data = ['ord' => $ord, 'test' => $ordItems, 'i' => $i];
 
             Mail::send('admin.orders.email', $data, function($message) use ($ord){
-                $message->to($ord['email'], 'RiM Team')->cc('matoriinfos@gmail.com')->subject('Orzi pizzeria');
+                $message->to($ord['email'], 'RiM Team')->cc('reljin992@gmail.com')->subject('Orzi pizzeria');
             });
 
 

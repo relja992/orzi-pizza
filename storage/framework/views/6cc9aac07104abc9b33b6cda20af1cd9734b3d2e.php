@@ -17,7 +17,7 @@
 					<th style="text-align:center; border: 1px solid black;">Naziv jela</th>
 					<th style="text-align:center; border: 1px solid black;">Opis</th>
 					<th style="text-align:center; border: 1px solid black;">Prilozi</th>
-					<th style="text-align:center">Količina</th>
+					<th style="text-align:center; border: 1px solid black;">Količina</th>
 					<th style="text-align:center; border: 1px solid black;">Cena</th>
 					<th style="text-align:center; border: 1px solid black;">Veličina</th>
 				</thead>
@@ -29,7 +29,7 @@
 							<td style="vertical-align:middle; border: 1px solid black;"><?php echo e($orderItem->product->name); ?></td>
 							<td style="vertical-align:middle; border: 1px solid black;"><?php echo e($orderItem->product->description); ?></td>
 							<td style="vertical-align:middle; border: 1px solid black;"><?php echo e($orderItem->prilozi); ?></td>
-							<td style="vertical-align:middle"><?php echo e($orderItem->amount); ?></td>
+							<td style="vertical-align:middle; border: 1px solid black;"><?php echo e($orderItem->amount); ?></td>
 							<?php if($orderItem->product->price2 == 0): ?>
 								<td style="vertical-align:middle; border: 1px solid black;"><?php echo e($orderItem->product->price); ?></td>
 							<?php elseif($orderItem->size == 'small'): ?>

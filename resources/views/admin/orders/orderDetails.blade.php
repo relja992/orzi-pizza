@@ -48,9 +48,12 @@
 				</tbody>
 			</table>
 			<div>
-				<h3 class="pull-right">Ukupno:&nbsp;<span class="label label-lg label-success pull-right">{{ $ord->price }}</span></h3>
+				<h4 class="pull-right">Cena priloga:&nbsp;<span class="label label-lg label-success pull-right">{{ $prilozi_cena }}</span></h4>
 			</div>
-			<br><br><br><br>
+			<div>
+				<h3 style="clear:right;" class="pull-right">Ukupno:&nbsp;<span class="label label-lg label-success pull-right">{{ $ord->price }}</span></h3>
+			</div>
+			<br><br><br><br><br><br>
 			
 
 			<div class="col-md-5">
@@ -95,8 +98,8 @@
 
 		</div>
 		@if($ord->status == 'na čekanju')
-				<div class="">
-					<a href="{{ route('admin.orders.updatee', $ord->id) }}" class="btn btn-success btn-lg pull-right">Potvrdi naružbinu</a>
+				<div class="" style="padding-right:30px; font-size:20px">
+					<a href="{{ route('admin.orders.updatee', $ord->id) }}" class="btn btn-success btn-lg pull-right" style=" font-size:20px">Potvrdi naružbinu</a>
 				</div>
 			@elseif($ord->status == 'odobrena')
 				<div>

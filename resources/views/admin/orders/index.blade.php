@@ -36,7 +36,9 @@
 					@endforeach
 
 				</tbody>
-			</table> <br><br><br><br><br>
+			</table> 
+
+			<div class="text-center">{!!$orders->links();!!}</div>
 
 			
 		</div>
