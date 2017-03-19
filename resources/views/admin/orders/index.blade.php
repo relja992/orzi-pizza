@@ -21,7 +21,7 @@
 
 						<tr>
 							<td style="vertical-align:middle">{{ $order->id }}</td>
-							<td style="vertical-align:middle">{{ date('h:m', strtotime($order->created_at)) }}&nbsp;&nbsp;&nbsp;&nbsp;{{ date('j.n.Y.', strtotime($order->created_at)) }}</td>
+							<td style="vertical-align:middle">{{ date('H:i', strtotime($order->created_at)) }}&nbsp;&nbsp;&nbsp;&nbsp;{{ date('j.n.Y.', strtotime($order->created_at)) }}</td>
 							<td style="vertical-align:middle">{{ $order->name }} {{ $order->surname }}</td>
 							<td style="vertical-align:middle">{{ $order->address }}/{{ $order->stan }}</td>
 							<td style="vertical-align:middle">{{ $order->price }}</td>

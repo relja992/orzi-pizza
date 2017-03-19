@@ -46,6 +46,9 @@
 				</tbody>
 			</table>
 			<div>
+				<h5 class="pull-right">Cena priloga:&nbsp;<span class="label label-lg label-success pull-right">{{ $cenaPriloga }}</span></h5>
+			</div>
+			<div>
 				<h3 class="pull-right">Ukupno:&nbsp;<span class="label label-lg label-success pull-right">{{ $ord->price }}</span></h3>
 			</div>
 			<br><br>

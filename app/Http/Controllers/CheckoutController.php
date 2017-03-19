@@ -46,6 +46,7 @@ class CheckoutController extends Controller
         $order->napomena = $request->napomena;
         $order->price = Cart::subtotal(2, ',', '.');
         $order->status = 'na čekanju';
+        //$order->mojDatum = date('Y-m-d H:i:s');
         $order->save();
 
         $id = $order->id;
@@ -64,8 +65,56 @@ class CheckoutController extends Controller
 
         		$orderItem->save();
         	}
-        //setovanje sesije za obavestenje
 
+            $ordItems = OrderItems::where('order_id', $id)->get();
+
+            $cenaDodataka = 0;
+            $cenaProizvoda = 0;
+
+            foreach($ordItems as $ordItem){
+
+                if($ordItem->product->size == 'small'){
+                    $cenaProizvoda += $ordItem->product->price * $ordItem->amount;
+                }elseif($ordItem->size == 'medium'){
+                    $cenaProizvoda += $ordItem->product->price2 * $ordItem->amount;
+                }elseif($ordItem->size == 'large'){
+                    $cenaProizvoda += $ordItem->product->price3 * $ordItem->amount;
+                }elseif($ordItem->size == 'pene'){
+                    $cenaProizvoda += $ordItem->product->price * $ordItem->amount;
+                }elseif($ordItem->size == 'fusili'){
+                    $cenaProizvoda += $ordItem->product->price * $ordItem->amount;
+                }elseif($ordItem->size == '200g'){
+                    $cenaProizvoda += $ordItem->product->price * $ordItem->amount;
+                }elseif($ordItem->size == '300g'){
+                    $cenaProizvoda += $ordItem->product->price2 * $ordItem->amount;
+                }elseif($ordItem->size == '500g'){
+                    $cenaProizvoda += $ordItem->product->price3 * $ordItem->amount;
+                }elseif($ordItem->size == '1kg'){
+                    $cenaProizvoda += $ordItem->product->price4 * $ordItem->amount;
+                }elseif($ordItem->size == 'standard'){
+                    $cenaProizvoda += $ordItem->product->price * $ordItem->amount;
+                }else{
+                    $cenaProizvoda += $ordItem->product->price * $ordItem->amount;
+                }
+            }
+
+            $cenaOrd = array();
+            $cenaOrd = explode(".", $order->price);
+
+            if(intval($cenaOrd[0])<100){
+            $prvaCifra = $cenaOrd[0] * 1000;
+            $ostatak = array();
+            $ostatak = explode(",", $cenaOrd[1]);
+        
+            $cenaOrdera = $prvaCifra + intval($ostatak[0]);
+            }else{
+            $cenaOrdera = $cenaOrd[0];
+            }
+
+            $cenaDodataka = $cenaOrdera - $cenaProizvoda;
+
+
+        //setovanje sesije za obavestenje
             Session::flash('success', 'Uspešno ste izvršili naručivanje. Poslat Vam je email sa specifikacijom narudžbine.');
 
     	//send email
@@ -74,7 +123,7 @@ class CheckoutController extends Controller
             $ordItems = OrderItems::where('order_id', $id)->get();
             $i=1;
 
-            $data = ['ord' => $ord, 'test' => $ordItems, 'i' => $i];
+            $data = ['ord' => $ord, 'test' => $ordItems, 'i' => $i, 'cenaPriloga' => $cenaDodataka];
 
             Mail::send('admin.orders.email', $data, function($message) use ($ord){
                 $message->to($ord['email'], 'RiM Team')->cc('reljin992@gmail.com')->subject('Orzi pizzeria');
