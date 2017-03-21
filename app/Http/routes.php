@@ -17,7 +17,7 @@ Route::get('/', function () {
 */
 
 Route::get('/', ['as' => 'home', 'uses' => 'Kontroler@index']);
-Route::get('/menu', ['as' => 'menu', 'uses' => 'Kontroler@menu']);
+Route::get('/menu', ['as' => 'menu', 'uses' => 'Kontroler@menu2']);
 Route::get('/menu2', ['as' => 'menu2', 'uses' => 'Kontroler@menu2']);
 Route::get('/contact', ['as' => 'contact', 'uses' => 'Kontroler@contact']);
 Route::get('/gallery', ['as' => 'gallery', 'uses' => 'Kontroler@gallery']);

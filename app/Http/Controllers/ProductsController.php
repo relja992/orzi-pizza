@@ -117,13 +117,16 @@ class ProductsController extends Controller
             ]);
 
         //dd('prosla validacija');
+        $imageName='';
 
         //slika
+        if($request->image != null){
         $image = $request->image;
         if($image){
             $imageName = $image->getClientOriginalName();
             $image->move('images', $imageName);
             $formInput['image'] = $imageName;
+            }
         }
 
         //update
@@ -134,7 +137,10 @@ class ProductsController extends Controller
         $proizvod->price = $request->price;
         $proizvod->price2 = $request->price2;
         $proizvod->price3 = $request->price3;
-        $proizvod->image = $imageName;
+        $proizvod->price4 = $request->price4;
+        if($imageName != null){
+            $proizvod->image = $imageName;
+        }
         $proizvod->category_id = $request->category_id;
         $proizvod->save();
 

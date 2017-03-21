@@ -11,7 +11,7 @@
 	<div class="row">
 		<div class="col-md-12">
 
-			<p><strong>Vaša narudžbina je primljena. Isporučićemo Vam je u roku od 45 min. U suprotnom je dobijate gratis.<strong></p>
+			<p><strong>Vaša narudžbina je primljena. Isporučićemo Vam je u roku od 50 min.<strong></p>
 
 		</div>
 	</div>

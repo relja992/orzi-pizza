@@ -10,8 +10,9 @@
 					<th style="text-align:center">#</th>
 					<th style="text-align:center">Naziv</th>
 					<th style="text-align:center">Opis</th>
-					<th style="text-align:center"></th>
 					<th style="text-align:center">Cene</th>
+					<th style="text-align:center"></th>
+					<th style="text-align:center"></th>
 					<th style="text-align:center"></th>
 					<th style="text-align:center">Slika</th>
 					<th style="text-align:center">Kategorija</th>
@@ -33,7 +34,13 @@
 								@if($category->slug == 'pizza')
 									<td style="vertical-align:middle">{{ $product->price2 }}</td>
 									<td style="vertical-align:middle">{{ $product->price3 }}</td>
+									<td></td>
+								@elseif($category->slug == 'grill-kg')
+									<td style="vertical-align:middle">{{ $product->price2 }}</td>
+									<td style="vertical-align:middle">{{ $product->price3 }}</td>
+									<td style="vertical-align:middle">{{ $product->price4 }}</td>
 								@else
+									<td></td>
 									<td></td>
 									<td></td>
 								@endif

@@ -46,7 +46,7 @@
             <div class="form-group" style="clear:both;">
                 {{ Form::label('image', 'Fotografija') }}<br>
                 <img src="{{ asset('/images/').'/'.$proizvod->image }}" id="picture" style="width:300px;height:300px;">
-                {{ Form::file('image',array('class' => 'form-control' , 'required' => '', 'onChange' => 'onFileSelected(event)')) }}
+                {{ Form::file('image',array('class' => 'form-control', 'onChange' => 'onFileSelected(event)')) }}
             </div>
 
             <div class="form-group col-md-8 col-md-offset-2"  id="idDiv" style="visibility:hidden">

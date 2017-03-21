@@ -29,13 +29,51 @@ class Kontroler extends Controller
         $cat = Category::all();
         $pro = Product::all();
         $pri = Prilog::orderBy('price', 'desc')->get();
-        $vel = "1";
+        //$vel = "1";
+
+
+        $odobrenoNarucivanje = false;
         $dayofweek = date('l');
-        $vreme = 0;
-        $opseg1 =9;
+        $sat = date('H');
+        $satInt = intval($sat);
+        $min = date('i');
+        $minInt = intval($min);
+
+        //dd($satInt);
+        $vreme1 = 9;
+        $vreme2 = 16;
+        $vreme3 = 22;
+        $vremeMin3 = 45;
+
+
+        if($dayofweek == 'Sunday'){
+            if($satInt < $vreme1){
+                $odobrenoNarucivanje = false;
+            }
+            elseif($satInt >= $vreme3){
+                if($minInt > $vremeMin3){
+                $odobrenoNarucivanje = false;
+                }
+            }else{
+                $odobrenoNarucivanje = true;
+            }
+        }else{
+            if($satInt < $vreme1){
+                $odobrenoNarucivanje = false;
+            }
+            elseif($satInt >= $vreme2){
+                if($minInt > $vremeMin3){
+                $odobrenoNarucivanje = false;
+                }
+            }else{
+                $odobrenoNarucivanje = true;
+            }
+        }
+
+
         //,.....
         //dd($dayofweek);
-        return view('layout.menu2')->withCategories($cat)->withProducts($pro)->withTest($vel)->withPrilozi($pri)->withDan($dayofweek);
+        return view('layout.menu2')->withCategories($cat)->withProducts($pro)->withPrilozi($pri)->withOdobreno($odobrenoNarucivanje);
     }
 
     public function contact(){
