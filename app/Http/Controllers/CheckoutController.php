@@ -25,8 +25,8 @@ class CheckoutController extends Controller
 
     public function finishOrder(Request $request){
 
-    	//validation
-    	$this->validate($request, [
+        //validation
+        $this->validate($request, [
                 'name' => 'required',
                 'surname' => 'required',
                 'address' => 'required',
@@ -34,8 +34,8 @@ class CheckoutController extends Controller
                 'email' => 'required|email',
             ]);
 
-    	//taking datas from form
-    	$order = new Order();
+        //taking datas from form
+        $order = new Order();
         $order->name = $request->name;
         $order->surname = $request->surname;
         $order->address = $request->address;
@@ -54,17 +54,17 @@ class CheckoutController extends Controller
         //taking data from cart inserting to db * 2
             $cartItems = Cart::content();
 
-        	foreach($cartItems as $cartItem){
+            foreach($cartItems as $cartItem){
 
-        		$orderItem = new OrderItems();
-        		$orderItem->order_id = $id;
-        		$orderItem->product_id = $cartItem->id;
-        		$orderItem->amount = $cartItem->qty;
-        		$orderItem->size = $cartItem->options->size;
+                $orderItem = new OrderItems();
+                $orderItem->order_id = $id;
+                $orderItem->product_id = $cartItem->id;
+                $orderItem->amount = $cartItem->qty;
+                $orderItem->size = $cartItem->options->size;
                 $orderItem->prilozi = $cartItem->options->prilozi;
 
-        		$orderItem->save();
-        	}
+                $orderItem->save();
+            }
 
             $ordItems = OrderItems::where('order_id', $id)->get();
 
@@ -117,7 +117,7 @@ class CheckoutController extends Controller
         //setovanje sesije za obavestenje
             Session::flash('success', 'Uspešno ste izvršili naručivanje. Poslat Vam je email sa specifikacijom narudžbine.');
 
-    	//send email
+        //send email
 
             $ord = Order::find($id);
             $ordItems = OrderItems::where('order_id', $id)->get();
@@ -126,7 +126,7 @@ class CheckoutController extends Controller
             $data = ['ord' => $ord, 'test' => $ordItems, 'i' => $i, 'cenaPriloga' => $cenaDodataka];
 
             Mail::send('admin.orders.email', $data, function($message) use ($ord){
-                $message->to($ord['email'], 'RiM Team')->cc('reljin992@gmail.com')->subject('Orzi pizzeria');
+                $message->to($ord['email'], $ord->name . ' ' . $ord->surname)->cc('orzipizzeria@gmail.com')->subject('Orzi pizzeria');
             });
 
 

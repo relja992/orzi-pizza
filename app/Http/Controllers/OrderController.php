@@ -138,10 +138,10 @@ class OrderController extends Controller
 
         $ord = Order::find($id);
 
-            $data = ['ord' => $ord];
+            $data = ['ord' => $ord, ];
 
             Mail::send('admin.orders.email2', $data, function($message) use ($ord){
-                $message->to($ord['email'], 'RiM Team')->cc('reljin992@gmail.com')->subject('Orzi pizzeria');
+                $message->to($ord['email'], $ord->name . ' ' . $ord->surname)->subject('Orzi pizzeria');
             });
 
 
