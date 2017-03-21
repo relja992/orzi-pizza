@@ -513,11 +513,13 @@
 										</div>
 
 									</div>
-									@if($category->slug == 'pasta' || $category->slug == 'drink' || $category->slug == 'salad' || $category->slug == 'other')
+									@if($dan == 'Tuesday')
+										@if($category->slug == 'pasta' || $category->slug == 'drink' || $category->slug == 'salad' || $category->slug == 'other')
 										<input class="btn btn-danger btn-lg active" type="submit" value="Dodaj u korpu">
-									@else
+										@else
 										<br>
 										<input class="btn btn-danger btn-lg active myBtn" type="button" value="Dodaj priloge" onClick="openModal(this);">
+										@endif
 									@endif
 
 									

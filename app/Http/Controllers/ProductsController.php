@@ -80,7 +80,12 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        //
+        $jelo = Product::find($id);
+        $cats = Category::pluck('name', 'id');
+
+        //dd($jelo);
+
+        return view('admin.product.edit')->withProizvod($jelo)->withCategories($cats);
     }
 
     /**
@@ -103,7 +108,37 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //validacija
+        $this->validate($request, [
+                'name' => 'required',
+                'price' => 'required',
+                'image' => 'image|mimes:png,jpg,jpeg|max:10240',
+                'category_id' => 'required'
+            ]);
+
+        //dd('prosla validacija');
+
+        //slika
+        $image = $request->image;
+        if($image){
+            $imageName = $image->getClientOriginalName();
+            $image->move('images', $imageName);
+            $formInput['image'] = $imageName;
+        }
+
+        //update
+        $proizvod = Product::find($id);
+
+        $proizvod->name = $request->name;
+        $proizvod->description = $request->description;
+        $proizvod->price = $request->price;
+        $proizvod->price2 = $request->price2;
+        $proizvod->price3 = $request->price3;
+        $proizvod->image = $imageName;
+        $proizvod->category_id = $request->category_id;
+        $proizvod->save();
+
+        return redirect()->route('admin.product.index');
     }
 
     /**

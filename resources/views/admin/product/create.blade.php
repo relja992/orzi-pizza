@@ -47,7 +47,7 @@
                 {{ Form::file('image',array('class' => 'form-control' , 'required' => '')) }}
             </div>
 
-             {{ Form::submit('Dodaj jelo', array('class' => 'btn btn-success')) }}
+             {{ Form::submit('Dodaj jelo', array('class' => 'btn btn-success btn-lg')) }}
             {!! Form::close() !!}
 
         </div>

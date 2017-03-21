@@ -30,7 +30,12 @@ class Kontroler extends Controller
         $pro = Product::all();
         $pri = Prilog::orderBy('price', 'desc')->get();
         $vel = "1";
-        return view('layout.menu2')->withCategories($cat)->withProducts($pro)->withTest($vel)->withPrilozi($pri);
+        $dayofweek = date('l');
+        $vreme = 0;
+        $opseg1 =9;
+        //,.....
+        //dd($dayofweek);
+        return view('layout.menu2')->withCategories($cat)->withProducts($pro)->withTest($vel)->withPrilozi($pri)->withDan($dayofweek);
     }
 
     public function contact(){

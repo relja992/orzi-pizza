@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Order;
+use Mail;
 use App\OrderItems;
 
 class OrderController extends Controller
@@ -133,6 +134,16 @@ class OrderController extends Controller
     public function updatee($id)
     {
         Order::where('id', $id)->update(['status' => 'odobrena']);
+
+
+        $ord = Order::find($id);
+
+            $data = ['ord' => $ord];
+
+            Mail::send('admin.orders.email2', $data, function($message) use ($ord){
+                $message->to($ord['email'], 'RiM Team')->cc('reljin992@gmail.com')->subject('Orzi pizzeria');
+            });
+
 
         return redirect()->route('admin.orders.index');
     }
