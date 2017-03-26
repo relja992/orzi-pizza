@@ -139,7 +139,7 @@ class CartController extends Controller
             $size = "500g";
             $price = $product->price3 + $cenaPriloga;
             Cart::add($id, $product->name, 1, $price,['size'=> $size, 'prilozi' => $checkString]); 
-        }elseif($request->optradio == 8){
+        }elseif($request->optradio == 9){
             $size = "1kg";
             $price = $product->price4 + $cenaPriloga;
             Cart::add($id, $product->name, 1, $price,['size'=> $size, 'prilozi' => $checkString]); 
@@ -278,8 +278,8 @@ class CartController extends Controller
             $cenaPriloga = $item->price - $product->price;
             $price = $product->price + $cenaPriloga;
         }
-
-        Cart::update($id, ['qty'=>$request->qty, 'price' => $price, 'options'=> ['size'=> $item->options->size, 'prilozi' => $item->options->prilozi]]);
+        //dd($request->size);
+        Cart::update($id, ['qty'=>$request->qty, 'price' => $price, 'options'=> ['size'=> $request->size, 'prilozi' => $item->options->prilozi]]);
 
         return back();
     }

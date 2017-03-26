@@ -34,6 +34,7 @@ class Kontroler extends Controller
 
         $odobrenoNarucivanje = false;
         $dayofweek = date('l');
+        //dd($dayofweek);
         $sat = date('H');
         $satInt = intval($sat);
         $min = date('i');
@@ -47,7 +48,7 @@ class Kontroler extends Controller
 
 
         if($dayofweek == 'Sunday'){
-            if($satInt < $vreme1){
+            if($satInt < $vreme2){
                 $odobrenoNarucivanje = false;
             }
             elseif($satInt >= $vreme3){

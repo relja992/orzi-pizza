@@ -179,7 +179,7 @@
 				                    @if($cartItem->options->size == 'small' || $cartItem->options->size == 'medium' || $cartItem->options->size == 'large')
 					                    <td style="vertical-align:middle; text-align:center; width:80px">
 					                        <div > 
-					                        	{!! Form::select('size', ['small'=>'24 cm','medium'=>'32 cm','large'=>'45 cm'] , $cartItem->options->has('size')?$cartItem->options->size:'' ) !!}
+					                        	{!! Form::select('size', ['small'=>'24 cm','medium'=>'32 cm','large'=>'45 cm'] , $cartItem->options->size) !!}
 					                        </div>
 					                    </td>
 					            @elseif($cartItem->options->size == '200g' || $cartItem->options->size == '300g' || $cartItem->options->size == '500g' || $cartItem->options->size == '1kg')
