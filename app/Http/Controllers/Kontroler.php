@@ -31,21 +31,20 @@ class Kontroler extends Controller
         $pri = Prilog::orderBy('price', 'desc')->get();
         //$vel = "1";
 
-
         $odobrenoNarucivanje = false;
         $dayofweek = date('l');
-        //dd($dayofweek);
+        
         $sat = date('H');
         $satInt = intval($sat);
         $min = date('i');
         $minInt = intval($min);
 
-        //dd($satInt);
         $vreme1 = 9;
         $vreme2 = 16;
         $vreme3 = 22;
         $vremeMin3 = 45;
 
+        //dd($satInt);
 
         if($dayofweek == 'Sunday'){
             if($satInt < $vreme2){
@@ -62,14 +61,12 @@ class Kontroler extends Controller
             if($satInt < $vreme1){
                 $odobrenoNarucivanje = false;
             }
-            elseif($satInt >= $vreme2){
-                if($minInt > $vremeMin3){
+            elseif($satInt >= $vreme3 && $minInt > $vremeMin3){
                 $odobrenoNarucivanje = false;
-                }
             }else{
                 $odobrenoNarucivanje = true;
+                }
             }
-        }
 
 
         //,.....
