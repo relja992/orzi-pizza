@@ -279,6 +279,9 @@ class CartController extends Controller
             $price = $product->price + $cenaPriloga;
         }
         //dd($request->size);
+        if($request->size == null){
+            $request->size = 'standard';
+        }
         Cart::update($id, ['qty'=>$request->qty, 'price' => $price, 'options'=> ['size'=> $request->size, 'prilozi' => $item->options->prilozi]]);
 
         return back();

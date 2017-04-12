@@ -1,12 +1,10 @@
-@extends('layout.main')
-
-@section('body')
+<?php $__env->startSection('body'); ?>
 
 <body class="intro-top fixed-footer scrollable yo-anim-enabled">
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <!--content-->
 <nav id="main-navbar" class="hidden-xs hidden-sm">
@@ -19,7 +17,7 @@
 		</div>
 
 		<div class="logo pull-left">
-			<a href="{{ url('/') }}">
+			<a href="<?php echo e(url('/')); ?>">
 				<figure>
 					<img src="img/logo2.png" class="light-logo" alt="ORZI PIZZERIA"/>
 					<img src="img/logo2.png" class="dark-logo" alt="ORZI PIZZERIA"/>
@@ -30,64 +28,64 @@
 			<ul class="pull-right">
 				
 				<li>
-					<a href="{{ url('/') }}" class="    ">Početna</a>	
+					<a href="<?php echo e(url('/')); ?>" class="    ">Početna</a>	
 				</li>				
 				<li>
-					<a href="{{ url('/menu') }}" class="hover-subnav">meni</a>
+					<a href="<?php echo e(url('/menu')); ?>" class="hover-subnav">meni</a>
 					<div class="subnav image-subnav">
 						<ul class="subnav-wrapper">
 							<li>
-								<a href="{{ url('/menu') }}#grill" style="color: white;">roštilj</a>
+								<a href="<?php echo e(url('/menu')); ?>#grill" style="color: white;">roštilj</a>
 								<div>
-									<a href="{{ url('/menu') }}#grill" class="menu-img" style="background-image: url('img/demo/nav/grill.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#grill" class="menu-img" style="background-image: url('img/demo/nav/grill.jpg')"></a>
 								</div>
 							</li>			
 							<li>
-								<a href="{{ url('/menu') }}#salad" style="color: white;">salate</a>
+								<a href="<?php echo e(url('/menu')); ?>#salad" style="color: white;">salate</a>
 								<div>
-									<a href="{{ url('/menu') }}#salad" class="menu-img" style="background-image: url('img/demo/nav/starters.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#salad" class="menu-img" style="background-image: url('img/demo/nav/starters.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#pasta" style="color: white;">paste</a>
+								<a href="<?php echo e(url('/menu')); ?>#pasta" style="color: white;">paste</a>
 								<div>							
-									<a href="{{ url('/menu') }}#pasta" class="menu-img" style="background-image: url('img/demo/nav/salads.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#pasta" class="menu-img" style="background-image: url('img/demo/nav/salads.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#tortilla" style="color: white;">tortilje</a>
+								<a href="<?php echo e(url('/menu')); ?>#tortilla" style="color: white;">tortilje</a>
 								<div>
-									<a href="{{ url('/menu') }}#tortilla" class="menu-img" style="background-image: url('img/demo/nav/mains.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#tortilla" class="menu-img" style="background-image: url('img/demo/nav/mains.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#pizza" style="color: white;">pizza</a>
+								<a href="<?php echo e(url('/menu')); ?>#pizza" style="color: white;">pizza</a>
 								<div>
-									<a href="{{ url('/menu') }}#pizza" class="menu-img" style="background-image: url('img/demo/nav/soup.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#pizza" class="menu-img" style="background-image: url('img/demo/nav/soup.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#pancake" style="color: white;">slatke palačinke</a>
+								<a href="<?php echo e(url('/menu')); ?>#pancake" style="color: white;">slatke palačinke</a>
 								<div>
-									<a href="{{ url('/menu') }}#pancake" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#pancake" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#pancake_salted" style="color: white;">slane palačinke</a>
+								<a href="<?php echo e(url('/menu')); ?>#pancake_salted" style="color: white;">slane palačinke</a>
 								<div>
-									<a href="{{ url('/menu') }}#pancake_salted" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#pancake_salted" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#sandwich" style="color: white;">sendviči</a>
+								<a href="<?php echo e(url('/menu')); ?>#sandwich" style="color: white;">sendviči</a>
 								<div>							
-									<a href="{{ url('/menu') }}#sandwich style="color: white;"" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#sandwich style="color: white;"" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#other" style="color: white;">ostalo</a>
+								<a href="<?php echo e(url('/menu')); ?>#other" style="color: white;">ostalo</a>
 								<div>							
-									<a href="{{ url('/menu') }}#other style="color: white;"" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#other style="color: white;"" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
 								</div>
 							</li>
 						</ul>
@@ -95,20 +93,21 @@
 				</li>	
 				
 				<li>
-					<a href="{{ url('/contact') }}" class="">kontakt</a>	
+					<a href="<?php echo e(url('/contact')); ?>" class="">kontakt</a>	
 				</li>
 				
 				<li>
-					<a href="{{ url('/gallery') }}" class="hover-subnav">galerija</a>
+					<a href="<?php echo e(url('/gallery')); ?>" class="hover-subnav">galerija</a>
 					
 				</li>
 				<li>
-                        <a href="{{ route('cart.index') }}">
+                        <a href="<?php echo e(route('cart.index')); ?>">
                             <i class="fa fa-shopping-basket fa-2x" aria-hidden="true" style="color:#EA4623" >
                             </i>
                             Korpa
                             <span class="badge" style="background-color: #EA4623;">
-                                {{ Cart::count() }}
+                                <?php echo e(Cart::count()); ?>
+
                             </span>
                         </a>
                 </li>				
@@ -121,7 +120,7 @@
 								<div class="container-fluid">
 									<ul class="menu-header">
 										<li class="pull-left">
-											<a href="{{ url('/') }}" class="logo">
+											<a href="<?php echo e(url('/')); ?>" class="logo">
 												<figure>
 													<img src="img/logo2.png" alt="ORZI PIZZA"/>
 												</figure>
@@ -134,12 +133,12 @@
 							<div class="" id="flyout-container">
 								<ul id="mobile-navbar" class="nav flyout-menu main-nav nav-height">
 									<li class="nav-item">
-										<a title="" href="{{ url('/') }}">početna</a>
+										<a title="" href="<?php echo e(url('/')); ?>">početna</a>
 									</li>
 									
 									</li>
 									<li class="nav-item">
-										<a title="" href="{{ route('menu') }}" class="">Meni</a>
+										<a title="" href="<?php echo e(route('menu')); ?>" class="">Meni</a>
 										<!--<span class="open-children"><i class="fa fa-angle-down"></i></span>-->
 				
 									</li>
@@ -150,24 +149,25 @@
 									</li>
 									-->
 									<li class="nav-item">
-										<a title="" href="{{ route('gallery') }}">Galerija</a>
+										<a title="" href="<?php echo e(route('gallery')); ?>">Galerija</a>
 									</li>
 									<li class="nav-item">
-										<a title="" href="{{ route('contact') }}">Kontakt</a>
+										<a title="" href="<?php echo e(route('contact')); ?>">Kontakt</a>
 									</li>
 									<li>
-				                        <a href="{{ route('cart.index') }}">
+				                        <a href="<?php echo e(route('cart.index')); ?>">
 				                            <i class="fa fa-shopping-basket fa-2x" aria-hidden="true" style="color:#EA4623" >
 				                            </i>
 				                            <strong style="color:#ee6344">Korpa</strong>
 				                            <span class="badge" style="background-color: #EA4623;">
-				                                {{ Cart::count() }}
+				                                <?php echo e(Cart::count()); ?>
+
 				                            </span>
 				                        </a>
 					                </li>
 									<!--
 									<li class="nav-item">
-										<a title="" href="{{ url('/narucite_online') }}">Naručite online</a>
+										<a title="" href="<?php echo e(url('/narucite_online')); ?>">Naručite online</a>
 									</li>
 									-->
 								</ul>
@@ -323,4 +323,5 @@
 	</div>	
 </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

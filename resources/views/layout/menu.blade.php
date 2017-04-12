@@ -101,44 +101,53 @@
 		</div>
 	</div>
 </nav>
-<div id="mobile-nav" class="visible-xs visible-sm">
-	<header>
-		<div class="container-fluid">
-			<ul class="menu-header">
-				<li class="pull-left">
-					<a href="index-2.html" class="logo">
-						<figure>
-							<img src="img/logo2.png" alt="ORZI PIZZERIA"/>
-						</figure>
-					</a>
-				</li>
-				<li class="reorder pull-right"><a href="#" title=""><i class="fa fa-bars"></i></a></li>
-			</ul>
-		</div>
-	</header>	
-	<div class="" id="flyout-container">
-		<ul id="mobile-navbar" class="nav flyout-menu main-nav nav-height">
-			<li class="nav-item">
-				<a title="" href="index-2.html">početna</a>
-			</li>
-			
-			
-			<li class="nav-item">
-				<a title="" href="menu.html" class="">Meni</a>
-				<span class="open-children"><i class="fa fa-angle-down"></i></span>
+						<div id="mobile-nav" class="visible-xs visible-sm">
+							<header>
+								<div class="container-fluid">
+									<ul class="menu-header">
+										<li class="pull-left">
+											<!--<a href="index-2.html" class="logo">
+												<figure>
+													<img src="img/logo2.png" alt="ORZI PIZZA"/>
+												</figure>
+											</a>-->
+										</li>
+										<li class="reorder pull-right"><a href="#" title=""><i class="fa fa-bars"></i></a></li>
+									</ul>
+								</div>
+							</header>	
+							<div class="" id="flyout-container">
+								<ul id="mobile-navbar" class="nav flyout-menu main-nav nav-height">
+									<li class="nav-item">
+										<a title="" href="{{ url('/') }}">početna</a>
+									</li>
+									
+									</li>
+									<li class="nav-item">
+										<a title="" href="{{ route('menu') }}" class="">Meni</a>
+										<!--<span class="open-children"><i class="fa fa-angle-down"></i></span>-->
 				
-			<li class="nav-item">
-				<a title="" href="contact.html">Kontakt</a>
-			</li>
-			<li class="nav-item">
-				<a title="" href="shop.html">Akcije</a>
-			</li>
-			<li class="nav-item">
-				<a title="" href="gallery.html">Galerija</a>
-			</li>
-		</ul>
-	</div>
-</div>
+									</li>
+
+									<!--
+									<li class="nav-item">
+										<a title="" href="shop.html">Akcije</a>
+									</li>
+									-->
+									<li class="nav-item">
+										<a title="" href="{{ route('gallery') }}">Galerija</a>
+									</li>
+									<li class="nav-item">
+										<a title="" href="{{ route('contact') }}">Kontakt</a>
+									</li>
+									<!--
+									<li class="nav-item">
+										<a title="" href="{{ url('/narucite_online') }}">Naručite online</a>
+									</li>
+									-->
+								</ul>
+							</div>
+						</div>
 
 
 

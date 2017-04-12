@@ -1,22 +1,20 @@
-@extends('layout.main')
+<?php $__env->startSection('skripta'); ?>
+	<link rel="stylesheet" href="<?php echo e(asset("css/modal.css")); ?>"/>
+<?php $__env->stopSection(); ?>
 
-@section('skripta')
-	<link rel="stylesheet" href="{{ asset("css/modal.css") }}"/>
-@endsection
-
-@section('parsley')
+<?php $__env->startSection('parsley'); ?>
 	
 	<script src="js/parsley2.min.js"></script>
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('body')
+<?php $__env->startSection('body'); ?>
     
 <body class="intro-fullscreen fixed-footer scroll-down yo-anim-enabled">
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 <!--content-->
 <nav id="main-navbar" class="hidden-xs hidden-sm">
 	<div class="nav hidden-xs">
@@ -27,7 +25,7 @@
 		</div>
 
 		<div class="logo pull-left">
-			<a href="{{ url('/') }}">
+			<a href="<?php echo e(url('/')); ?>">
 				<figure>
 					<img src="img/logo1.png" class="light-logo" alt="ORZI PIZZERIA"/>
 					<img src="img/logo2.png" class="dark-logo" alt="ORZI PIZZERIA"/>
@@ -43,64 +41,64 @@
 			<ul class="pull-right">
 				
 				<li>
-					<a href="{{ url('/') }}" class="    ">Početna</a>	
+					<a href="<?php echo e(url('/')); ?>" class="    ">Početna</a>	
 				</li>				
 				<li>
-					<a href="{{ url('/menu') }}" class="hover-subnav">meni</a>
+					<a href="<?php echo e(url('/menu')); ?>" class="hover-subnav">meni</a>
 					<div class="subnav image-subnav">
 						<ul class="subnav-wrapper">
 							<li>
-								<a href="{{ url('/menu') }}#grill" style="color: white;">roštilj</a>
+								<a href="<?php echo e(url('/menu')); ?>#grill" style="color: white;">roštilj</a>
 								<div>
-									<a href="{{ url('/menu') }}#grill" class="menu-img" style="background-image: url('img/demo/nav/grill.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#grill" class="menu-img" style="background-image: url('img/demo/nav/grill.jpg')"></a>
 								</div>
 							</li>			
 							<li>
-								<a href="{{ url('/menu') }}#salad" style="color: white;">salate</a>
+								<a href="<?php echo e(url('/menu')); ?>#salad" style="color: white;">salate</a>
 								<div>
-									<a href="{{ url('/menu') }}#salad" class="menu-img" style="background-image: url('img/demo/nav/starters.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#salad" class="menu-img" style="background-image: url('img/demo/nav/starters.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#pasta" style="color: white;">paste</a>
+								<a href="<?php echo e(url('/menu')); ?>#pasta" style="color: white;">paste</a>
 								<div>							
-									<a href="{{ url('/menu') }}#pasta" class="menu-img" style="background-image: url('img/demo/nav/salads.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#pasta" class="menu-img" style="background-image: url('img/demo/nav/salads.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#tortilla" style="color: white;">tortilje</a>
+								<a href="<?php echo e(url('/menu')); ?>#tortilla" style="color: white;">tortilje</a>
 								<div>
-									<a href="{{ url('/menu') }}#tortilla" class="menu-img" style="background-image: url('img/demo/nav/mains.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#tortilla" class="menu-img" style="background-image: url('img/demo/nav/mains.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#pizza" style="color: white;">pizza</a>
+								<a href="<?php echo e(url('/menu')); ?>#pizza" style="color: white;">pizza</a>
 								<div>
-									<a href="{{ url('/menu') }}#pizza" class="menu-img" style="background-image: url('img/demo/nav/soup.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#pizza" class="menu-img" style="background-image: url('img/demo/nav/soup.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#pancake" style="color: white;">slatke palačinke</a>
+								<a href="<?php echo e(url('/menu')); ?>#pancake" style="color: white;">slatke palačinke</a>
 								<div>
-									<a href="{{ url('/menu') }}#pancake" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#pancake" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#pancake_salted" style="color: white;">slane palačinke</a>
+								<a href="<?php echo e(url('/menu')); ?>#pancake_salted" style="color: white;">slane palačinke</a>
 								<div>
-									<a href="{{ url('/menu') }}#pancake_salted" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#pancake_salted" class="menu-img" style="background-image: url('img/demo/nav/deserts.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#sandwich" style="color: white;">sendviči</a>
+								<a href="<?php echo e(url('/menu')); ?>#sandwich" style="color: white;">sendviči</a>
 								<div>							
-									<a href="{{ url('/menu') }}#sandwich style="color: white;"" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#sandwich style="color: white;"" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
 								</div>
 							</li>
 							<li>
-								<a href="{{ url('/menu') }}#other" style="color: white;">ostalo</a>
+								<a href="<?php echo e(url('/menu')); ?>#other" style="color: white;">ostalo</a>
 								<div>							
-									<a href="{{ url('/menu') }}#other style="color: white;"" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
+									<a href="<?php echo e(url('/menu')); ?>#other style="color: white;"" class="menu-img" style="background-image: url('img/demo/nav/drinks.jpg')"></a>
 								</div>
 							</li>
 						</ul>
@@ -108,20 +106,21 @@
 				</li>	
 				
 				<li>
-					<a href="{{ url('/contact') }}" class="">kontakt</a>	
+					<a href="<?php echo e(url('/contact')); ?>" class="">kontakt</a>	
 				</li>
 				
 				<li>
-					<a href="{{ url('/gallery') }}" class="hover-subnav">galerija</a>
+					<a href="<?php echo e(url('/gallery')); ?>" class="hover-subnav">galerija</a>
 					
 				</li>
 				<li>
-                        <a href="{{ route('cart.index') }}">
+                        <a href="<?php echo e(route('cart.index')); ?>">
                             <i class="fa fa-shopping-basket fa-2x" aria-hidden="true" style="color:#EA4623" >
                             </i>
                             Korpa
                             <span class="badge" style="background-color: #EA4623;">
-                                {{ Cart::count() }}
+                                <?php echo e(Cart::count()); ?>
+
                             </span>
                         </a>
                 </li>				
@@ -134,7 +133,7 @@
 								<div class="container-fluid">
 									<ul class="menu-header">
 										<li class="pull-left">
-											<a href="{{ url('/') }}" class="logo">
+											<a href="<?php echo e(url('/')); ?>" class="logo">
 												<figure>
 													<img src="img/logo2.png" alt="ORZI PIZZA"/>
 												</figure>
@@ -147,12 +146,12 @@
 							<div class="" id="flyout-container">
 								<ul id="mobile-navbar" class="nav flyout-menu main-nav nav-height">
 									<li class="nav-item">
-										<a title="" href="{{ url('/') }}">početna</a>
+										<a title="" href="<?php echo e(url('/')); ?>">početna</a>
 									</li>
 									
 									</li>
 									<li class="nav-item">
-										<a title="" href="{{ route('menu') }}" class="">Meni</a>
+										<a title="" href="<?php echo e(route('menu')); ?>" class="">Meni</a>
 										<!--<span class="open-children"><i class="fa fa-angle-down"></i></span>-->
 				
 									</li>
@@ -163,24 +162,25 @@
 									</li>
 									-->
 									<li class="nav-item">
-										<a title="" href="{{ route('gallery') }}">Galerija</a>
+										<a title="" href="<?php echo e(route('gallery')); ?>">Galerija</a>
 									</li>
 									<li class="nav-item">
-										<a title="" href="{{ route('contact') }}">Kontakt</a>
+										<a title="" href="<?php echo e(route('contact')); ?>">Kontakt</a>
 									</li>
 									<li>
-				                        <a href="{{ route('cart.index') }}">
+				                        <a href="<?php echo e(route('cart.index')); ?>">
 				                            <i class="fa fa-shopping-basket fa-2x" aria-hidden="true" style="color:#EA4623" >
 				                            </i>
 				                            <strong style="color:#ee6344">Korpa</strong>
 				                            <span class="badge" style="background-color: #EA4623;">
-				                                {{ Cart::count() }}
+				                                <?php echo e(Cart::count()); ?>
+
 				                            </span>
 				                        </a>
 					                </li>
 									<!--
 									<li class="nav-item">
-										<a title="" href="{{ url('/narucite_online') }}">Naručite online</a>
+										<a title="" href="<?php echo e(url('/narucite_online')); ?>">Naručite online</a>
 									</li>
 									-->
 								</ul>
@@ -255,11 +255,11 @@
 		</div> -->
 
 	<div class="container-fluid menu-content mixitup">
-		@if (Session::has('success'))
+		<?php if(Session::has('success')): ?>
 			<div class="col-md-12">
-				<h5 class="alert alert-success" style="text-align:center">{{ Session::get('success') }}</h5>
+				<h5 class="alert alert-success" style="text-align:center"><?php echo e(Session::get('success')); ?></h5>
 			</div>
-		@endif
+		<?php endif; ?>
 
 	
 
@@ -267,21 +267,21 @@
 
 
 
-	@foreach($categories as $category)
-		<div class="mix {{ $category->slug }}" data-myorder="0">
+	<?php foreach($categories as $category): ?>
+		<div class="mix <?php echo e($category->slug); ?>" data-myorder="0">
 			<div class="row">
 				<div class="col-xs-12 menu-category sticky-header sticky-header first-header fixed visible">
 					
-					<h2>{{ $category->name }}</h2>
+					<h2><?php echo e($category->name); ?></h2>
 						
 				</div>
 				<div class="row">
-					@foreach($products as $product)
-					@if($product->category_id == $category->id)
+					<?php foreach($products as $product): ?>
+					<?php if($product->category_id == $category->id): ?>
 					<div class="menu-item">
-						<a style="margin: auto;" href="{{ url('images', $product->image) }}" class="open-overlay">
+						<a style="margin: auto;" href="<?php echo e(url('images', $product->image)); ?>" class="open-overlay">
 							<figure>
-								<img src="img/placeholder.png" data-src="{{ url('images', $product->image) }}" alt="Menu item"/>
+								<img src="img/placeholder.png" data-src="<?php echo e(url('images', $product->image)); ?>" alt="Menu item"/>
 								<div class="actions">
 									<i class="icon-magnifier-add"></i>
 								</div>
@@ -290,18 +290,19 @@
 						<div class="item-description" style="height:300px;">
 							<div class="">
 								<div class="">
-									<h4 class="name">{{ $product->name }}</h4>
-									<p>{{ $product->description }}</p>
-									{!! Form::open(['route' => ['cart.addItem',$product->id], 'method' => 'POST', 'data-parsley-validate' => '', 'class' => 'forma']) !!}
+									<h4 class="name"><?php echo e($product->name); ?></h4>
+									<p><?php echo e($product->description); ?></p>
+									<?php echo Form::open(['route' => ['cart.addItem',$product->id], 'method' => 'POST', 'data-parsley-validate' => '', 'class' => 'forma']); ?>
+
 									
-									@if($category->slug == 'pasta')
+									<?php if($category->slug == 'pasta'): ?>
 										<br><h9 style="font-size:9px">Odaberi veličinu</h9><br>
 										<div class="btn-group" role="group" aria-label="...">
 											<label class="radio-inline"><input data-parsley-multiple data-parsley-errors-container="#message-holder" required type="radio" value="4" name="optradio">Pene</label>
 											<label class="radio-inline"><input data-parsley-multiple type="radio" value="5" name="optradio">Fusili</label>
 										</div><br><br>&nbsp;
 									
-									@elseif($category->slug == 'pizza')
+									<?php elseif($category->slug == 'pizza'): ?>
 										<br><h9 style="font-size:9px">Odaberi veličinu</h9><br>
 										<div class="btn-group" role="group" aria-label="...">
 											<label class="radio-inline"><input data-parsley-multiple data-parsley-errors-container="#message-holder" required type="radio" value="1" name="optradio">24 cm</label>
@@ -309,11 +310,11 @@
 											<label class="radio-inline"><input data-parsley-multiple type="radio" value="3" name="optradio">45 cm</label>
 										</div><br>&nbsp;
 
-										<span class="new-price item-price">{{ $product->price }}</span><h8>RSD</h8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-										<span class="new-price item-price">{{ $product->price2 }}</span><h8>RSD</h8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-										<span class="new-price item-price">{{ $product->price3 }}</span>RSD<br><br>
+										<span class="new-price item-price"><?php echo e($product->price); ?></span><h8>RSD</h8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<span class="new-price item-price"><?php echo e($product->price2); ?></span><h8>RSD</h8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<span class="new-price item-price"><?php echo e($product->price3); ?></span>RSD<br><br>
 
-									@elseif($category->slug == 'grill-kg')
+									<?php elseif($category->slug == 'grill-kg'): ?>
 										<br><h9 style="font-size:9px">Odaberi veličinu</h9><br>
 										<div class="btn-group" role="group" aria-label="...">
 											<label class="radio-inline"><input data-parsley-multiple data-parsley-errors-container="#message-holder" required type="radio" value="6" name="optradio">200g</label>
@@ -322,13 +323,13 @@
 											<label class="radio-inline"><input data-parsley-multiple type="radio" value="9" name="optradio">1kg</label>
 										</div><br>&nbsp;
 
-										<span class="new-price item-price">{{ $product->price }}</span><h8>RSD</h8>&nbsp;&nbsp;&nbsp;
-										<span class="new-price item-price">{{ $product->price2 }}</span><h8>RSD</h8>&nbsp;&nbsp;&nbsp;
-										<span class="new-price item-price">{{ $product->price3 }}</span><h8>RSD</h8>&nbsp;&nbsp;&nbsp;
-										<span class="new-price item-price">{{ $product->price4 }}</span>RSD<br><br>
-									@else
-										<span class="new-price item-price">{{ $product->price}} RSD</span><br><br>
-									@endif
+										<span class="new-price item-price"><?php echo e($product->price); ?></span><h8>RSD</h8>&nbsp;&nbsp;&nbsp;
+										<span class="new-price item-price"><?php echo e($product->price2); ?></span><h8>RSD</h8>&nbsp;&nbsp;&nbsp;
+										<span class="new-price item-price"><?php echo e($product->price3); ?></span><h8>RSD</h8>&nbsp;&nbsp;&nbsp;
+										<span class="new-price item-price"><?php echo e($product->price4); ?></span>RSD<br><br>
+									<?php else: ?>
+										<span class="new-price item-price"><?php echo e($product->price); ?> RSD</span><br><br>
+									<?php endif; ?>
 
 
 
@@ -342,9 +343,9 @@
 										      <h3 style="font-size:24px" name="modalDiv">Dodavanje priloga</h3>
 										    </div> 
 									    <div class="modal-body">
-										        <h3 >{{ $product->name }}</h3><br>
-										        <h4>{{ $product->description }}</h4><br>
-										        @if($category->slug != "grill")
+										        <h3 ><?php echo e($product->name); ?></h3><br>
+										        <h4><?php echo e($product->description); ?></h4><br>
+										        <?php if($category->slug != "grill"): ?>
 											      	<div class="row">
 											      	<div class="col-md-4 col-md-offset-4">
 											      	<table class="table table-striped">
@@ -355,73 +356,57 @@
 											            </tr>
 											            </thead>
 											      		<tbody>
-														@foreach($prilozi as $prilog)
-															@if(($category->slug == 'grill' || $category->slug == 'pancake_salted' || $category->slug == 'tortilla' || $category->slug == 'pizza' || $category->slug == 'sandwich') && $prilog->tip == 'roštilj' && $prilog->price != 0)
+														<?php foreach($prilozi as $prilog): ?>
+															<?php if(($category->slug == 'grill' || $category->slug == 'pancake_salted' || $category->slug == 'tortilla' || $category->slug == 'pizza' || $category->slug == 'sandwich') && $prilog->tip == 'roštilj' && $prilog->price != 0): ?>
 																<tr>
 																	<td style="width:200px; text-align:left">
 																      	<div class="has-error">
 																		  <div class="checkbox">
 																		    <label>
-																		      {!! Form::checkbox('ch[]', $prilog->namePrice, false); !!} 
+																		      <?php echo Form::checkbox('ch[]', $prilog->namePrice, false);; ?> 
 																		     
-																		      {{ $prilog->name }}
+																		      <?php echo e($prilog->name); ?>
+
 																		    </label>
 																		  </div>
 																		</div>
 																	</td>
 																	<td style="width:200px; text-align:center; vertical-align:middle;">
 																	    <label style="text-align:center">
-																	      {{ $prilog->price }},00&nbsp;RSD
+																	      <?php echo e($prilog->price); ?>,00&nbsp;RSD
 																	    </label>
 																	</td>
 																</tr>
-															@elseif($category->slug == 'pancake' && $prilog->tip == 'slatka' && $prilog->price != 0)
+															<?php elseif($category->slug == 'pancake' && $prilog->tip == 'slatka' && $prilog->price != 0): ?>
 																<tr>
 																	<td style="width:200px; text-align:left">
 																      	<div class="has-error">
 																		  <div class="checkbox">
 																		    <label>
-																		      {!! Form::checkbox('ch[]', $prilog->namePrice, false); !!} 
+																		      <?php echo Form::checkbox('ch[]', $prilog->namePrice, false);; ?> 
 																		     
-																		      {{ $prilog->name }}
+																		      <?php echo e($prilog->name); ?>
+
 																		    </label>
 																		  </div>
 																		</div>
 																	</td>
 																	<td style="width:200px; text-align:center; vertical-align:middle;">
 																	    <label style="text-align:center">
-																	      {{ $prilog->price }},00&nbsp;RSD
+																	      <?php echo e($prilog->price); ?>,00&nbsp;RSD
 																	    </label>
 																	</td>
 																</tr>
-															@elseif(($category->slug == 'grill' || $category->slug == 'grill-kg') && $prilog->tip == 'roštilj' && $prilog->price == 0)
+															<?php elseif(($category->slug == 'grill' || $category->slug == 'grill-kg') && $prilog->tip == 'roštilj' && $prilog->price == 0): ?>
 																<tr>
 																	<td style="width:200px; text-align:left">
 																      	<div class="has-error">
 																		  <div class="checkbox">
 																		    <label>
-																		      {!! Form::checkbox('ch[]', $prilog->namePrice, false); !!} 
+																		      <?php echo Form::checkbox('ch[]', $prilog->namePrice, false);; ?> 
 																		     
-																		      {{ $prilog->name }}
-																		    </label>
-																		  </div>
-																		</div>
-																	</td>
-																	<td style="width:200px; text-align:center; vertical-align:middle;">
-																	    <label style="text-align:center">
-																	      
-																	    </label>
-																	</td>
-																</tr>
-															@elseif($category->slug != 'grill' && $category->slug != 'grill-kg' && $prilog->tip == 'ostalo' && $category->slug != 'pancake')
-																<tr>
-																	<td style="width:200px; text-align:left">
-																      	<div class="has-error">
-																		  <div class="checkbox">
-																		    <label>
-																		      {!! Form::checkbox('ch[]', $prilog->namePrice, false); !!} 
-																		     
-																		      {{ $prilog->name }}
+																		      <?php echo e($prilog->name); ?>
+
 																		    </label>
 																		  </div>
 																		</div>
@@ -432,14 +417,34 @@
 																	    </label>
 																	</td>
 																</tr>
-															@endif
-														@endforeach
+															<?php elseif($category->slug != 'grill' && $category->slug != 'grill-kg' && $prilog->tip == 'ostalo' && $category->slug != 'pancake'): ?>
+																<tr>
+																	<td style="width:200px; text-align:left">
+																      	<div class="has-error">
+																		  <div class="checkbox">
+																		    <label>
+																		      <?php echo Form::checkbox('ch[]', $prilog->namePrice, false);; ?> 
+																		     
+																		      <?php echo e($prilog->name); ?>
+
+																		    </label>
+																		  </div>
+																		</div>
+																	</td>
+																	<td style="width:200px; text-align:center; vertical-align:middle;">
+																	    <label style="text-align:center">
+																	      
+																	    </label>
+																	</td>
+																</tr>
+															<?php endif; ?>
+														<?php endforeach; ?>
 														</tbody>
 													</table>
 													</div>
 													
 													</div>
-											@else
+											<?php else: ?>
 												<div class="row">
 
 										      	<div class="col-md-8 col-md-offset-2">
@@ -452,28 +457,29 @@
 										            </tr>
 										            </thead>
 										      		<tbody>
-													@foreach($prilozi as $prilog)
-														@if(($category->slug == 'grill' || $category->slug == 'tortilla' || $category->slug == 'pizza' || $category->slug == 'sandwich') && $prilog->tip == 'roštilj' && $prilog->price != 0)
+													<?php foreach($prilozi as $prilog): ?>
+														<?php if(($category->slug == 'grill' || $category->slug == 'tortilla' || $category->slug == 'pizza' || $category->slug == 'sandwich') && $prilog->tip == 'roštilj' && $prilog->price != 0): ?>
 															<tr>
 																<td style="width:200px; text-align:left">
 															      	<div class="has-error">
 																	  <div class="checkbox">
 																	    <label>
-																	      {!! Form::checkbox('ch[]', $prilog->namePrice, false); !!} 
+																	      <?php echo Form::checkbox('ch[]', $prilog->namePrice, false);; ?> 
 																	     
-																	      {{ $prilog->name }}
+																	      <?php echo e($prilog->name); ?>
+
 																	    </label>
 																	  </div>
 																	</div>
 																</td>
 																<td style="width:200px; text-align:center; vertical-align:middle;">
 																    <label style="text-align:center">
-																      {{ $prilog->price }},00&nbsp;RSD
+																      <?php echo e($prilog->price); ?>,00&nbsp;RSD
 																    </label>
 																</td>
 															</tr>
-														@endif
-													@endforeach
+														<?php endif; ?>
+													<?php endforeach; ?>
 													</tbody>
 												</table>
 												</div>
@@ -489,16 +495,17 @@
 										            </tr>
 										            </thead>
 										      		<tbody>
-													@foreach($prilozi as $prilog)
-														@if(($category->slug == 'grill' || $category->slug == 'grill-kg') && $prilog->tip == 'roštilj' && $prilog->price == 0)
+													<?php foreach($prilozi as $prilog): ?>
+														<?php if(($category->slug == 'grill' || $category->slug == 'grill-kg') && $prilog->tip == 'roštilj' && $prilog->price == 0): ?>
 															<tr>
 																<td style="width:200px; text-align:left">
 															      	<div class="has-error">
 																	  <div class="checkbox">
 																	    <label>
-																	      {!! Form::checkbox('ch[]', $prilog->namePrice, false); !!} 
+																	      <?php echo Form::checkbox('ch[]', $prilog->namePrice, false);; ?> 
 																	     
-																	      {{ $prilog->name }}
+																	      <?php echo e($prilog->name); ?>
+
 																	    </label>
 																	  </div>
 																	</div>
@@ -509,8 +516,8 @@
 																    </label>
 																</td>
 															</tr>
-														@endif
-													@endforeach
+														<?php endif; ?>
+													<?php endforeach; ?>
 													</tbody>
 												</table>
 												</div>
@@ -521,7 +528,7 @@
 											</div>
 
 											</div>
-											@endif
+											<?php endif; ?>
 
 
 
@@ -532,39 +539,41 @@
 										</div>
 
 									</div>
-									@if($odobreno == true)
-										@if($category->slug == 'pasta' || $category->slug == 'drink' || $category->slug == 'salad' || $category->slug == 'other')
+									<?php if($odobreno == true): ?>
+										<?php if($category->slug == 'pasta' || $category->slug == 'drink' || $category->slug == 'salad' || $category->slug == 'other'): ?>
 										<input class="btn btn-danger btn-lg active" type="submit" value="Dodaj u korpu">
-										@else
+										<?php else: ?>
 										<br>
 										<input class="btn btn-danger btn-lg active myBtn" type="button" value="Dodaj priloge" onClick="openModal(this);">
-										@endif
-									@else
+										<?php endif; ?>
+									<?php else: ?>
 										<br>
 										<span class="label label-danger" style="font-size:18px"><strong>Trenutno ne radimo</strong></span>
-									@endif
+									<?php endif; ?>
 
 									
 
 
 									
 
-									{!! Form::close() !!}
+									<?php echo Form::close(); ?>
+
 								</div>
 							</div>
 						</div>
 					</div>
-					@endif
-					@endforeach
+					<?php endif; ?>
+					<?php endforeach; ?>
 				</div>
 			</div>
 		</div>
-		@endforeach
+		<?php endforeach; ?>
 	</div>
 </section>
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('javascript')
+<?php $__env->startSection('javascript'); ?>
 	<script src="js/mojJS/script.js"></script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
